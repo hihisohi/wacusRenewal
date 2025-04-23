@@ -1,0 +1,554 @@
+---
+title: "HompageDetail Page"
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"; //타이틀이랑 웹사이트 설명 
+import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
+
+import "../../../public/css/homepage/section6.css"
+
+import Head from '../../components/layout/Head.astro'; //메타태그들
+import Header from '../../components/layout/Header.astro'; //진정한 헤더
+
+import Section10 from "../../components/main/Section10.astro"; //풋터
+---
+
+<html lang="ko">
+    <head>
+        <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <!-- <ViewTransitions /> -->
+    <body>
+        <Header />
+        
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <main id="HompageDetail_page">
+                    <section class="sec_1">
+                        <div class="w_90">
+                            <div class="top" data-aos="fade-right" data-aos-duration="1000">
+                                <h2 class="">
+                                    WACUS는<br class="block_768"> 고객 중심적이고
+                                </h2>
+                                <h2>
+                                    트렌드에 민감한<br class="block_768"> 접근 방식으로 혁신적이고
+                                </h2>
+                                <h2>
+                                    데이터 기반의<br class="block_768"> 웹 솔루션을 제공합니다.
+                                </h2>
+                            </div>
+                            <div class="bottom">
+                                <article class="sub_sec_top" data-aos="fade-left" data-aos-duration="1000">
+                                    <div class="sub_title">
+                                        <h2>
+                                            Wacus Homepage<span></span>
+                                        </h2>
+                                    </div>
+                                    <p class="title_info">
+                                        와커스는 단순히 아름다운 디자인을 넘어, <strong>고객의 아이디어와 비전을 <br class="none_768">
+                                        명확히 해석하여 웹이라는 공간에서 생동감 있게 구현</strong>합니다.<br>
+                                        최신 웹 트렌드와 맞춤형 솔루션을 통해 브랜드 가치를 극대화하며,<br class="none_768">
+                                        독창적이고 차별화된 디지털 경험을 제공합니다.
+                                    </p>
+                                </article>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_2">
+                        <div class="w_90">
+                            <div class="cont_1">
+                                <div class="text_box" data-aos="fade-right" data-aos-duration="1000">
+                                    <h3>Wacus Skills</h3>
+                                    <p>
+                                        와커스는 각 분야별 전문가가 철저한 분석을 통해 <br>
+                                        최적의 상품을 제안합니다.
+                                    </p>
+                                </div>
+                                <div class="right_box">
+                                    <div class="list_box">
+                                        <ul>
+                                            <li data-aos="fade-right" data-aos-duration="1000">
+                                                <div class="top">
+                                                    <div class="card_title">
+                                                        <h4>Web</h4>
+                                                        <span></span>
+                                                    </div>
+                                                    <p>웹</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <div class="img_box shake">
+                                                        <img src="/public/img/homepagedetail/homePageDetail_img_1.png" alt="웹">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-aos="fade-left" data-aos-duration="1000">
+                                                <div class="top">
+                                                    <div class="card_title">
+                                                        <h4>Publishing</h4>
+                                                        <span></span>
+                                                    </div>
+                                                    <p>퍼블리싱</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <div class="img_box shake">
+                                                        <img src="/public/img/homepagedetail/homePageDetail_img_2.png" alt="파블리싱">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="list_box">
+                                        <ul>
+                                            <li data-aos="fade-left" data-aos-duration="1000">
+                                                <div class="top">
+                                                    <div class="card_title">
+                                                        <h4>Mobile</h4>
+                                                        <span></span>
+                                                    </div>
+                                                    <p>모바일</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <div class="img_box shake">
+                                                        <img src="/public/img/homepagedetail/homePageDetail_img_3.png" alt="모바일">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-aos="fade-right" data-aos-duration="1000">
+                                                <div class="top">
+                                                    <div class="card_title">
+                                                        <h4>Programming</h4>
+                                                        <span></span>
+                                                    </div>
+                                                    <p>개발</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <div class="img_box shake">
+                                                        <img src="/public/img/homepagedetail/homePageDetail_img_4.png" alt="개발">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-aos="fade-left" data-aos-duration="1000">
+                                                <div class="top">
+                                                    <div class="card_title">
+                                                        <h4>Maintenance</h4>
+                                                        <span></span>
+                                                    </div>
+                                                    <p>유지보수</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <div class="img_box shake">
+                                                        <img src="/public/img/homepagedetail/homePageDetail_img_5.png" alt="유지보수">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="list_box">
+                                        <ul>
+                                            <li data-aos="fade-right" data-aos-duration="1000">
+                                                <div class="top">
+                                                    <div class="card_title ">
+                                                        <h4>responsive</h4>
+                                                        <span></span>
+                                                    </div>
+                                                    <p>반응형</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <div class="img_box shake">
+                                                        <img src="/public/img/homepagedetail/homePageDetail_img_6.png" alt="반응형">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-aos="fade-left" data-aos-duration="1000">
+                                                <div class="top">
+                                                    <div class="card_title">
+                                                        <h4>SEO</h4>
+                                                        <span></span>
+                                                    </div>
+                                                    <p>검색 엔진 최적화</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <div class="img_box shake">
+                                                        <img src="/public/img/homepagedetail/homePageDetail_img_7.png" alt="검색 엔진 최적화">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li data-aos="fade-right" data-aos-duration="1000">
+                                                <div class="top">
+                                                    <div class="card_title">
+                                                        <h4>UI/UX</h4>
+                                                        <span></span>
+                                                    </div>
+                                                    <p>사용자 경험</p>
+                                                </div>
+                                                <div class="bottom">
+                                                    <div class="img_box shake">
+                                                        <img  src="/public/img/homepagedetail/homePageDetail_img_8.png" alt="사용자 경험">
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_3">
+                        <div class="sec_4">
+                            <div class="w_90">
+                                <div class="top" data-aos="fade-up" data-aos-duration="1000">
+                                    <h2>홈페이지 제작이
+                                        필요한 이유</h2>
+                                    <p>Why Creating a Website is Necessary</p>
+                                    <div class="y_line"></div>
+                                </div>
+                                <div class="cont_2" data-aos="fade-up" data-aos-duration="1000">
+                                    <div class="text">
+                                        <strong>홈페이지는 브랜드의 맞춤형 슈트와 같습니다.</strong> <br>
+                                        사용자에게 브랜드의 감성을 명확히 전달하며 신뢰를 쌓는 역할을 합니다. <br>
+                                        소비자는 홈페이지를 통해 브랜드에 몰입하고 깊은 신뢰감을 형성할 수 있습니다.<br>
+                                        와커스는 <strong>브랜드의 이미지를 세심히 분석하고 이를 홈페이지와 완벽히 조화</strong>시킵니다.<br>
+                                        맞춤 제작 과정을 통해 <strong>브랜드의 숨겨진 매력을 발견하고,<br class="none_768">
+                                        새로운 가치를 창출</strong>할 수 있도록 정교하게 제작합니다.
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_5">
+                        <div class="sec_sticky">
+                            <div class="cont_1" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="sec_5_bg ">
+                                    <img class="none_768" src="/public/img/homepagedetail/homePageDetail_img_10.png" alt="">
+                                    <img class="block_768" src="/public/img/homepagedetail/homePageDetail_img_10_m.png" alt="">
+                                </div>
+                                <div class="row_box">
+                                    <div class="sec_5_title">
+                                        <h3>홈페이지 제작 과정</h3>
+                                        <p>
+                                            홈페이지 제작은 ‘와커스’를 위한 것이 아닙니다.<br>
+                                            와커스는 클라이언트의 니즈를 철저히 반영하여 작업하며,<br>
+                                            다양한 소통을 통해 최상의 결과물을 만들어냅니다.
+                                        </p>
+                                    </div>
+                                    <div class="">
+                                        <ul class="step_list">
+                                            <li>
+                                                <div class="img_box">
+                                                    <img src="/public/img/homepagedetail/homePageDetail_img_11.png" alt="기획">
+                                                </div>
+                                                <div class="span_title">
+                                                    <span>STEP1. 기획(Planning)</span>
+                                                </div>
+                                                <div class="text">
+                                                    신규브랜딩 or 현 브랜드 조사 → 스토리보드 전달 → 고객 니즈 사항 정리 <br>
+                                                    → 필수기능 검토 → 컨셉결정 → 사이트맵 구성 → 레퍼런스 조사
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img_box">
+                                                    <img src="/public/img/homepagedetail/homePageDetail_img_12.png" alt="디자인">
+                                                </div>
+                                                <div  class="span_title">
+                                                    <span>STEP 2. 디자인(Design)</span>
+                                                </div>
+                                                <div  class="text">
+                                                    레이아웃 구성 → 브랜드 그래픽 작업 → 모션 제안 → 디자인 콘티
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img_box">
+                                                    <img src="/public/img/homepagedetail/homePageDetail_img_13.png" alt="퍼블리싱">
+                                                </div>
+                                                <div class="span_title">
+                                                    <span>STEP 3. 퍼블리싱(Publishing)</span>
+                                                </div>
+                                                <div class="text">
+                                                    임시사이트 구성 → 인터랙션 표현 → 레이아웃 및 그래픽 구현
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img_box">
+                                                    <img src="/public/img/homepagedetail/homePageDetail_img_14.png" alt="프로그래밍">
+                                                </div>
+                                                <div class="span_title">
+                                                    <span>STEP 4. 프로그래밍(Programming)</span>
+                                                </div>
+                                                <div class="text">
+                                                    기능개발 → 사용자-관리자페이지 연동 → 데이터입력
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="img_box">
+                                                    <img src="/public/img/homepagedetail/homePageDetail_img_15.png" alt="연동-검수">
+                                                </div>
+                                                <div class="span_title">
+                                                    <span>STEP 5. 연동-검수(Interworking – Inspection)</span>
+                                                </div>
+                                                <div class="text">
+                                                    도메인 연결 → SEO 및 검색 최적화 → 오류 수정 → 이미지 수정 → 기능 개선
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_4">
+                        <div class="w_90">
+                            <div class="top" data-aos="fade-up" data-aos-duration="1000">
+                                <h2>와커스의 차별점</h2>
+                                <p>Wacus Differentiation</p>
+                                <div class="y_line"></div>
+                            </div>
+                            <div class="cont_1">
+                                <div class="text_box" data-aos="fade-right" data-aos-duration="1000">
+                                    <ul>
+                                        <li class="num_list">
+                                            <h5>1</h5>
+                                            <dl>
+                                                <dt>
+                                                    <h4>목적과 브랜드에 딱 맞는 맞춤형 홈페이지</h4>
+                                                    <span></span>
+                                                </dt>
+                                                <dd>
+                                                    와커스는 고객의 목적과 브랜드 아이덴티티를 반영하여 <br>
+                                                    단순히 예쁜 디자인을 넘어, 맞춤형 웹사이트를 제작합니다.
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="num_list">
+                                            <h5>2</h5>
+                                            <dl>
+                                                <dt>
+                                                    <h4>사용자 중심의 UI/UX 설계</h4>
+                                                    <span></span>
+                                                </dt>
+                                                <dd>
+                                                    사용자가 쉽게 이해하고 상호작용할 수 있도록 직관적이고 편리한 UI/UX를 <br>
+                                                    설계하며, 효율적인 구조와 템플릿 개발로 최적의 사용자 경험을 제공합니다.
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="num_list">
+                                            <h5>3</h5>
+                                            <dl>
+                                                <dt>
+                                                    <h4>독창적인 인터랙티브 콘텐츠</h4>
+                                                    <span></span>
+                                                </dt>
+                                                <dd>
+                                                    GSAP, AOS 등 최신 기술을 활용해 생동감 넘치는 인터랙티브 효과를 <br>
+                                                    구현하며, 부드럽고 매끄러운 동적 요소로 차별화된 사용자 경험을 제공합니다.
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="num_list">
+                                            <h5>4</h5>
+                                            <dl>
+                                                <dt>
+                                                    <h4>풍부한 경험과 전문성</h4>
+                                                    <span></span>
+                                                </dt>
+                                                <dd>
+                                                    다양한 프로젝트 경험과 각 분야 전문가로 구성된 팀이 웹 표준과 접근성을 <br>
+                                                    준수하며 고도화된 웹 솔루션을 제공합니다.
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="num_list">
+                                            <h5>5</h5>
+                                            <dl>
+                                                <dt>
+                                                    <h4>하나뿐인 맞춤형 디자인</h4>
+                                                    <span></span>
+                                                </dt>
+                                                <dd>
+                                                    템플릿 사용을 배제하고, 1:1 커뮤니케이션을 통해 브랜드 정체성을 반영한 <br>
+                                                    독창적이고 맞춤형 디자인을 제공합니다.
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                        <li class="num_list">
+                                            <h5>6</h5>
+                                            <dl>
+                                                <dt>
+                                                    <h4>한 걸음 더 나아가는 사후관리</h4>
+                                                    <span></span>
+                                                </dt>
+                                                <dd>
+                                                    SEO, 유지보수, 데이터 분석 등 고객의 장기적 성장을 돕는 후속 서비스를 <br>
+                                                    제공하며 지속 가능한 파트너십을 유지합니다.
+                                                </dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="img_box" data-aos="fade-left" data-aos-duration="1000">
+                                    <img src="/public/img/homepagedetail/homePageDetail_img_9.gif" alt="와커스의 차별점">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_4">
+                        <div class="w_90">
+                            <div class="top" data-aos="fade-up" data-aos-duration="1000">
+                                <h2>우리가 지향하는 가치</h2>
+                                <p>Our Aspirational Values</p>
+                                <div class="y_line"></div>
+                            </div>
+                            <div class="cont_2" data-aos="fade-up" data-aos-duration="1000">
+                                <div class="text">
+                                    우리는 단순한 홈페이지 제작을 넘어, <br class="none_768">
+                                    브랜드 가치를 극대화하고 <br class="none_768">
+                                    <strong>고객의 성공을 돕는 파트너</strong>가 되기를 목표로 합니다.<br>
+                                    최신 기술과 장인정신으로 차별화된 웹사이트를 제작하며, <br class="none_768">
+                                    항상 <strong>고객의 만족을 최우선</strong>으로 생각합니다.
+                                </div>
+                                <ul class="btn_list">
+                                    <li>
+                                        <a href="https://wacus.co.kr/portfolio/index.php?cate=web" class="goto_btn">
+                                            <div>
+                                                <div class="btn_title">
+                                                    <h4>View Portfolio</h4>
+                                                    <span></span>
+                                                </div>
+                                                <p>
+                                                    포트폴리오 보러가기
+                                                </p>
+                                            </div>
+                                            <div class="icon_img">
+                                                <img src="/public/img/homepagedetail/arrow_icon.png" alt="화살표">
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/contact" class="goto_btn">
+                                            <div>
+                                                <div class="btn_title">
+                                                    <h4>Contact Us</h4>
+                                                    <span></span>
+                                                </div>
+                                                <p>
+                                                    프로젝트 함께하기
+                                                </p>
+                                            </div>
+                                            <div class="icon_img">
+                                                <img src="/public/img/homepagedetail/arrow_icon.png" alt="화살표">
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <Section10/>
+                </main>
+
+            </div>
+        </div>
+    </body>
+<script is:inline>
+
+    $(document).ready(function () {
+        let $headings = $(".sec_1 h2"); // 모든 h2 요소를 선택
+        let index = 0; // 시작 인덱스
+
+        function toggleOnClass() {
+        // 현재 인덱스의 h2에 on 클래스 추가
+        $headings.eq(index).addClass("on");
+
+        // 이전 인덱스의 h2에서 on 클래스 제거
+        let prevIndex = (index - 1 + $headings.length) % $headings.length;
+        $headings.eq(prevIndex).removeClass("on");
+
+            // 다음 인덱스로 이동 (마지막 요소 이후에는 첫 번째로 돌아감)
+            index = (index + 1) % $headings.length;
+        }
+
+        // 1초 간격으로 toggleOnClass 실행
+        setInterval(toggleOnClass, 1000);
+        });
+
+
+        
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+        ScrollTrigger.matchMedia({
+        
+        "(min-width:768px)" : function(){
+
+            const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#HompageDetail_page .sec_5",
+                start: "top top", // 섹션이 화면 상단에 올 때
+                end: "+=300%", // 섹션이 화면 상단을 지나갈 때
+                scrub: true, // 스크롤에 따라 애니메이션이 진행됨
+                pin: true, // sec_5를 고정
+                anticipatePin: 1, // pin의 반응을 부드럽게
+                //markers: true, // 디버깅용 마커 표시
+            }
+        });
+
+        tl.to("#HompageDetail_page .sec_5 .cont_1", {
+            scale: 1, // 우측으로 이동
+            duration: 1, // duration을 설정하여 애니메이션 길이 설정
+        })
+        .to("#HompageDetail_page .sec_5 .cont_1 .sec_5_bg img", {
+            filter: "grayscale(1)", // grayscale 효과 추가
+            duration: 1, // 필터 적용 시간
+        })
+        .to("#HompageDetail_page .sec_5 .row_box", {
+            opacity: 1, // 애니메이션을 자연스럽게 나타나게 하려면 opacity도 사용
+            duration: 0.5, // 애니메이션 지속 시간
+        })
+        .to("#HompageDetail_page .sec_5 .step_list", {
+                    x: "-150%", // 우측으로 이동
+                    duration: 2.5,
+        });
+        },
+        "(max-width:768px)" : function(){
+
+            const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#HompageDetail_page .sec_5",
+                start: "top top", // 섹션이 화면 상단에 올 때
+                end: "+=600%", // 섹션이 화면 상단을 지나갈 때
+                scrub: true, // 스크롤에 따라 애니메이션이 진행됨
+                pin: true, // sec_5를 고정
+                // anticipatePin: 1, // pin의 반응을 부드럽게
+                //markers: true, // 디버깅용 마커 표시
+            }
+        });
+
+            tl.to("#HompageDetail_page .sec_5 .cont_1", {
+                scale: 1, // 우측으로 이동
+                duration: 1, // duration을 설정하여 애니메이션 길이 설정
+            })
+            .to("#HompageDetail_page .sec_5 .cont_1 .sec_5_bg img", {
+                filter: "grayscale(1)", // grayscale 효과 추가
+                duration: 1, // 필터 적용 시간
+            })
+            .to("#HompageDetail_page .sec_5 .row_box", {
+                opacity: 1, // 애니메이션을 자연스럽게 나타나게 하려면 opacity도 사용
+                duration: 0.5, // 애니메이션 지속 시간
+            })
+            .to("#HompageDetail_page .sec_5 .step_list", {
+                        x: "-500%", // 우측으로 이동
+                        duration: 2.5,
+            });
+        }
+        
+    });
+
+</script>
+
+</html>

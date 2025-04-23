@@ -1,0 +1,42 @@
+/* html,
+body {
+  overflow: hidden;
+} */
+
+body {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #containerNME {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    position: fixed;
+    mix-blend-mode: plus-lighter; 
+    opacity: .95;
+    /* filter: grayscale(0.7); */
+    pointer-events: none;
+  }
+  
+  canvas#NewMouseEffect {
+    width: 100%;
+    height: 100%;
+    position:fixed;
+    z-index: 999;
+  }
+  /* #containerBox {
+      width:100%;
+      height:100%;
+      opacity: 0;
+      position:fixed;
+  } */
+  

@@ -1,0 +1,740 @@
+---
+title: "Marketing Page"
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"; //타이틀이랑 웹사이트 설명 
+import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
+
+import "../../../public/css/marketing/section2.css"
+
+import Head from '../../components/layout/Head.astro'; //메타태그들
+import Header from '../../components/layout/Header.astro'; //진정한 헤더
+
+import Section10 from "../../components/main/Section10.astro"; //풋터
+---
+
+<html lang="ko">
+    <head>
+        <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <!-- <ViewTransitions /> -->
+    <body>
+        <Header />
+        
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <main id="marketing_page">
+                    <section class="sec_1">
+                        <article class="sub_sec_top" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="sub_title">
+                                <h2>
+                                    Hospital Marketing<span></span>
+                                </h2>
+                            </div>
+                            <p class="title_info">
+                                Hospital Marketing Project
+                            </p>
+                        </article>
+                        <div class="img_box" data-aos="fade-left"  data-aos-duration="1000">
+                            <div class="none_768">
+                                <img src="../../../public/img/marketingPage/market_sub_1.png" alt="Hospital Marketing">
+                            </div>
+                            <div class="block_768">
+                                <img src="../../../public/img/marketingPage/market_sub_1_m.png" alt="Hospital Marketing">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_2 sec_py">
+                        <div class="sub_w">
+                            <div class="sec_title_box" data-aos="fade-up"  data-aos-duration="1000">
+                                <span>Why Hospital Marketing?</span>
+                                <h3>병원 마케팅이 왜 필요할까?</h3>
+                                <p>
+                                    개원하는 병원은 늘고 지역내 경쟁이 심화되고 있는 현재,<br class="none_768">
+                                    치열한 경쟁속에서 살아남기 위한 필수적인 <strong>마케팅</strong>
+                                </p>
+                            </div>
+                            <div class="cont_1" data-aos="fade-up"  data-aos-duration="1000">
+                                <div class="left">
+                                    <ul>
+                                        <li>
+                                            <div class="img_box">
+                                                <img src="../../../public/img/marketingPage/market_sub_2.png" alt="병 · 의원 개업">
+                                            </div>
+                                            <p>
+                                                매년 약 1,500~2,000 <br>
+                                                <span>병 · 의원 개업</span> 
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="img_box">
+                                                <img src="../../../public/img/marketingPage/market_sub_3.png" alt="병 · 의원 폐업">
+                                            </div>
+                                            <p>
+                                                매년 약 1,000<br>
+                                                <span>병 · 의원 폐업</span> 
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <div class="img_box">
+                                                <img src="../../../public/img/marketingPage/market_sub_4.png" alt="병 · 의원 증가">
+                                            </div>
+                                            <p>
+                                                매년 약 700<br>
+                                                <span>병 · 의원 증가</span> 
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="right">
+                                    <div class="graph_box">
+                                        <img src="../../../public/img/marketingPage/market_sub_5.png" alt="">
+                                        <div class="graph_img">
+                                            <img src="../../../public/img/marketingPage/market_sub_5_1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="../../../public/img/marketingPage/market_sub_6.png" alt="">
+                                    </div>
+                                    <ul class="graph_title">
+                                        <li>
+                                            <span></span>
+                                            <p>개업</p>
+                                        </li>
+                                        <li>
+                                            <span></span>
+                                            <p>폐업</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_3 sec_py">
+                        <div class="sub_w">
+                            <div class="sec_title_box center" data-aos="fade-up"  data-aos-duration="1000">
+                                <span>Why Hospital Marketing?</span>
+                                <h3>병원 온라인 마케팅은 무엇을 할까?</h3>
+                                <p>
+                                    인터넷 활성화로 인해 이제는 온라인 시장이 무엇보다 중요해 졌습니다.<br class="none_768">
+                                    <strong>병원을 방문하는 비율도 온라인을 통해 방문하는 환자가 더욱 많기에 온라인 시장을 공략해야 합니다.</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="cont_1">
+                            <div class="cont_box" data-aos="fade-right"  data-aos-duration="1000">
+                                <div class="_1" >
+                                    <div class="big" >
+                                        <div class="img_box">
+                                            <img src="../../../public/img/marketingPage/market_sub_8.svg" alt="">
+                                        </div>
+                                        <p>홈페이지<br>정보전달</p>
+                                    </div>
+                                    <div class="small">
+                                        <div class="img_box">
+                                            <img src="../../../public/img/marketingPage/market_sub_9.svg" alt="">
+                                        </div>
+                                        <p>검색 키워드<br>상위노출</p>
+                                    </div>
+                                    <div class="middle">
+                                        <div class="img_box">
+                                            <img src="../../../public/img/marketingPage/market_sub_10.svg" alt="">
+                                        </div>
+                                        <p>플레이스<br>최적화</p>
+                                    </div>
+                                </div>
+                                <div class="arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="54" height="13" viewBox="0 0 54 13" fill="none">
+                                        <path d="M54 6.75L44 0.976497V12.5235L54 6.75ZM0 7.75H45V5.75H0V7.75Z" fill="black"/>
+                                    </svg>
+                                </div>
+                                <div class="_2" >
+                                    <div class="img_box">
+                                        <img src="../../../public/img/marketingPage/market_sub_7.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="arrow" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="54" height="13" viewBox="0 0 54 13" fill="none">
+                                        <path d="M54 6.75L44 0.976497V12.5235L54 6.75ZM0 7.75H45V5.75H0V7.75Z" fill="black"/>
+                                    </svg>
+                                </div>
+                                <div class="_3" >
+                                    <h3>기존환자 유지</h3>
+                                    <h3>신규환자 유치</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_4 sec_py">
+                        <div class="sub_w">
+                            <div class="sec_title_box center"  data-aos="fade-up"  data-aos-duration="1000">
+                                <span>So What??</span>
+                                <h3>와커스 온라인 마케팅 효과는?</h3>
+                            </div>
+                        </div>
+                        <div class="cont_1"  data-aos="fade-up"  data-aos-duration="1000">
+                            <div class="text_list">
+                                <div class="img_box">
+                                    <img src="../../../public/img/marketingPage/market_sub_11.png" alt="">
+                                </div>
+                                <dl>
+                                    <dt>
+                                        홈페이지 방문자 수 증가
+                                    </dt>
+                                    <dd>
+                                        다양한 온라인 광고가 홈페이지<br>
+                                        or 랜딩 페이지로 이동하도록 연계하여<br>
+                                        <strong>방문자 수 증가 효과</strong>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="line"></div>
+                            <div class="text_list">
+                                <div class="img_box">
+                                    <img src="../../../public/img/marketingPage/market_sub_12.png" alt="">
+                                </div>
+                                <dl>
+                                    <dt>
+                                        플레이스 유입량 증가
+                                    </dt>
+                                    <dd>
+                                        지역 키워드 검색 시 플레이스<br>
+                                        최적화 작업으로 노출을 높여<br>
+                                        <strong>유입수 증가 효과</strong>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="line"></div>
+                            <div class="text_list">
+                                <div class="img_box">
+                                    <img src="../../../public/img/marketingPage/market_sub_13.png" alt="">
+                                </div>
+                                <dl>
+                                    <dt>
+                                        브랜드 인지도 상승
+                                    </dt>
+                                    <dd>
+                                        다양한 검색 키워드 노출로 인해<br>
+                                         병원의 브랜드 <strong>인지도 상승 효과</strong>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+
+                    </section>
+
+                    <section class="sec_5 sec_py">
+                        <div class="sub_w">
+                            <div class="sec_title_box center"  data-aos="fade-up"  data-aos-duration="1000">
+                                <h3>와커스 온라인 마케팅 핵심 패키지</h3>
+                            </div>
+                            <ul class="sec_5_price_btn_list"  data-aos="fade-up"  data-aos-duration="1000">
+                                <li class="on">
+                                    <p>Starter Vision Package</p>
+                                    <h4>스타터 비전 패키지</h4>
+                                </li>
+                                <li>
+                                    <p>Signature Package</p>
+                                    <h4>시그니쳐 패키지</h4>
+                                </li>
+                                <li>
+                                    <p>Infinity Pro Package</p>
+                                    <h4>인피니티 프로 패키지</h4>
+                                    <!-- <h5>4,500,000원</h5> -->
+                                </li>
+                            </ul>
+                            <div class="sec_5_price_box"  data-aos="fade-up"  data-aos-duration="1000">
+                                <div class="sec_5_price_content">
+                                    <div class="box _1 full">
+                                        <div class="box_w">
+                                            <div class="price_title">
+                                                <span>Preparing</span>
+                                                <h4>준비중입니다.</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="box _1">
+                                        <div class="box_w">
+                                            <div class="price_title">
+                                                <div class="img_box">
+                                                    <img src="../../../public/img/marketingPage/market_sub_14.png" alt="마케팅 서비스">
+                                                </div>
+                                                <span>Marketing Service</span>
+                                                <h4>마케팅 서비스</h4>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div>
+                                                <ul class="price_info">
+                                                    <li>
+                                                        <span class="num">1</span>
+                                                        <dl>
+                                                            <dt>
+                                                                브랜드 블로그 운영
+                                                            </dt>
+                                                            <dd>
+                                                                브랜드 블로그 홈페이지형 스킨 제작
+                                                            </dd>
+                                                            <dd>브랜드 블로그 발행 <span>5건</span> (검색결과 최적화 로직 사용)</dd>
+                                                            <dd>기자단 배포 <span>5건</span>or 뉴스 기사 <span>1건</span></dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">2</span>
+                                                        <dl>
+                                                            <dt>
+                                                                의료광고 심의 대행
+                                                            </dt>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">3</span>
+                                                        <dl>
+                                                            <dt>
+                                                                유료이미지 & 일러스트 활용한 카드뉴스 제작
+                                                            </dt>
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box _2">
+                                        <div class="box_w">
+                                            <div class="price_title">
+                                                <div class="img_box">
+                                                    <img src="../../../public/img/marketingPage/market_sub_15.png" alt="">
+                                                </div>
+                                                <span>Add Service</span>
+                                                <h4>추가 제공 서비스</h4>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div>
+                                                <ul class="price_info">
+                                                    <li>
+                                                        <span class="num">4</span>
+                                                        <dl>
+                                                            <dt>
+                                                                모니터링 & 컨설팅
+                                                            </dt>
+                                                            <dd>광고주 업체 전반적인 모니터링</dd>
+                                                            <dd>경쟁사 키워드 및 온라인 광고 분석</dd>
+                                                            <dd>마케팅 제안 및 방향성 컨설팅</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">5</span>
+                                                        <dl>
+                                                            <dt>
+                                                                운영채널 데이터 분석 & 컨설팅
+                                                            </dt>
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plus_box">
+                                        +
+                                    </div> -->
+                                </div>
+                                <div class="sec_5_price_content">
+                                    <div class="box _1 full">
+                                        <div class="box_w">
+                                            <div class="price_title">
+                                                <span>Preparing</span>
+                                                <h4>준비중입니다.</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="box _1">
+                                        <div class="box_w">
+                                            <div class="price_title">
+                                                <div class="img_box">
+                                                    <img src="../../../public/img/marketingPage/market_sub_14.png" alt="마케팅 서비스">
+                                                </div>
+                                                <span>Marketing Service</span>
+                                                <h4>마케팅 서비스</h4>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div>
+                                                <ul class="price_info">
+                                                    <li>
+                                                        <span class="num">1</span>
+                                                        <dl>
+                                                            <dt>
+                                                                브랜드 블로그 운영
+                                                            </dt>
+                                                            <dd>
+                                                                브랜드 블로그 홈페이지형 스킨 제작
+                                                            </dd>
+                                                            <dd>브랜드 블로그 발행 <span>10건</span> (검색결과 최적화 로직 사용)</dd>
+                                                            <dd>기자단 배포 <span>5건</span></dd>
+                                                            <dd>언론사 뉴스 기사 <span>1건</span></dd>
+                                                            <dd>네이버 클립 영상 <span>10건</span></dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">2</span>
+                                                        <dl>
+                                                            <dt>
+                                                                의료광고 심의 대행
+                                                            </dt>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">3</span>
+                                                        <dl>
+                                                            <dt>
+                                                                유료이미지 & 일러스트 활용한 카드뉴스 제작
+                                                            </dt>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">4</span>
+                                                        <dl>
+                                                            <dt>
+                                                                네이버 플레이스 최적화 & 리뷰 관리
+                                                            </dt>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">5</span>
+                                                        <dl>
+                                                            <dt>
+                                                                브랜드 홈페이지 렌탈
+                                                            </dt>
+                                                            <dd>
+                                                                홈페이지 시안 A, B, C 선택
+                                                            </dd>
+                                                            <dd>제작 및 유지보수</dd>
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box _2">
+                                        <div class="box_w">
+                                            <div class="price_title">
+                                                <div class="img_box">
+                                                    <img src="../../../public/img/marketingPage/market_sub_15.png" alt="">
+                                                </div>
+                                                <span>Add Service</span>
+                                                <h4>추가 제공 서비스</h4>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div>
+                                                <ul class="price_info">
+                                                    <li>
+                                                        <span class="num">6</span>
+                                                        <dl>
+                                                            <dt>
+                                                                월 디자인 제작 2건 제공 (팝업, 인쇄물 등)
+                                                            </dt>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">7</span>
+                                                        <dl>
+                                                            <dt>
+                                                                모니터링 & 컨설팅
+                                                            </dt>
+                                                            <dd>광고주 업체 전반적인 모니터링</dd>
+                                                            <dd>경쟁사 키워드 및 온라인 광고 분석</dd>
+                                                            <dd>마케팅 제안 및 방향성 컨설팅</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">10</span>
+                                                        <dl>
+                                                            <dt>
+                                                                운영채널 데이터 분석 & 컨설팅
+                                                            </dt>
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                                <div class="honey_tip">
+                                                    <div class="title">
+                                                        <div class="img_box">
+                                                            <img src="../../../public/img/marketingPage/market_sub_16.svg" alt="">
+                                                        </div>
+                                                        <h5>스탠다드 패키지 1년 이상 계약시</h5>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <span></span>
+                                                            <p>와커스 자사 저작권 홈페이지 렌탈서비스 제공</p>
+                                                        </li>
+                                                        <li>
+                                                            <span></span>
+                                                            <p>홈페이지 관리에 필요한 관리자 페이지 제공</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plus_box">
+                                        +
+                                    </div> -->
+                                </div>
+                                <div class="sec_5_price_content">
+                                    <div class="box _1 full">
+                                        <div class="box_w">
+                                            <div class="price_title">
+                                                <span>Preparing</span>
+                                                <h4>준비중입니다.</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="box _1">
+                                        <div class="box_w">
+                                            <div class="price_title">
+                                                <div class="img_box">
+                                                    <img src="../../../public/img/marketingPage/market_sub_14.png" alt="마케팅 서비스">
+                                                </div>
+                                                <span>Marketing Service</span>
+                                                <h4>마케팅 서비스</h4>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div>
+                                                <ul class="price_info">
+                                                    <li>
+                                                        <span class="num">1</span>
+                                                        <dl>
+                                                            <dt>
+                                                                브랜드 블로그 운영
+                                                            </dt>
+                                                            <dd>
+                                                                브랜드 블로그 홈페이지형 스킨 제작
+                                                            </dd>
+                                                            <dd>브랜드 블로그 발행 <span>15건</span> (검색결과 최적화 로직 사용)</dd>
+                                                            <dd>기자단 배포 <span>10건</span></dd>
+                                                            <dd>언론사 뉴스 기사 <span>1건</span></dd>
+                                                            <dd>네이버 클립 영상 <span>10건</span></dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">2</span>
+                                                        <dl>
+                                                            <dt>
+                                                                의료광고 심의 대행
+                                                            </dt>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">3</span>
+                                                        <dl>
+                                                            <dt>
+                                                                유료이미지 & 일러스트 활용한 카드뉴스 제작
+                                                            </dt>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">4</span>
+                                                        <dl>
+                                                            <dt>
+                                                                네이버 플레이스 최적화 & 리뷰 관리
+                                                            </dt>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">5</span>
+                                                        <dl>
+                                                            <dt>
+                                                                인스타그램 운영
+                                                            </dt>
+                                                            <dd>
+                                                                인스타그램 계정 활성화
+                                                            </dd>
+                                                            <dd>인스타그램 카드뉴스 발행</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">6</span>
+                                                        <dl>
+                                                            <dt>
+                                                                브랜드 홈페이지 렌탈
+                                                            </dt>
+                                                            <dd>
+                                                                홈페이지 시안 A, B, C 선택
+                                                            </dd>
+                                                            <dd>제작 및 유지보수</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">5</span>
+                                                        <dl>
+                                                            <dt>
+                                                                홈페이지 퍼포먼스 광고
+                                                            </dt>
+                                                            <dd>
+                                                                일 방문자 150명 보장
+                                                            </dd>
+                                                            <dd>모니터링 및 광고 컨설팅</dd>
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="box _2">
+                                        <div class="box_w">
+                                            <div class="price_title">
+                                                <div class="img_box">
+                                                    <img src="../../../public/img/marketingPage/market_sub_15.png" alt="">
+                                                </div>
+                                                <span>Add Service</span>
+                                                <h4>추가 제공 서비스</h4>
+                                            </div>
+                                            <div class="line"></div>
+                                            <div>
+                                                <ul class="price_info">
+                                                    <li>
+                                                        <span class="num">8</span>
+                                                        <dl>
+                                                            <dt>
+                                                                홈페이지 데이터 분석
+                                                            </dt>
+                                                            <dd>
+                                                                유입 데이터 활용한 광고 방향 설계
+                                                            </dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">9</span>
+                                                        <dl>
+                                                            <dt>
+                                                                월 디자인 제작 2건 제공 (팝업, 인쇄물 등)
+                                                            </dt>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">10</span>
+                                                        <dl>
+                                                            <dt>
+                                                                모니터링 & 컨설팅
+                                                            </dt>
+                                                            <dd>광고주 업체 전반적인 모니터링</dd>
+                                                            <dd>경쟁사 키워드 및 온라인 광고 분석</dd>
+                                                            <dd>마케팅 제안 및 방향성 컨설팅</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">11</span>
+                                                        <dl>
+                                                            <dt>
+                                                                운영채널 데이터 분석 & 컨설팅
+                                                            </dt>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">12</span>
+                                                        <dl>
+                                                            <dt>
+                                                                네이버 광고 관리
+                                                            </dt>
+                                                            <dd>플레이스 광고 셋팅</dd>
+                                                            <dd>파워링크 진단 및 운영관리</dd>
+                                                            <dd>브랜드 검색광고 셋팅</dd>
+                                                        </dl>
+                                                    </li>
+                                                    <li>
+                                                        <span class="num">13</span>
+                                                        <dl>
+                                                            <dt>
+                                                                분기별 서비스
+                                                            </dt>
+                                                            <dd>
+                                                                업체 컨셉 사진 촬영 or 유튜브용 영상 촬영
+                                                            </dd>
+                                                        </dl>
+                                                    </li>
+                                                </ul>
+                                                <div class="honey_tip">
+                                                    <div class="title">
+                                                        <div class="img_box">
+                                                            <img src="../../../public/img/marketingPage/market_sub_16.svg" alt="">
+                                                        </div>
+                                                        <h5>인피디티 프로 패키지 1년 이상 계약시</h5>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <span></span>
+                                                            <p>와커스 자사 저작권 홈페이지 렌탈서비스 제공</p>
+                                                        </li>
+                                                        <li>
+                                                            <span></span>
+                                                            <p>홈페이지 관리에 필요한 관리자 페이지 제공</p>
+                                                        </li>
+                                                        <li>
+                                                            <span></span>
+                                                            <p>홈페이지 유입 데이터 분석 진행 & 맞춤 컨설팅</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="plus_box">
+                                        +
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <Section10/>
+                </main>
+
+            </div>
+        </div>
+    </body>
+<script is:inline>
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.to(".graph_img >img", {
+        scrollTrigger: {
+            trigger: "#marketing_page .sec_2 .cont_1",
+            start: "top +=60%", 
+            end: "bottom bottom",
+            scrub: true,
+            // markers:true,
+            },
+            y: 11, // `transform: translateY(11px)` 대신 사용
+            // opacity: 1, // `opacity: "1"`로 설정
+            duration: 0.4, 
+        },
+    );
+
+    $(document).ready(function () {
+        function initializeTabs(tabMenuSelector, tabContentSelector, activeClass, scrollTargetSelector) {
+            // 모든 탭 콘텐츠 숨기기, 첫 번째 탭 콘텐츠만 표시
+            $(tabContentSelector).hide();
+            $(tabContentSelector).first().show();
+
+            // 탭 메뉴 클릭 이벤트 등록
+            $(tabMenuSelector).on("click", "li", function () {
+                // 모든 탭에서 활성 클래스 제거
+                $(tabMenuSelector + " li").removeClass(activeClass);
+                // 현재 클릭한 탭에 활성 클래스 추가
+                $(this).addClass(activeClass);
+
+                // 모든 탭 콘텐츠 숨기고 클릭된 탭에 해당하는 콘텐츠 표시
+                var currentTab = $(this).index();
+                $(tabContentSelector).hide();
+                $(tabContentSelector).eq(currentTab).show();
+                $("html, body").animate({
+                    scrollTop: $(scrollTargetSelector).offset().top
+                }, 500); // 스크롤 지속 시간 (500ms)
+            });
+        }
+
+        // 함수 호출 예제
+        initializeTabs(".sec_5_price_btn_list", ".sec_5_price_content", "on", ".sec_5_price_box");
+    });
+
+</script>
+
+</html>

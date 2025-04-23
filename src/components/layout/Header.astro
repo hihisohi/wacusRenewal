@@ -1,0 +1,305 @@
+---
+// Header.astro
+import Modal from "../layout/Modal.astro"; //우리의 경험
+const currentPath = Astro.url.pathname;
+const isMain = currentPath === "/";
+const isHomePage = currentPath === "/homepage";
+const isMarketingPage = currentPath === "/marketing";
+const isMarketingPage2 = currentPath === "/marketingPage";
+const isCompany = currentPath === "/company";
+const isWorks = currentPath === "/works";
+
+
+const boardPaths = [ "/board","/boardView"];
+const isBoard = boardPaths.includes(currentPath);
+---
+
+
+<!-- 메인페이지 헤더 -->
+<header class={`${isMarketingPage || isBoard || isMarketingPage2 || isCompany || isWorks ? "w_header" : ""} ${isMarketingPage ? "marketing_on" : ""}`}>
+    <div class="left">
+        <div class="headerLogo" >
+            <!-- <a onclick="gsapToScroll(0)"> -->
+            <!-- <a href="#" onclick="window.location='/'"> -->
+            <a href="/">
+                <img src="/public/img/logo_b.svg" alt="WACUS로고" class="b_logo">
+                <img src="/public/img/logo_w.svg" alt="WACUS로고" class="w_logo">
+            </a>
+        </div>
+        <div class="none_mo yes_roll" style={{ display: isMarketingPage2 || isCompany || isWorks ? "none" : "" }}>
+            <div class="swiper rolling_text">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p>여러분의 브랜드는 어떤 이야기를 하고 싶나요?</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p>지금, 와커스와 함께하세요!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <nav>
+            <ul class="nav_list">               
+                <li class={isMain ? "on" : " "}>
+                    <a href="#" onclick="window.location='/'">
+                        ABOUT WACUS
+                        <span><img src="/public/img/index_menu_on.png" alt=""></span>
+                    </a>
+                </li>
+                <li class={isHomePage ? "on" : " "}>
+                    <a href="#" onclick="window.location='/homepage'">HOMEPAGE
+                        <span><img src="/public/img/web_menu_on.png" alt=""></span>
+                    </a>
+                </li>
+                <li class={isMarketingPage ? "on" : " "}>
+                    <a href="#" onclick="window.location='/marketing'">MARKETING
+                        <span><img src="/public/img/marketing_menu_on.png" alt=""></span>
+                    </a>
+                </li>
+                <li class="">
+                    <a href="https://wacus.co.kr/portfolio/index.php?cate=web" target="_blank"  rel="external">
+                        PORTFOLIO
+
+                    </a>
+                </li>
+               
+            </ul>
+        </nav>
+        <div class="ham">
+            <span></span>
+            <span></span>
+            <span></span>
+            <!-- <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                <mask id="mask0_1630_761" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+                <rect width="48" height="48" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_1630_761)">
+                <path d="M8 34.5385V33H40V34.5385H8ZM8 24.769V23.231H40V24.769H8ZM8 15V13.4615H40V15H8Z" fill="white"/>
+                </g>
+            </svg>  -->
+        </div>
+    </div>
+</header>
+
+{/* 홈페이지 퀵메뉴 */}
+{isHomePage && (
+
+<div class="quick_bottom">
+    <div class="quick_list_box">
+        <ul class="quick_list">
+            <li>
+                <a href="/" >
+                    <p>ABOUT WACUS</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <mask id="mask0_1637_1013" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                            <rect y="0.0991211" width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_1637_1013)">
+                            <path d="M18.5 11.5991L12.5 17.5991L11.1 16.1991L14.7 12.5991L5.5 12.5991L5.5 10.5991L14.7 10.5991L11.1 6.99912L12.5 5.59912L18.5 11.5991Z" fill="white"/>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="/marketing" >
+                    <p>
+                        WACUS MARKETING
+                    </p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <mask id="mask0_1637_1013" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                            <rect y="0.0991211" width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_1637_1013)">
+                            <path d="M18.5 11.5991L12.5 17.5991L11.1 16.1991L14.7 12.5991L5.5 12.5991L5.5 10.5991L14.7 10.5991L11.1 6.99912L12.5 5.59912L18.5 11.5991Z" fill="white"/>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="quick_btn_box">
+        <div class="quick_btn">
+            <div class="_1 side front">
+                <img src="/public/img/quick_bottom_off.png" alt="">
+            </div>
+            <div class="_2 side back" >
+                <img src="/public/img/quick_bottom_on.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => { 
+        //홈페이지 마케팅 모바일 우측하단 버튼
+        $(".quick_btn_box").on("click", function () {
+            $(".quick_list_box").stop().slideToggle(300); // 300ms 동안 슬라이드 애니메이션
+        });
+    })
+</script>
+)}
+{/* 홈페이지 헤더 //*/}
+
+{/* 마케팅 퀵메뉴 */}
+{isMarketingPage && (
+
+<div class="quick_bottom" >
+    <div class="quick_list_box">
+        <ul class="quick_list">
+            <li>
+                <a href="/">
+                    <p>ABOUT WACUS</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <mask id="mask0_1637_1013" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                            <rect y="0.0991211" width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_1637_1013)">
+                            <path d="M18.5 11.5991L12.5 17.5991L11.1 16.1991L14.7 12.5991L5.5 12.5991L5.5 10.5991L14.7 10.5991L11.1 6.99912L12.5 5.59912L18.5 11.5991Z" fill="white"/>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="/homepage">
+                    <p>
+                        WACUS HOMEPAGE
+                    </p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                        <mask id="mask0_1637_1013" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                            <rect y="0.0991211" width="24" height="24" fill="#D9D9D9"/>
+                        </mask>
+                        <g mask="url(#mask0_1637_1013)">
+                            <path d="M18.5 11.5991L12.5 17.5991L11.1 16.1991L14.7 12.5991L5.5 12.5991L5.5 10.5991L14.7 10.5991L11.1 6.99912L12.5 5.59912L18.5 11.5991Z" fill="white"/>
+                        </g>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="quick_btn_box">
+        <div class="quick_btn">
+            <div class="_1 side front">
+                <img src="/public/img/quick_bottom_off.png" alt="">
+            </div>
+            <div class="_2 side back" >
+                <img src="/public/img/quick_bottom_on2.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => { 
+        //홈페이지 마케팅 모바일 우측하단 버튼
+        $(".quick_btn_box").on("click", function () {
+
+            $(".quick_list_box").stop().slideToggle(300); // 300ms 동안 슬라이드 애니메이션
+        });
+    })
+</script>
+<script is:inline>
+    var swiper = new Swiper(".rolling_text", {
+        direction: "vertical",
+        // effect:'fade', 
+        speed:1300,
+        mousewheel: true,
+        touchMoveStopPropagation: false,
+        watchOverflow: true,
+        loop:true,
+        autoplay: {
+            delay: 1000, 
+            disableOnInteraction: false,
+        },
+        })
+</script>
+)}
+{/* 마케팅 헤더 ////*/}
+
+
+
+
+
+
+
+
+
+<Modal />
+
+<div class={`menu_box ${isMarketingPage || isBoard || isMarketingPage2 || isCompany || isWorks ? "w_menu" : ""}`}>
+    <div class="close_bg">
+        <div class="close_w">
+
+        </div>
+        <div class={isMarketingPage || isBoard || isMarketingPage2 || isCompany || isWorks ? "menu_list board_bg" : "menu_list"}>
+            <div class= "menu_title">
+                <h4 onclick="window.location='/'">About us</h4>
+                <ul>
+                    <li>
+                        <a href="/company">Company</a>
+                    </li>
+                    <li>
+                        <a href="/board">Story</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu_title">
+                <h4 onclick="window.location='/works'">Works</h4>
+            </div>
+            <div class="menu_title">
+                <h4 onclick="window.location='/marketing'">Marketing</h4>
+                <ul>
+                    <li>
+                        <a href="/marketingPage">Hospital Marketing</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu_title">
+                <h4 onclick="window.location='/homepage'">Homepage</h4>
+                <ul>
+                    <li>
+                        <a href="/homePageDetail">Home page</a>
+                    </li>
+                    <li>
+                        <a href="/seo">SEO</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu_title">
+                <h4 onclick="window.location='https://wacus.co.kr/portfolio/index.php?cate=web;'">Portfolio</h4>
+            </div>
+            <div class="menu_title">
+                <h4 id="header_contact_link" onclick="window.location='/contact'">Contact</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script is:inline>
+
+    function gtag_report_conversion_header_contact(url) {
+    var callback = function () {
+        if (typeof(url) != 'undefined') {
+        window.location = url;
+        }
+    };
+    gtag('event', 'conversion', {
+        'send_to': 'AW-16997367498/mPp0CNr0nLgaEMr9_Kg_',
+        'value': 5.0,
+        'currency': 'KRW',
+        'event_callback': callback
+    });
+    return false;
+    }
+    $('#header_contact_link').on('click', function(e) {
+        e.preventDefault();
+        gtag_report_conversion_header_contact($(this).attr('href'));
+    });
+
+
+    $(".close_w").on("click", function () {
+        $(".menu_box,.ham").removeClass("open");
+    })
+
+</script>

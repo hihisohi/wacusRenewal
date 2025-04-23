@@ -1,0 +1,158 @@
+@charset "UTF-8"; 
+
+/* common */
+.blind { position: absolute; overflow: hidden; width: 1px; height: 1px; margin: -1px; clip: rect(0, 0, 0, 0);}
+
+/* section 공통 */
+.pc { display: block;}
+.mo { display: none;}
+.section * { font: inherit; color: inherit;}
+.font-paperlogy { font-family: 'Paperlogy', serif;}
+.fw-700 { font-weight: 700;}
+.color-white { color: #fff;}
+.color-blue { color: #00D0FF;}
+.txt-gradient { background: linear-gradient(180deg, #85E4FA 24.29%, #FFF 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.btn { display: flex; align-items: center; width: 100%; max-width: 156px; padding: 7px 20px; border: 0; line-height: 1.5; cursor: pointer;}
+.btn-lg { max-width: 350px; padding: 10px 36px;}
+.btn-white { color: #262626; background-color: #fff;}
+.btn-black { color: #fff; background-color: #262626;}
+.btn-ico { width: 50px; height: 50px; border-radius: 18px; background: url('/img/hospital/arw-right-bk.svg') no-repeat center center / 24px auto #fff;}
+.main-ttl { font-family: "Origin Super Condensed", serif; font-size: 200px; letter-spacing: 4px; text-transform: uppercase;}
+
+/* service 영역 */
+.sc-service { padding: 120px 0; background: #E7E7E7;}
+.sc-service .inner { padding: 0 min(3.5vw, 70px);}
+.sc-service .sc-ttl { color: #262626;}
+.sc-service .service-list { display: flex; flex-wrap: wrap; gap: 30px 24px; margin-top: 40px;}
+.sc-service .service-item { width: calc(50% - 12px);}
+.sc-service .link-service { display: flex; height: 370px; border-radius: 40px; overflow: hidden; background-color: #292929; transition: all .3s;}
+.sc-service .link-service:hover { background-color: #000;}
+.sc-service .txt-area { display: flex; flex-direction: column; width: 57%; padding: 60px min(3.125vw, 60px);}
+.sc-service .ttl { color: #fff; font-size: 32px; font-weight: 600;}
+.sc-service .desc { margin-top: 18px; font-size: 18px; font-weight: 500; line-height: 1.5; color: #A3A3A3; letter-spacing: -0.72px;}
+.sc-service .btn { margin-top: auto;}
+.sc-service .img-area { position: relative; width: 43%; /* max-width: 378px; */ overflow: hidden;}
+.sc-service .img-area .img { width: 100%; height: 100%; object-fit: cover; opacity: .4; filter: brightness(.9) saturate(0) contrast(1.05); transition: all .4s ease-in-out;}
+.sc-service .link-service:hover .img-area .img { opacity: 1; filter: brightness(1) saturate(1) contrast(1);}
+
+.modal-type02 { display: flex; align-items: center; position: fixed; top: 0; left: 0; opacity: 1; z-index: 999; width: 100%; height: 100vh; animation: modal-open ease-out;  background: rgba(0, 0, 0, 0.60);}
+.modal-close { display: none; opacity: 0;}
+.modal-close .modal-centered {transform: translate(0, 100px);}
+.modal-type02 .modal-centered { display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh;}
+.modal-type02 .modal-box { position: relative; width: 100%; max-width: 888px; aspect-ratio: 888 / 464; border-radius: 40px; overflow: hidden; background-color: #fff; animation: modal-inner .3s ease-out; transform: translate(0, 0); transition: transform 0.3s ease-out;}
+.modal-type02 .btn-modal-close { position: absolute; top: 30px; right: 30px; width: 30px; height: 30px; padding: 0; border: none; border-radius: 18px; background: url(/img/hospital/ico-close-bk.svg) no-repeat center center / 100% auto #EFEFEF;}
+.modal-type02 .modal-content { display: flex; align-items: center; height: 100%;}
+.modal-type02 .modal-content .img-area { width: 38.2%; height: 100%;}
+.modal-type02 .modal-content .img-area .img { width: 100%; height: 100%; object-fit: cover;}
+.modal-type02 .modal-content .txt-area { display: flex; flex-direction: column; gap: 20px; width: 61.8%; padding: 0 40px;}
+.modal-type02 .modal-content .sub-title { color: #303030; font-size: 22px; line-height: 1.3;}
+.modal-type02 .modal-content .modal-title { color: #171717; font-size: 42px; font-weight: 700; line-height: 1.3; letter-spacing: -0.84px;}
+.modal-type02 .modal-content .modal-desc { color: #525252; font-size: 18px; font-weight: 500; line-height: 1.6; letter-spacing: -0.36px;}
+.modal-type02 .modal-content .ico-area { display: flex; gap: 18px;}
+.modal-type02 .modal-content .ico-box { width: 90px; height: 26px;}
+.modal-type02 .modal-content .ico { display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-position: center center; background-size: 100% auto;}
+.modal-type02 .modal-content .ico.ico-naver { background-image: url(/img/hospital/ico-naver.svg);}
+.modal-type02 .modal-content .ico.ico-google { width: 77px; background-image: url(/img/hospital/ico-google.svg);}
+.modal-type02 .modal-content .ico.ico-ig { width: 95px; background-image: url(/img/hospital/ico-ig.svg);}
+.modal-type02 .modal-content .ico.ico-fb { width: 96px; background-image: url(/img/hospital/ico-fb.svg);}
+.modal-type02 .modal-content .ico.ico-yt { background-image: url(/img/hospital/ico-yt.svg);}
+.modal-type02 .modal-content .ico.ico-meta { background-image: url(/img/hospital/ico-meta.svg);}
+.modal-type02 .modal-content .btn { position: relative; border-radius: 999em;}
+.modal-type02 .modal-content .btn::after { content: ''; display: block; width: 20px; height: 20px; background: url(/img/hospital/arw-right-w.svg) no-repeat center center / 100% auto;}
+
+@keyframes modal-open {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes modal-inner {
+    from {
+        transform: translate(0, 100px);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    /* common */
+    .btn { max-width: 13vw; padding: 0.5833vw 1.6667vw;}
+    .btn-lg { max-width: 29.1667vw; padding: 0.8333vw 3vw;}
+    .btn-ico { width: 4.1667vw; height: 4.1667vw; border-radius: 1.5vw;}
+    .main-ttl { font-size: 180px; letter-spacing: 0.3333vw;}
+    
+    /* service 영역 */
+    .sc-service { padding: 10vw 0;}
+    .sc-service .inner { padding: 0 5.8333vw;}
+    .sc-service .service-list { gap: 2.5vw 2vw; margin-top: 3.3333vw;}
+    .sc-service .service-item { width: calc(50% - 1vw);}
+    .sc-service .link-service { height: 30.8333vw; border-radius: 3.3333vw;}
+    .sc-service .txt-area { width: 57%; padding: 5vw min(3.125vw, 5vw);}
+    .sc-service .ttl { font-size: 2.6667vw;}
+    .sc-service .desc { margin-top: 1.5vw; font-size: 1.5vw; letter-spacing: -0.06vw;}
+    .sc-service .img-area {  width: 43%; max-width: 31.5vw;}
+    
+    .modal-close .modal-centered {transform: translate(0, 8.3333vw);}
+    .modal-type02 .modal-box { max-width: 74vw; border-radius: 3.3333vw;}
+    .modal-type02 .btn-modal-close { top: 2.5vw; right: 2.5vw; width: 2.5vw; height: 2.5vw; border-radius: 1.5vw;}
+    .modal-type02 .modal-content .img-area { width: 38.2%;}
+    .modal-type02 .modal-content .txt-area { gap: 1.6667vw; width: 61.8%; padding: 0 3.3333vw;}
+    .modal-type02 .modal-content .sub-title { font-size: 1.8333vw;}
+    .modal-type02 .modal-content .modal-title { font-size: 3.5vw; letter-spacing: -0.07vw;}
+    .modal-type02 .modal-content .modal-desc { font-size: 1.5vw; letter-spacing: -0.03vw;}
+    .modal-type02 .modal-content .ico-area { gap: 1.5vw;}
+    .modal-type02 .modal-content .ico-box { width: 7.5vw; height: 2.1667vw;}
+    .modal-type02 .modal-content .ico.ico-google { width: 6.4167vw;}
+    .modal-type02 .modal-content .ico.ico-ig { width: 7.9167vw;}
+    .modal-type02 .modal-content .ico.ico-fb { width: 8vw;}
+    .modal-type02 .modal-content .btn::after { width: 1.6667vw; height: 1.6667vw;}
+}
+
+@media screen and (max-width: 768px) {
+    /* common */
+    .pc { display: none !important;}
+    .mo { display: block;}
+    .btn { max-width: 13vw; padding: 0.5833vw 1.6667vw;}
+    .btn-lg { max-width: 263px; padding:7px 27px;}
+    .btn-ico { width: 50px; height: 50px; border-radius: 18px;}
+    .main-ttl { font-size: 86px; letter-spacing: 1.72px;}
+    
+    /* service 영역 */
+    .sc-service { padding: 80px 0 140px;}
+    .sc-service .inner { padding: 0 18px;}
+    .sc-service .service-swiper { overflow: visible;}
+    .sc-service .service-list { flex-wrap: nowrap; gap: 0; margin-top: 12px;}
+    .sc-service .service-item { width: 100%; max-width: 300px; perspective: 600px;}
+    .sc-service .service-item + .service-item { margin-left: 12px;}
+    .sc-service .link-service { display: block; position: relative; height: 420px; border-radius: 20px; overflow: visible; background-color: #000; will-change: transform; transition: transform 1s; transform-style: preserve-3d;}
+    .sc-service .link-service.is-flipped { transform: rotateY(180deg);}
+    .sc-service .card-cnt { position: absolute; top: 0; left: 0; width: 100%; height: 100%; backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: translateZ(0); -webkit-transform: translateZ(0);}
+    .sc-service .card-cnt.front { display: flex; overflow: hidden; border-radius: 20px; flex-direction: column;}
+    .sc-service .card-cnt.back { background-color: #fff; overflow: hidden; border-radius: 20px; transform: rotateY(180deg);}
+    .sc-service .txt-area { width: 100%; padding: 34px 30px;}
+    .sc-service .ttl { font-size: 20px;}
+    .sc-service .desc { margin: 15px 0 40px; font-size: 15px; letter-spacing: -0.6px;}
+    .sc-service .btn-ico { background: url(/img/hospital/ico-flip.svg) no-repeat center center / 24px auto #fff;}
+    .sc-service .img-area { width: 100%; max-width: unset;}
+    .sc-service .img-area .img { width: 100%; opacity: 1; filter: unset;}
+    .sc-service .sub-ttl { font-size: 14px;}
+    .sc-service .modal-title { margin-top: 6px; font-size: 22px; line-height: 1.3; letter-spacing: -.44px;}
+    .sc-service .modal-desc { margin-top: 10px; font-size: 15px; line-height: 1.5; letter-spacing: -0.6px;}
+    .sc-service .ico-area { display: flex; flex-wrap: wrap; gap: 10px 13px; margin-top: 50px;}
+    .sc-service .ico-box { width: 68px; height: 20px;}
+    .sc-service .ico { display: block; width: 100%; height: 100%; background-repeat: no-repeat; background-position: center center; background-size: 100% auto;}
+    .sc-service .ico.ico-naver { background-image: url(/img/hospital/ico-naver.svg);}
+    .sc-service .ico.ico-google { width: 60px; background-image: url(/img/hospital/ico-google.svg);}
+    .sc-service .ico.ico-ig { width: 73px; background-image: url(/img/hospital/ico-ig.svg);}
+    .sc-service .ico.ico-fb { width: 74px; background-image: url(/img/hospital/ico-fb.svg);}
+    .sc-service .ico.ico-yt { background-image: url(/img/hospital/ico-yt.svg);}
+    .sc-service .ico.ico-meta { background-image: url(/img/hospital/ico-meta.svg);}
+    .sc-service .btn-black { position: relative; width: 100%; max-width: 168px; margin-top: 50px; padding: 7px 20px; border-radius: 999em; font-size: 14px; letter-spacing: -0.56px;}
+    .sc-service .btn-black::after { content: ''; display: block; width: 20px; height: 20px; background: url(/img/hospital/arw-right-w.svg) no-repeat center center / 100% auto;}
+    .sc-service .swiper-pagination { bottom: -25px;}
+    .sc-service .swiper-pagination .swiper-pagination-bullet { width: 5px; height: 5px; margin: 0 3px; border-radius: 999em; background-color: #000; transition: all .3s;}
+    .sc-service .swiper-pagination .swiper-pagination-bullet-active { width: 50px;}
+}

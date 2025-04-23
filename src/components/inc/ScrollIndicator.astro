@@ -1,0 +1,179 @@
+<!-- <script src="/smooth-scrollbar.js" is:inline>
+    document.addEventListener('astro:page-load', () => {
+        console.log('scrollSmoother!');
+        const Scrollbar = window.Scrollbar;
+        scrollbar.use(OverscrollPlugin)
+        Scrollbar.init(document.querySelector("#smooth-content"), {
+        damping: 0.1,
+        renderByPixels: true,
+        });
+        console.log(Scrollbar);
+    });
+</script> -->
+
+<div class="progress-container">
+	<div class="progress-bar" id="indicator"></div>
+</div>
+
+<style>
+    .progress-container {
+    position: fixed;
+    right: 16px;
+    height: calc(var(--vh) * .2);
+    top:50%;
+    width: 6px; /* 높이는 4px */
+    background: rgba(124, 124, 124, 0.1); /* 배경색 투명하게 */
+    z-index: 1000; /* 다른 요소들보다 위에 보이게 */
+    transform: translateY(-50%);
+    border-radius: 3px;
+    opacity: 0;
+    transition:.3s opacity ;
+    }
+    .progress-container.on {
+        opacity: 1;
+    }
+    .progress-bar {
+        border-radius: 3px;
+        position: absolute;
+        top:0;
+        width: 6px;
+        height: 20%;
+        background: linear-gradient(0deg, rgb(69, 93, 230) 0%, #00D0FF 100%);
+        animation:lightBlur 2s infinite ease ;
+        
+    }
+    @media screen and (max-width:768px) {
+        .progress-container {right:6px;width: 2px;border-radius: 1px;}    
+        .progress-bar {width:2px;border-radius: 1px;}
+    }
+    @keyframes lightBlur {
+        0% {filter:drop-shadow(0 0 8px rgba(255,255,255,.5));}        
+        50% {filter:drop-shadow(0 0 0 rgba(255,255,255,.5));}
+        100% {filter:drop-shadow(0 0 8px rgba(255,255,255,.5));}
+    }
+
+</style>
+
+
+<script is:inline>
+    // document.addEventListener('astro:page-load', () => {
+    $(document).ready(function(){
+        window.onscroll = function() {myFunction()};
+        let vh = window.innerHeight;
+        $('.progress-container').attr('style','--vh:'+vh+'px');
+        $(window).on('resize', function(){
+            vh = window.innerHeight;
+            $('.progress-container').attr('style','--vh:'+vh+'px');
+        });
+        function myFunction() {
+        $('.progress-container').addClass('on');
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 80;
+        $('.progress-bar').attr('style','top:calc('+scrolled+'%');
+        };
+        let scrolling;
+        window.addEventListener('scroll', (e) => {
+        clearTimeout(scrolling);
+        scrolling = setTimeout(() => {
+            $('.progress-container').removeClass('on');
+            scrolling = undefined;
+        }, 1500);
+        })
+        
+    });
+</script>
+
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script> 
+<!--script type="module">
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    let ctx10, content;
+    let smoother;
+    // console.log($('#smooth-content'));
+  
+    
+  
+    
+    // 페이지 전환 전 정리
+    document.addEventListener('astro:before-swap', () => {
+    //   console.log("페이지가 전환되기 전입니다. 필요한 정리 작업을 수행합니다.");
+      // ScrollTrigger 및 Smoother 정리
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+      ScrollTrigger.clearScrollMemory();
+      smoother && smoother.kill();
+      // GSAP 컨텍스트 정리
+      ctx10 && ctx10.revert();
+      ctx10 = null;
+    });
+  
+  
+    // 페이지 로드 시 실행
+    document.addEventListener('astro:after-swap', () => {
+    //   console.log($('#smooth-content'));
+      window.scrollTo(0, 0);
+    //   if (window.location.hash === "") {
+    //       // 스크롤 위치 초기화는 필요할 때만 수행
+    //       window.scrollTo(0, 0);
+    //       console.log('전환 후?');
+    //   }
+      setTimeout(() => {
+        if (window.innerWidth > 767) {
+          // 기존 컨텍스트와 Smoother를 정리
+          
+          ctx10 && ctx10.revert();
+          smoother && smoother.kill();
+          content = document.getElementById("smooth-content");
+        //   scrollCtx()
+
+        const lenis = new Lenis({
+            // 추가된 부분
+            duration: 1.3,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            });
+
+            function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+          
+        }
+      }, 1000);
+    });
+  
+    $(document).ready(function(){
+    //   console.log($('#smooth-content'));
+      if (window.location.hash === "") {
+          // 스크롤 위치 초기화는 필요할 때만 수행
+          window.scrollTo(0, 0);
+        //   console.log('기본 값?');
+      }
+      setTimeout(() => {
+        if (window.innerWidth > 767) {
+          // 기존 컨텍스트와 Smoother를 정리
+          ctx10 && ctx10.revert();
+          smoother && smoother.kill();
+          content = document.getElementById("smooth-content");
+          scrollCtx()
+          
+        }
+      }, 1000);
+    });
+  
+  function scrollCtx() {
+      // 새로운 컨텍스트 및 Smoother 생성
+      ctx10 = gsap.context(() => {
+          gsap.set(document.body, { height: content.clientHeight });
+          smoother = ScrollSmoother.create({
+          smooth: 1,
+          effects: true,
+          ignoreMobileResize: true,
+          });
+      });
+  }
+  
+//   function revertM() {
+//       console.log('REVERT!!');
+//       ctx10.revert();
+//   };
+</script-->

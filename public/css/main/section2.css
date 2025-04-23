@@ -1,0 +1,149 @@
+.s11_tit_group11{display: flex;gap: 26px; width: 95%; margin: 0 auto;}
+.s11_tit_group11 h2{color: #fff; font-size: 200px;font-family:"origin-super-condensed", sans-serif;letter-spacing: -0.02rem;}
+.s11_tit_group11 h3{ padding-top: 20px;font-size: 32px;font-weight: 500;line-height: 1.5;color: #00d0ff;}
+.s11_tit_group11 h3 span{border-bottom: 2px solid #00d0ff;padding-bottom: 3px;}
+.section11 .view_more_box{
+    text-align: right;
+    width: 95%;
+    margin: 80px auto 40px;
+}
+.section11{
+    padding: 130px 0 200px 0;
+}
+.section11 .view_more_box > a{
+    display: inline-block;
+    border-radius: 12px;
+    border: 1.5px solid #FFF;
+    color: #FFF;
+    font-family: "PT Bandoche";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+.import_card{
+    position: relative;
+}
+
+.import_card .img_box{
+    filter: brightness(0.5);
+    /* aspect-ratio: 650 / 365;
+    max-height: 365px; */
+}
+.import_card .img_box img{
+    display: block;
+    width: 100%;
+    max-height: 350px;
+    min-height: 350px;
+    object-fit: cover;
+}
+.import_card .text_box{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    max-width: 350px;
+    width: 100%;
+}
+.import_card .text_box h3{
+    color: #FFF;
+    font-family: SUIT;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.4;
+    letter-spacing: -0.56px;
+    letter-spacing: -0.56px;
+    white-space: nowrap;      /* 텍스트를 한 줄로 처리 */
+    overflow: hidden;         /* 넘친 부분을 숨김 */
+    text-overflow: ellipsis; 
+}
+.import_card .text_box span{
+    margin-top: 16px;
+    color: #FFF;
+    font-family: SUIT;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.3px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.40);
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+.import_swiper .swiper-button-next:after,
+.import_swiper .swiper-button-prev:after{
+    display: none;
+}
+.import_swiper .swiper-button-next,
+.import_swiper  .swiper-rtl .swiper-button-prev{
+    right: 70px;
+}
+.import_swiper .swiper-button-prev,
+.import_swiper  .swiper-rtl .swiper-button-next{
+    left: 70px;
+}
+.import_swiper .swiper-button-next, .import_swiper .swiper-button-prev{
+    width: 39px;
+    height: 39px;
+}
+@media screen and (max-width:1280px) {
+    .import_card .text_box h3{
+        font-size: 20px;
+    }
+    .import_card .text_box{
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .s11_tit_group11 {
+        width:calc(100% - 48px);
+    }
+    .section11{
+        padding: 40px 0 80px;
+    }
+    .s11_tit_group11 h2{
+        font-size: 100px;
+    }
+    .s11_tit_group11 h3{
+        font-size: 24px;
+    }
+    .section11 .view_more_box{
+        margin: 40px auto 20px;
+    }
+    .import_card .text_box h3{
+        font-size: 18px;
+    }
+    .import_card .text_box h3{
+        margin-top: 8px;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    .import_card .text_box h3{
+        font-size: 18px;
+    }
+    .import_card .text_box h3{
+        margin-top: 8px;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    .import_card .text_box span{
+        margin-top: 7px;
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    .import_card .img_box img{
+   
+        max-height: 250px;
+        min-height: 250px;
+    }
+    .import_swiper .swiper-button-next,
+    .import_swiper  .swiper-rtl .swiper-button-prev{
+        right: 35px;
+    }
+    .import_swiper .swiper-button-prev,
+    .import_swiper  .swiper-rtl .swiper-button-next{
+        left: 35px;
+    }
+}

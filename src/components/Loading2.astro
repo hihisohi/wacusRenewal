@@ -1,0 +1,154 @@
+---
+
+import "../../public/css/loading.css";
+
+---
+
+
+<!-- LOADING SCREEN -->
+<div class="loading-screen">
+    <!-- loader -->
+    <div class="loader">
+        <div class="loader-1 bar"></div>
+        <div class="loader-2 bar"></div>
+        <div class="loader-3 bar"></div>
+        <div class="loader-4 bar"></div>
+    </div>
+
+    <!-- <div class="loaderLogoImg">
+        <img src="/img/logo_w.svg" alt="와커스 로고">
+    </div> -->
+        <!-- counter -->
+    <div class="counter">
+        
+    </div>
+</div>
+
+
+
+<script>
+    // document.addEventListener('astro:page-load', () => {
+    $(document).ready(function(){
+        $('.loading-screen .counter').attr('style','pointer-events:none;opacity:0;');
+            gsap.to(".loader", {
+                background: "none",
+                delay: 1,
+                duration: 0.1,
+            });
+            if (window.innerWidth > 1025) {
+            gsap.to(".loader-1", {
+                borderRadius: "50",
+                rotate: 65,
+                x:204,
+                duration: 0.5,
+                delay: 1,
+            });
+                gsap.to(
+            ".loader-2",
+            {   
+                borderRadius: "50",
+                x:68,
+                rotate: -65,
+                duration: 0.5,
+            },
+            "<"
+            );
+            gsap.to(".loader-3", {
+                borderRadius: "50",
+            x:-68,
+            rotate: 65,
+            duration: 0.5,
+            delay: 1,
+            });
+            gsap.to(".loader-4", {
+                borderRadius: "50",
+            x:-204,
+            rotate: -65,
+            duration: 0.5,
+            delay: 1,
+            });
+            
+            gsap.to('.loader',{
+                scale: 40,
+                duration: 1,
+                delay: 2,
+                ease: "power2.inOut"
+            })
+            gsap.to('.loader',{
+                rotate: 45,
+                y: 500,
+                x: 2000,
+                duration: 1,
+                delay: 2,
+                ease: "power2.inOut",
+            })
+            gsap.to(".loading-screen",{
+                opacity: 0,
+                duration: 0.5,
+                delay: 2.5,
+                ease: "power1.inOut",
+                onComplete: function(){
+                    $('.loading-screen').attr('style','pointer-events:none;opacity:0;');
+                },
+            })
+
+        } else {
+            gsap.to(".loader-1", {
+                borderRadius: "50",
+                rotate: 65,
+                x:'20.4vw',
+                duration: 0.5,
+                delay: 1,
+            });
+            gsap.to(
+            ".loader-2",
+            {   
+                borderRadius: "50",
+                x:'6.8vw',
+                rotate: -65,
+                duration: 0.5,
+            },
+            "<"
+            );
+            gsap.to(".loader-3", {
+                borderRadius: "50",
+            x:'-6.8vw',
+            rotate: 65,
+            duration: 0.5,
+            delay: 1,
+            });
+            gsap.to(".loader-4", {
+                borderRadius: "50",
+            x:'-20.4vw',
+            rotate: -65,
+            duration: 0.5,
+            delay: 1,
+            });
+            
+            gsap.to('.loader',{
+                scale: 40,
+                duration: 1,
+                delay: 2,
+                ease: "power2.inOut"
+            })
+            gsap.to('.loader',{
+                rotate: 45,
+                y: '50vw',
+                x: '200vw',
+                duration: 1,
+                delay: 2,
+                ease: "power2.inOut",
+            })
+            gsap.to(".loading-screen",{
+                opacity: 0,
+                duration: 0.5,
+                delay: 2.5,
+                ease: "power1.inOut",
+                onComplete: function(){
+                    $('.loading-screen').attr('style','pointer-events:none;opacity:0;');
+                },
+            })
+        };
+    });
+
+</script>

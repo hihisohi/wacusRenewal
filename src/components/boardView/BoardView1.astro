@@ -1,0 +1,195 @@
+<section class="detail_page">
+    <div class="detail_wrap">
+        <div class="detail_view container_sh">
+            <div class="title_wrap">
+                <div class="title" id="titleData">
+
+                </div>
+                <div class="date" id="dateData"></div>
+                <div class="tag" id="cateData"></div>
+            </div>
+            <div class="con_wrap">
+                <img src="" id="imgData" alt="">
+                <p id="contentData">
+                </p>
+            </div>
+        </div>
+        <div class="detail_nav container_sh">
+            <div class="prev_btn button">
+                <a href="javascript:alert('이전글이 없습니다.');" id="beforeLink">
+                    <span class="pc_block" id="beforeTitle">이전글이 없습니다.</span>
+                </a>
+            </div>
+            <div class="list_go">
+                <a href="#" onclick="window.location='/board'">
+                    Back to List
+                </a>
+            </div>
+            <div class="next_btn button">
+                <a href="javascript:alert('다음글이 없습니다.');" id="afterLink">
+                    <span class="pc_block" id="afterTitle">다음글이 없습니다.</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="list_wrap">
+        <h3>이런 와커스 스토리는 어때요?</h3>
+        <div class="dt_list_swiper swiper">
+            <div class="swiper-wrapper" id="bringDataPost">
+              
+                <div class="swiper-slide">
+                    <a href="javascript:alert('준비중입니다');">
+                        <img src="/img/boardview/list01.jpg" alt="">
+                        <div class="txt_wrap">
+                            <p>2024 와커스 가을 워크샵<br>
+                                두줄일때</p>
+                            <div class="list_tag">
+                                Contents
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+
+            </div>
+        </div>
+    </div> -->
+</section>
+
+<script is:inline>
+    detailListSwiper = new Swiper(".dt_list_swiper", {
+        spaceBetween: 20,
+        autoplay: {
+            delay: 2500,
+            disableOnInteration: false,
+        },
+        breakpoints: {
+            0 : {
+                slidesPerView: 1.5,
+                centeredSlides : true,
+            },
+            769: {
+                slidesPerView: 3,
+                centeredSlides : false,
+            },
+            1024 : {
+                slidesPerView: 4,
+                centeredSlides : false,
+            },
+        }
+    })
+
+</script>
+
+<script is:inline>
+  $(document).ready(function() {
+    let seq = getQueryParam('seq');
+
+  // AJAX 요청을 설정합니다
+  $.ajax({
+      url: "https://wacus.co.kr/api/bringPostData3.php", // 데이터를 가져올 서버의 URL
+      type: "POST", // HTTP 요청 메소드 (GET, POST 등)
+      dataType: "json",
+      data : {seq : seq},
+      success: function(response) {
+        document.getElementById("titleData").textContent  = response.title[0];
+        document.getElementById("dateData").textContent  = response.wdate[0];
+        document.getElementById("cateData").textContent  = response.category[0];
+        document.getElementById("imgData").src   = response.img[0];
+        document.getElementById("contentData").innerHTML  = response.content[0];
+        
+      },
+      error: function(xhr, status, error) {
+          // 요청이 실패하면, 에러 로그를 콘솔에 출력합니다.
+          console.error("AJAX 요청 실패: " + status + ", " + error);
+      }
+  });
+});
+
+function getQueryParam(param) {
+    var urlParams = new URLSearchParams(window.location.search);
+    return urlParams.has(param) ? urlParams.get(param) : '';
+}
+
+$(document).ready(function() {
+  let seq = getQueryParam('seq');
+    // AJAX 요청을 설정합니다
+    // $.ajax({
+    //     url: "https://wacus.co.kr/api/bringPostData.php", // 데이터를 가져올 서버의 URL
+    //     type: "POST", // HTTP 요청 메소드 (GET, POST 등)
+    //     dataType: "json",
+    //     success: function(response) {
+    //       console.log(response);
+    //       console.log(response.seq.length);
+
+    //       var contentHtml = '';
+
+    //       for (let index = 0; index < response.seq.length; index++) {
+            
+    //         // 각 항목별로 HTML 문자열을 생성
+    //         contentHtml += '<div class="swiper-slide">'+
+    //                 '<a href="javascript:alert(`/boardView?seq='+response.seq[index]+'`);">'+
+    //                     '<img src="' + response.img[index]+'" alt="">'+
+    //                     '<div class="txt_wrap">' + response.title[index] + '<div class="list_tag">'+
+    //                              response.category[index] +
+    //                         '</div>'+
+    //                     '</div>'+
+    //                 '</a>'+
+    //             '</div>';
+                
+
+    //       }
+    //       // 'bringDataPost' ID를 가진 div에 생성된 HTML을 삽입 
+    //       $('#bringDataPost').html(contentHtml);
+            
+    //     },
+    //     error: function(xhr, status, error) {
+    //         // 요청이 실패하면, 에러 로그를 콘솔에 출력합니다.
+    //         console.error("AJAX 요청 실패: " + status + ", " + error);
+    //     }
+    // });
+
+    $.ajax({
+        url: "https://wacus.co.kr/api/bringBeforeLink.php", // 데이터를 가져올 서버의 URL
+        type: "POST", // HTTP 요청 메소드 (GET, POST 등)
+        dataType: "json",
+        data : {seq : seq},
+        success: function(response) {
+          console.log(response.title[0]);
+          console.log(response.seq.length);
+          
+          if(response.title[0] !== undefined && response.title[0])
+            document.getElementById("beforeTitle").textContent = response.title[0];
+          if(response.title[0] !== undefined && response.title[0])
+            document.getElementById("beforeLink").href = '/boardView?seq='+response.seq[0];
+        },
+        error: function(xhr, status, error) {
+            // 요청이 실패하면, 에러 로그를 콘솔에 출력합니다.
+            console.error("AJAX 요청 실패: " + status + ", " + error);
+        }
+    });
+
+    $.ajax({
+        url: "https://wacus.co.kr/api/bringAfterLink.php", // 데이터를 가져올 서버의 URL
+        type: "POST", // HTTP 요청 메소드 (GET, POST 등)
+        dataType: "json",
+        data : {seq : seq},
+        success: function(response) {
+          console.log(response.title[0]);
+          console.log(response.seq.length);
+          if(response.title[0] !== undefined && response.title[0])
+            document.getElementById("afterTitle").textContent = response.title[0];
+          if(response.title[0] !== undefined && response.title[0])
+            document.getElementById("afterLink").href  = '/boardView?seq='+response.seq[0];
+        },
+        error: function(xhr, status, error) {
+            // 요청이 실패하면, 에러 로그를 콘솔에 출력합니다.
+            console.error("AJAX 요청 실패: " + status + ", " + error);
+        }
+    });
+
+    
+});
+
+
+</script>

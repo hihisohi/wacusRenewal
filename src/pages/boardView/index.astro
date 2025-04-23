@@ -1,0 +1,42 @@
+---
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"; //타이틀이랑 웹사이트 설명 
+import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
+
+
+import Head from '../../components/layout/Head.astro'; //메타태그들
+import Header from '../../components/layout/Header.astro'; //진정한 헤더
+import Section1 from "../../components/main/Section1.astro"; //메인 첫번째
+
+
+import Loading from "../../components/Loading.astro"; //로딩
+
+import MouseGrid from "../../components/MouseGrid.astro";
+import MouseEffect from "../../components/MouseEffect.astro";
+import BoardView1 from "../../components/boardView/BoardView1.astro";
+import Section10 from "../../components/main/Section10.astro";
+
+const currentUrl = Astro.request.url;
+
+---
+
+<html lang="ko">
+    <head>
+        <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <link rel="stylesheet" href="../../../public/css/boardview/boardview.css">
+    </head>
+    <body>
+        <Header />
+        <!-- <Loading /> -->
+        <!-- <ViewTransitions /> -->
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <BoardView1 />
+                <Section10 />
+            </div>
+        </div>
+
+
+    </body>
+
+</html>

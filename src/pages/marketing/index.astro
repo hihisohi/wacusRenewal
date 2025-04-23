@@ -1,0 +1,54 @@
+---
+title: "Marketing Page"
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"; //타이틀이랑 웹사이트 설명 
+import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
+
+import "../../../public/css/marketing/section1.css"
+
+import Head from '../../components/layout/Head.astro'; //메타태그들
+import Header from '../../components/layout/Header.astro'; //진정한 헤더
+
+import Loading from "../../components/Loading2.astro"; //상세로딩
+
+
+import Marketing1 from '../../components/marketing/Marketing1.astro'; //롤링섹션
+import Marketing2 from "../../components/marketing/Marketing2.astro"; //검정시계, 마케팅하는 프로세스
+import Marketing3 from "../../components/marketing/Marketing3.astro"; //마케팅종류
+import Marketing4 from "../../components/marketing/Marketing4.astro"; //our work
+import Marketing5 from "../../components/marketing/Marketing5.astro"; //문의하기
+import Section10 from "../../components/main/Section10.astro"; //풋터
+import ScrollIndicator from "../../components/inc/ScrollIndicator.astro"; //스크롤 인디케이터
+---
+
+<html lang="ko">
+    <head>
+        <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <ScrollIndicator />
+        <!-- <ViewTransitions /> -->
+        <link rel="stylesheet" href="../../../public/css/marketing/section1.css">
+        <link rel="stylesheet" href="../../../public/css/marketing/section4.css">
+        <script src="../../../public/js/marketing/section2.js"></script>
+        <script src="../../../public/js/marketing/section3.js"></script>
+        <script src="../../../public/js/marketing/section4.js"></script>
+        <script src="../../../public/js/marketing/section5.js"></script>
+    
+    </head>
+    <body>
+        <Header />
+        <Loading />
+        
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <Marketing1 client:load/>
+                <Marketing2 client:load />
+                <Marketing3 client:load/>
+                <Marketing4 client:load/>
+                <Marketing5 client:load/>
+                <Section10 client:load/>
+            </div>
+        </div>
+
+    </body>
+</html>

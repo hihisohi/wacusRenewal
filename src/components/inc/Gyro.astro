@@ -1,0 +1,14 @@
+<script>// DeviceOrientation 이벤트
+
+window.addEventListener("deviceorientation", event => {
+  // process event.alpha, event.beta and event.gamma
+//   $('#gytoTest').text('33');
+  $('#gytoTest').text(event.alpha);
+  $('#gytoTest2').text('true');
+});
+
+    
+</script>
+
+<div id="gytoTest" style="position:fixed;z-index: 999;width:100%;height:50px;font-size:18px;color:#000;bottom:0">test</div>
+<div id="gytoTest2" style="position:fixed;z-index: 999;width:100%;height:50px;font-size:18px;color:#000;bottom:50px">112</div>

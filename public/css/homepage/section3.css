@@ -1,0 +1,32 @@
+.line_mouse_section {
+    position: relative;
+    width: 100%;
+}
+
+.horizontal-bar, .vertical-bar {
+    position: absolute;
+    background-color: #222;
+    pointer-events: none; /* 마우스 이벤트가 이 요소를 차단하지 않도록 설정 */
+    transition: transform 0.1s ease;
+    z-index: 2;
+}
+
+.horizontal-bar {
+    height: 1px;
+}
+
+.vertical-bar {
+    width: 1px;
+}
+#stone {width:600px;height:600px;overflow: hidden; pointer-events: none;}
+#stoneRe {width:600px;height:600px;overflow: auto;transform: scaleY(-1) translateY(-50%);filter: blur(20px);mix-blend-mode: screen;position:absolute;}
+.sec2 .cont_1 >div.left {height:650px;overflow: hidden;position: relative;}
+.sec2 .blackSh {z-index: 1;position: absolute;bottom:-1px;width:100%;height: 30%;background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);}
+.sec2 .cont_1 >div.left {height:650px;overflow: hidden;position: relative;}
+
+@media screen and (max-width:1024px) {
+    #stone {width:100%;height:450px;overflow: hidden;}
+    #stoneRe {width:100%;height:450px}
+    .sec2 .cont_1 >div.left {width:100%;aspect-ratio: 1 / 1;height: 400px;}
+    
+}

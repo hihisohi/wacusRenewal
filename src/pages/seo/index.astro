@@ -1,0 +1,561 @@
+---
+title: "seo Page"
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"; //타이틀이랑 웹사이트 설명 
+import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
+
+import "../../../public/css/marketing/section6.css"
+
+import Head from '../../components/layout/Head.astro'; //메타태그들
+import Header from '../../components/layout/Header.astro'; //진정한 헤더
+
+import Section10 from "../../components/main/Section10.astro"; //풋터
+---
+
+<html lang="ko">
+    <head>
+        <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <!-- <ViewTransitions /> -->
+    <body>
+        <Header />
+        
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <main id="seo_page">
+                    <section class="sec_1">
+                        <div class="cont_1">
+                            <div class="text_box" data-aos="fade-right"  data-aos-duration="1500">
+                                <span>Wacus</span>
+                                <h2>
+                                    홈페이지 제작이후<br>
+                                    <span>상위노출</span>하셨나요?
+                                </h2>
+                                <p>
+                                    <strong>SEO(Search Engine Optimization) 전략 – 와커스의 검색엔진 최적화 노하우</strong><br class="none_768">
+                                    검색엔진 최적화(SEO)는 단순한 기술적 작업이 아니라, <br class="none_768">
+                                    고객의 웹사이트가 검색 결과 상위에 노출되어 더 많은 방문자와 신뢰를 얻을 수 있도록 돕는 핵심 전략입니다. <br>
+                                    와커스는 다음과 같은 SEO 최적화 방안을 통해 고객의 성공을 지원합니다.
+                                </p>
+                            </div>
+                            <div class="img_box" data-aos="fade-down"  data-aos-duration="1500">
+                                <img src="/public/img/seo/seo_img_1.png" alt="">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_2">
+                        <div class="cont_1">
+                            <div class="text_left seo_common_box" data-aos="fade-right"  data-aos-duration="1500">
+                                <div class="top">
+                                    <div class="num">
+                                        <h2>1</h2>
+                                        <span></span>
+                                        <h2 class="block_960">의미 있는 HTML 태그 사용</h2>
+                                    </div>
+                                    <div>
+                                        <h4 class="none_960">의미 있는 HTML 태그 사용</h4>
+                                        <p>우리는 단순히 HTML을 작성하는 것이 아니라, <strong>SEO 친화적인 코드를 만듭니다.</strong></p>
+                                    </div>
+                                </div>
+                                <div class="bottom" >
+                                    <dl>
+                                        <dt>계층 구조 명확화</dt>
+                                        <dd>
+                                            웹 접근성을 철저히 하여 장애를 가진 사용자뿐만 <br class="none_768">
+                                            일시적은 장애를 갖고 있는 사람도 이용할수 있도록 만든다.<br>
+                                            크로스브라우징을 통해 다양한 웹 브라우저와 환경에서 <br class="none_768">
+                                            동일하거나 유사한 사용자 경험을 제공하도록 제작합니다.
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>키워드 활용</dt>
+                                        <dd>
+                                            주요 키워드를 제목(h1, h2), 본문, URL, 메타 태그, <br class="none_768">
+                                            이미지 대체 텍스트(alt)에 자연스럽게 포함합니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="text_right" data-aos="fade-left"  data-aos-duration="1500">
+                                <div class="img_box">
+                                    <img src="/public/img/seo/seo_img_2.png" alt="">
+                                </div>
+                                <div class="ani _1 gray">
+                                    <span>SEO</span>
+                                </div>
+                                <div class="ani _2 gray">
+                                    <span>테크니컬구조화</span>
+                                </div>
+                                <div class="ani _3 gray_05">
+                                    <span>알고리즘</span>
+                                </div>
+                                <div class="ani _4 gray_05">
+                                    <span>Google</span>
+                                </div>
+                                <div class="ani _5 orange">
+                                    <span>와커스 홈페이지</span>
+                                </div>
+                                <div class="ani _6 orange">
+                                    <span>사이트 순위</span>
+                                </div>
+                                <div class="ani _7 gray_05">
+                                    <span>최적화 작업</span>
+                                </div>
+                                <div class="ani _8 orange">
+                                    <span>키워드 분석</span>
+                                </div>
+                                <div class="ani _9 gray_05">
+                                    <span>HTML 태그</span>
+                                </div>
+                                <div class="ani _10 gray">
+                                    <span>Daum</span>
+                                </div>
+                                <div class="ani _11 gray_05">
+                                    <span>Naver</span>
+                                </div>
+                                <div class="ani _12 gray">
+                                    <span>검색엔진최적화</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_3">
+                        <div class="cont_1">
+                            <div class="img_box" data-aos="fade-right"  data-aos-duration="1500">
+                                <img src="/public/img/seo/seo_img_3.png" alt="">
+                            </div>
+                            <div class="text_box seo_common_box" data-aos="fade-left"  data-aos-duration="1500">
+                                <div class="top">
+                                    <div class="num">
+                                        <h2>2</h2>
+                                        <span></span>
+                                        <h2 class="block_960">반응형 디자인 구현</h2>
+                                    </div>
+                                    <div>
+                                        <h4 class="none_960">반응형 디자인 구현</h4>
+                                        <p><strong>모든 디바이스에서 완벽히 작동</strong>하는 반응형 웹사이트를 설계합니다.</p>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <dl>
+                                        <dt>모바일 퍼스트 디자인</dt>
+                                        <dd>
+                                            Google이 모바일 친화적인 웹사이트를 선호하므로, <br class="none_768">
+                                            모바일에 최적화된 디자인을 구현합니다.
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>다양한 디바이스 지원</dt>
+                                        <dd>
+                                            다양한 인터렉션 사용 :gsap ,aos, animation, <br class="none_768">
+                                            javascript를 사용하여 동적요소 표현
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_2">
+                        <div class="cont_1">
+                            <div class="text_left seo_common_box" data-aos="fade-right"  data-aos-duration="1500">
+                                <div class="top">
+                                    <div class="num">
+                                        <h2>3</h2>
+                                        <span></span>
+                                        <h2 class="block_960">내부 링크와 사이트맵 관리</h2>
+                                    </div>
+                                    <div>
+                                        <h4 class="none_960">내부 링크와 사이트맵 관리</h4>
+                                        <p><strong>검색엔진이 웹사이트를 더 잘 탐색하고</strong> 색인할 수 있도록 내부 구조를 최적화합니다.</p>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <dl>
+                                        <dt>계층 구조 명확화</dt>
+                                        <dd>
+                                            h1, h2, h3 등의 계층을 명확히 작성해 검색엔진이 <br class="none_768">
+                                            콘텐츠 구조를 이해할 수 있도록 돕습니다.
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>키워드 활용</dt>
+                                        <dd>
+                                            주요 키워드를 제목(h1, h2), 본문, URL, 메타 태그, <br class="none_768">
+                                            이미지 대체 텍스트(alt)에 자연스럽게 포함합니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="text_right right_img_3" data-aos="fade-left"  data-aos-duration="1500">
+                                <div class="img_box">
+                                    <img src="/public/img/seo/seo_img_4.png" alt="">
+                                </div>
+                                <div class="orange_one">
+                                    <div class="ripple-container">
+                                        <div class="ripple"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_3">
+                        <div class="cont_1">
+                            <div class="img_box" data-aos="fade-right"  data-aos-duration="1500">
+                                <img src="/public/img/seo/seo_img_5.png" alt="">
+                            </div>
+                            <div class="text_box seo_common_box" data-aos="fade-left"  data-aos-duration="1500">
+                                <div class="top">
+                                    <div class="num">
+                                        <h2>4</h2>
+                                        <span></span>
+                                        <h2 class="block_960">HTTPS와 보안 강화</h2>
+                                    </div>
+                                    <div>
+                                        <h4 class="none_960">HTTPS와 보안 강화</h4>
+                                        <p>SSL 인증서를 적용하여 <strong>HTTPS를 구현</strong>합니다.</p>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <dl>
+                                        <dt>보안성 향상</dt>
+                                        <dd>
+                                            사용자 데이터를 보호하고, <br class="none_768">
+                                            Google이 선호하는 안전한 웹사이트로 인식되도록 합니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_2">
+                        <div class="cont_1">
+                            <div class="text_left seo_common_box" data-aos="fade-right"  data-aos-duration="1500">
+                                <div class="top">
+                                    <div class="num">
+                                        <h2>5</h2>
+                                        <span></span>
+                                        <h2 class="block_960">사용자 경험(UI/UX) 최적화</h2>
+                                    </div>
+                                    <div>
+                                        <h4 class="none_960">사용자 경험(UI/UX) 최적화</h4>
+                                        <p><strong>사용자 친화적인 설계</strong>를 통해 더 많은 방문자를 유도합니다.</p>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <dl>
+                                        <dt>낮은 이탈률</dt>
+                                        <dd>
+                                            간결한 네비게이션과 직관적인 디자인으로 사용자의 체류 시간을 늘립니다.
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>접근성 준수</dt>
+                                        <dd>
+                                            ARIA 속성을 활용해 스크린 리더 사용자도 <br class="none_768">
+                                            웹사이트를 쉽게 이용할 수 있도록 설계합니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="text_right right_img_3" data-aos="fade-left"  data-aos-duration="1500">
+                                <div class="img_box">
+                                    <img src="/public/img/seo/seo_img_6.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_3">
+                        <div class="cont_1">
+                            <div class="img_box" data-aos="fade-right"  data-aos-duration="1500">
+                                <img src="/public/img/seo/seo_img_7.png" alt="">
+                            </div>
+                            <div class="text_box seo_common_box"  data-aos="fade-left"  data-aos-duration="1500">
+                                <div class="top">
+                                    <div class="num">
+                                        <h2>6</h2>
+                                        <span></span>
+                                        <h2 class="block_960">백링크 전략</h2>
+                                    </div>
+                                    <div>
+                                        <h4 class="none_960">백링크 전략</h4>
+                                        <p>신뢰도 높은 백링크는 검색 순위를 높이고, <strong>더 많은 방문자를 유도</strong>합니다.</p>
+                                    </div>
+                                </div>
+                                <div class="bottom">
+                                    <dl>
+                                        <dt>검색 순위 상승</dt>
+                                        <dd>
+                                            양질의 백링크를 통해검색 엔진에서 순위가 상승합니다.
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>트래픽 증가</dt>
+                                        <dd>
+                                            외부 사이트에서 유입되는 방문자를 늘립니다.
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>신뢰도 향상</dt>
+                                        <dd>
+                                            신뢰할 수 있는 사이트에서 링크를 받으면 <br class="none_768">
+                                            사용자와 검색엔진 모두에게 긍정적인 신호를 보냅니다.
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_4">
+                        <div class="sub_w">
+                            <div class="sec_title_box center white" data-aos="fade-up"  data-aos-duration="1500">
+                                <span>Wacus SEO Effect</span>
+                                <h3>Wacus SEO효과</h3>
+                                <p>
+                                    와커스는 수많은 클라이언트와의 협업을 통해 다양한 형태의 홈페이지를 성공적으로 제작하며, <br class="none_768">
+                                    <strong>각 프로젝트마다 최적화된 노출 전략을 구현하고 있습니다.</strong><br>
+                                    우리는 단순히 홈페이지를 제작하는 데 그치지 않고, 검색엔진 최적화(SEO), 반응형 디자인, 소셜 미디어 연계 등 다양한 디지털 채널을 활용해
+                                    클라이언트의 브랜드와 메시지가 최대한 많은 잠재고객에게 효과적으로 전달될 수 있도록 지원합니다.<br>
+                                    이를 통해 <strong>와커스는 고객의 비즈니스 성장을 돕는 신뢰할 수 있는 파트너</strong>로 자리 잡고 있습니다.
+                                </p>
+                            </div>
+                            <div class="cont_1" data-aos="fade-up"  data-aos-duration="1500">
+                                <ul>
+                                    <li>
+                                        <div class="img_box">
+                                            <div class="ani_box">
+                                                <img src="/public/img/seo/seo_img_10.png" alt="">
+                                                <img src="/public/img/seo/seo_img_12.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="text_box">
+                                            <div class="ani_text_box">
+                                                <p>
+                                                    검색순위 상승
+                                                </p>
+                                                <p>
+                                                    고객 유입량 증가
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img_box">
+                                            <div class="ani_box">
+                                                <img src="/public/img/seo/seo_img_11.svg" alt="">
+                                                <img src="/public/img/seo/seo_img_13.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="text_box">
+                                            <div class="ani_text_box">
+                                                <p>
+                                                    브랜드 신뢰도 상승
+                                                </p>
+                                                <p>
+                                                    비즈니스 성장
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- <section class="sec_5">
+                        <div class="cont_1">
+                            <div class="img_box"data-aos="fade-right"  data-aos-duration="1500">
+                                <img src="/public/img/seo/seo_img_8.png" alt="와커스 빌딩">
+                            </div>
+                            <div class="text_box">
+                                <div class="top" data-aos="fade-left"  data-aos-duration="1500">
+                                    <span>The Values We Strive For</span>
+                                    <h3>우리가 지향하는 가치</h3>
+                                    <p>
+                                        우리는 단순한 홈페이지 제작을 넘어, <strong>브랜드 가치를 극대화하고 고객의 성공을 돕는 파트너가 되기를 목표</strong>로 합니다.<br>
+                                        최신 기술과 장인정신으로 차별화된 웹사이트를 제작하며, 항상 고객의 만족을 최우선으로 생각합니다.
+                                    </p>
+                                </div>
+                                <div class="bottom" data-aos="fade-left"  data-aos-duration="1500">
+                                    <h3>Let’s Work Together</h3>
+                                    <ul>
+                                        <li>
+                                            <a href="https://wacus.co.kr/portfolio/index.php?cate=web">
+                                                <h4>와커스 포트폴리오 보러가기</h4>
+                                                <div class="icon_img">
+                                                    <img src="/public/img/seo/seo_img_9.svg" alt="바로가기 아이콘">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/contact">
+                                                <h4>와커스와 프로젝트 함께하기</h4>
+                                                <div class="icon_img">
+                                                    <img src="/public/img/seo/seo_img_9.svg" alt="바로가기 아이콘">
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section> -->
+                    <section class="sec_5-1">
+                        <div class="cont_1">
+                            <div class="text_box">
+                                <div class="top" data-aos="fade-left"  data-aos-duration="1500">
+                                    <h3>우리가 지향하는 가치</h3>
+                                    <span>The Values We Strive For</span>
+                                    <p>
+                                        우리는 단순한 홈페이지 제작을 넘어, <br><strong>브랜드 가치를 극대화하고 <br>고객의 성공을 돕는 파트너가 되기를 목표</strong>로 합니다.<br>
+                                        최신 기술과 장인정신으로 차별화된 웹사이트를 제작하며, <br>항상 고객의 만족을 최우선으로 생각합니다.
+                                    </p>
+                                </div>
+                                <div class="bottom" data-aos="fade-left"  data-aos-duration="1500">
+                                    <ul>
+                                        <li>
+                                            <a href="https://wacus.co.kr/portfolio/index.php?cate=web">
+                                                <div class="btn_text">
+                                                    <h4>View Portfolio<span class="c1">.</span></h4>
+                                                    <h4>포트폴리오 보러가기</h4>
+                                                </div>
+                                                <div class="icon_img">
+                                                    <img src="/public/img/seo/arrow_forward_ios.svg" alt="바로가기 아이콘">
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="/contact">
+                                                <div class="btn_text">
+                                                    <h4>Contact Us<span class="c1">.</span></h4>
+                                                    <h4>프로젝트 함께하기</h4>
+                                                </div>
+                                                <div class="icon_img">
+                                                    <img src="/public/img/seo/arrow_forward_ios.svg" alt="바로가기 아이콘">
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <img src="/public/img/seo/s_5-1_ellipse.svg" alt="" class="dec">
+                        </div>
+                    </section>
+
+
+                    
+
+
+
+                    <Section10/>
+                </main>
+
+            </div>
+        </div>
+    </body>
+<script is:inline>
+
+// GSAP 초기화
+    gsap.registerPlugin(ScrollTrigger);
+
+    function setupAnimations() {
+        const changMobile = window.innerWidth <= 768;
+
+
+
+        if (changMobile) {
+            // 모바일 애니메이션
+
+            const tl = gsap.timeline({       
+                scrollTrigger: {
+                    trigger: ".sec_4", // 기준이 되는 요소
+                    start: "top+=30% 50%", // 화면 절반에 도달했을 때 시작
+                    end: "bottom bottom", // 스크롤 종료 지점
+                    // toggleActions: "play reverse play reverse", 
+                    // markers:true
+                },
+            });
+            tl
+                .fromTo(
+                    ".cont_1 ul li .ani_box",
+                    { y: 50, opacity: 0 }, // 시작 상태
+                    { y: 0, opacity: 1, stagger: 0.3, duration: 1, ease: "power2.out" },
+                    "strat" // 종료 상태
+                )
+                .fromTo(
+                    ".cont_1 ul li .ani_text_box",
+                    { y: 50, opacity: 0 }, // 시작 상태
+                    { y: 0, opacity: 1, stagger: 0.3, duration: 1, ease: "power2.out" }, // 종료 상태
+                "strat"
+                )
+                .fromTo(
+                    ".cont_1 ul li .ani_box",
+                    { y: 0,},
+                    { y: -40,  duration: 1, ease: "power2.out" },
+                    "moveUp"
+                )
+                .fromTo(
+                    ".cont_1 ul li .ani_text_box",
+                    { y: 0,},
+                    { y: -28,  duration: 1, ease: "power2.out" },
+                "moveUp"
+                )
+        } else {
+            // PC 애니메이션
+
+            const tl = gsap.timeline({       
+                scrollTrigger: {
+                    trigger: ".sec_4", // 기준이 되는 요소
+                    start: "top+=30% 50%", // 화면 절반에 도달했을 때 시작
+                    end: "bottom 50%", // 스크롤 종료 지점
+                    toggleActions: "play reverse play reverse", 
+                    // markers:true
+                },
+            });
+            tl
+                .fromTo(
+                    ".cont_1 ul li .ani_box",
+                    { y: 50, opacity: 0 }, // 시작 상태
+                    { y: 0, opacity: 1, stagger: 0.3, duration: 1, ease: "power2.out" },
+                    "strat" // 종료 상태
+                )
+                .fromTo(
+                    ".cont_1 ul li .ani_text_box",
+                    { y: 50, opacity: 0 }, // 시작 상태
+                    { y: 0, opacity: 1, stagger: 0.3, duration: 1, ease: "power2.out" }, // 종료 상태
+                "strat"
+                )
+                .fromTo(
+                    ".cont_1 ul li .ani_box",
+                    { y: 0,},
+                    { y: -61,  duration: 1, ease: "power2.out" },
+                    "moveUp"
+                )
+                .fromTo(
+                    ".cont_1 ul li .ani_text_box",
+                    { y: 0,},
+                    { y: -40,  duration: 1, ease: "power2.out" },
+                "moveUp"
+                )
+        }
+    }
+
+// 초기 애니메이션 설정
+setupAnimations();
+
+// 화면 크기 변경 시 다시 설정 (반응형 대응)
+window.addEventListener("resize", () => {
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // 기존 트리거 제거
+    setupAnimations(); // 새로 설정
+});
+   
+
+</script>
+
+</html>

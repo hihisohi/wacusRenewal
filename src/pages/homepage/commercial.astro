@@ -1,0 +1,51 @@
+---
+title: "Commercial Page"
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"; //타이틀이랑 웹사이트 설명 
+import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
+
+import "../../../public/css/commercialHp/section1.css";
+
+import Head from '../../components/layout/Head.astro'; //메타태그들
+import Header from '../../components/layout/Header.astro'; //진정한 헤더
+
+import Loading from "../../components/Loading2.astro"; //상세 로딩
+import MouseGrid from "../../components/MouseGrid.astro";   // 마우스 그리드 효과
+import ScrollIndicator from "../../components/inc/ScrollIndicator.astro"; //스크롤 인디케이터
+
+import CommercialHp1 from "../../components/commercialHp/CommercialHp1.astro";
+import CommercialHp2 from "../../components/commercialHp/CommercialHp2.astro";
+import CommercialHp3 from "../../components/commercialHp/CommercialHp3.astro";
+import CommercialHp4 from "../../components/commercialHp/CommercialHp4.astro";
+import CommercialHp5 from "../../components/commercialHp/CommercialHp5.astro";
+import CommercialHp6 from "../../components/commercialHp/CommercialHp6.astro";
+import CommercialHp7 from "../../components/commercialHp/CommercialHp7.astro";
+---
+
+<html lang="ko">
+    <head>
+        <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <ScrollIndicator />
+        
+        <link rel="stylesheet" href="../../../public/css/commercialHp/common.css">
+        <link rel="stylesheet" href="../../../public/css/commercialHp/section1.css">
+
+        <script src="../../../public/js/homepage/homepage1.js"></script>
+    </head>
+    <body>
+        <Header /> 
+        
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <CommercialHp1 />
+                <CommercialHp2 />
+                <CommercialHp3 />
+                <CommercialHp4 />
+                <CommercialHp5 />
+                <CommercialHp6 />
+                <CommercialHp7 />
+            </div>
+        </div>
+
+    </body>
+</html>

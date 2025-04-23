@@ -1,0 +1,88 @@
+@charset "UTF-8"; 
+
+/* common */
+.blind { position: absolute; overflow: hidden; width: 1px; height: 1px; margin: -1px; clip: rect(0, 0, 0, 0);}
+
+/* section 공통 */
+.pc { display: block;}
+.mo { display: none;}
+.section * { font: inherit; color: inherit;}
+.font-paperlogy { font-family: 'Paperlogy', serif;}
+.fw-700 { font-weight: 700;}
+.color-white { color: #fff;}
+.color-blue { color: #00D0FF;}
+.txt-gradient { background: linear-gradient(180deg, #85E4FA 24.29%, #FFF 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.btn { display: flex; align-items: center; width: 100%; max-width: 156px; padding: 7px 20px; border: 0; line-height: 1.5; cursor: pointer;}
+.btn-lg { max-width: 350px; padding: 10px 36px;}
+.btn-white { color: #262626; background-color: #fff;}
+.btn-black { color: #fff; background-color: #262626;}
+.btn-ico { width: 50px; height: 50px; border-radius: 18px; background: url('/img/hospital/arw-right-bk.svg') no-repeat center center / 24px auto #fff;}
+.main-ttl { font-family: "Origin Super Condensed", serif; font-size: 200px; letter-spacing: 4px; text-transform: uppercase;}
+
+/* project 영역 */
+.sc-project { background-color: #fff;}
+.sc-project .inner { padding: 120px min(3.5vw, 70px);}
+.sc-project .contents {display: grid; grid-template-columns: minmax(auto, 340px) 1fr; grid-template-rows: minmax(280px, auto) 1fr; gap: 50px 20px; margin-top: 40px;}
+.sc-project .ttl-box { display: flex; flex-direction: column; padding: 40px 30px 0 40px; border-radius: 40px; background: #F2F2F2;}
+.sc-project .ttl { color: #262626; font-weight: 600; font-size: 32px;}
+.sc-project .desc { margin-top: 7px; color: #A3A3A3; font-size: 18px; font-weight: 500; line-height: 1.5; letter-spacing: -0.72px;}
+.sc-project .project-num { display: flex; justify-content: flex-end; margin-top: auto;}
+.sc-project .project-num > span { display: block; margin-bottom: 17px; color: #262626; text-align: right; font-family: "Origin Super Condensed", serif; font-size: 130px; font-weight: 300; line-height: 1; letter-spacing: 2.6px;}
+.sc-project .project-nav { grid-row: 2;}
+.sc-project .nav-ttl { display: block; padding: 13px 0 12px 16px; color: #262626; font-size: 20px; font-weight: 600;}
+.sc-project .nav-item { width: 100%;}
+.sc-project .nav-item .btn { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: unset; padding: 13px 16px; border-radius: 10px; color: #A3A3A3; font-size: 18px; line-height: 1; font-weight: 600; background-color: unset; transition: all .3s;}
+.sc-project .nav-item:hover .btn { background-color: #F2F2F2;}
+.sc-project .nav-item.active .btn { color: #000; background-color: #00D0FF;}
+.sc-project .project-swiper { position: relative; grid-column: 2; grid-row: span 2; width: 100%; border-radius: 40px; overflow: hidden;}
+.sc-project .link-project { display: block; width: 100%; height: 100%;}
+.sc-project .link-project .img { width: 100%; height: 100%; object-fit: cover;}
+.sc-project .swiper-controller .btn { position: absolute; z-index: 10; top: 50%; border: 1px solid #fff; width: 50px; height: 50px; border-radius: 18px; background: url(/img/hospital/arw-left-w.svg) no-repeat center center / 24px auto rgba(255, 255, 255, .1);}
+.sc-project .swiper-controller .btn.btn-prev { left: 40px; transform: translateY(-50%);}
+.sc-project .swiper-controller .btn.btn-next { left: unset; right: 40px; transform: translateY(-50%) rotate(180deg);}
+.sc-project .cursor { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px; position: absolute; top: 0; left: 0; z-index: 5; width: 140px; height: 140px; border-radius: 50%; background: rgba(255, 255, 255, 0.30); background-blend-mode: exclusion; backdrop-filter: blur(30px); pointer-events: none; transform: scale(0);}
+.sc-project .cursor .ico { width: 18px; height: 18px; background: url(/img/hospital/ico-cursor.svg) no-repeat center center / cover;}
+.sc-project .cursor .txt { color: #FFF; font-family: 'Oswald', serif; font-size: 20px; font-weight: 300; letter-spacing: 0.4px;}
+.sc-project .project-bottom { display: flex; justify-content: center; align-items: center; gap: 10px; padding: 18px 0 17px; background: #E7E7E7;}
+.sc-project .project-bottom .txt { color: #262626; font-size: 18px; font-weight: 500; line-height: 1.5; letter-spacing: -0.72px;}
+.sc-project .btn-black { border-radius: 999em; font-weight: 600; font-size: 14px; letter-spacing: -0.56px;}
+.sc-project .project-nav .btn-black { justify-content: space-between; margin-top: 50px; max-width: 150px;}
+.sc-project .btn-black::after { content: ''; display: block; width: 20px; height: 20px; background: url(/img/hospital/arw-right-w.svg) no-repeat center center / cover;}
+
+@media screen and (max-width: 1200px) {
+    /* common */
+    .btn { max-width: 13vw; padding: 0.5833vw 1.6667vw;}
+    .btn-lg { max-width: 29.1667vw; padding: 0.8333vw 3vw;}
+    .btn-ico { width: 4.1667vw; height: 4.1667vw; border-radius: 1.5vw;}
+    .main-ttl { font-size: 180px; letter-spacing: 0.3333vw;}
+    .sc-project .btn-black { max-width: 156px;}
+}
+
+@media screen and (max-width: 768px) {
+    /* common */
+    .pc { display: none !important;}
+    .mo { display: block;}
+    .btn { max-width: 13vw; padding: 0.5833vw 1.6667vw;}
+    .btn-lg { max-width: 263px; padding:7px 27px;}
+    .btn-ico { width: 50px; height: 50px; border-radius: 18px;}
+    .main-ttl { font-size: 86px; letter-spacing: 1.72px;}
+
+    /* project 영역 */
+    .sc-project .inner { padding: 80px 18px;}
+    .sc-project .contents { grid-template-columns: 1fr; grid-template-rows: repeat(4, auto); gap: 0; margin-top: 20px;}
+    .sc-project .ttl-box { display: grid; grid-template-columns: 1fr auto; grid-template-rows: repeat(2, auto); grid-column: 1; grid-row: 1; margin-top: 20px; padding: 23px 28px; border-radius: 20px;}
+    .sc-project .ttl { grid-column: 1; grid-row: 1; font-size: 18px;}
+    .sc-project .desc { grid-column: 1; grid-row: 2; font-size: 15px; letter-spacing: -0.6px;}
+    .sc-project .project-num { grid-column: 2; grid-row: 1 / span 2;}
+    .sc-project .project-num > span { margin-bottom: 0; font-size: 80px; letter-spacing: 1.6px;}
+    .sc-project .project-nav { grid-column: 1; grid-row: 4; margin-top: 20px;}
+    .sc-project .nav-ttl { padding: 10px 0 10px 16px; font-size: 20px;}
+    .sc-project .nav-item .btn { padding: 12px 16px; border-radius: 12px; font-size: 15px;}
+    .sc-project .project-swiper { grid-column: 1; grid-row: 3; margin-top: 10px; border-radius: 20px; aspect-ratio: 338 / 282;}
+    .sc-project .swiper-controller .btn { width: 50px; height: 50px; border-radius: 18px;}
+    .sc-project .swiper-controller .btn.btn-prev { left: 10px;}
+    .sc-project .swiper-controller .btn.btn-next { right: 10px;}
+    .sc-project .cursor { display: none;}
+    .sc-project .project-bottom { display: none;}
+    .sc-project .project-nav .btn-black { margin-top: 20px; padding: 7px 20px;}
+}

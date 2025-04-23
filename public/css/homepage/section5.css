@@ -1,0 +1,380 @@
+input,
+button,
+select {
+    border: 0;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+/* IE 셀렉박스 기본 화살표 제거 */
+input[type=text]::-ms-clear {
+    display: none
+}
+
+/* IE 인풋박스 clear 버튼 제거 */
+input::placeholder {
+    color: #ababab
+}
+
+input[type="text"],
+textarea,
+button {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    appearance: none;
+    background: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+select,
+select:focus,
+textarea:focus {
+    outline: none;
+}
+
+/* 
+input[type="checkbox"]:focus {
+    outline: none;
+} */
+
+.contact {
+    color: #fff;
+}
+
+.contact .sc_inner {
+    padding: 140px 50px 100px;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.contact .tit {
+    text-align: center;
+    font-family: SUIT;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -3.2px;
+    padding-bottom: 60px;
+}
+
+.contact .con {
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid #525252;
+    background: #0F0F0F;
+}
+
+.contact .form {}
+
+.contact .form h3 {
+    padding-bottom: 20px;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 150%;
+    letter-spacing: -1.36px;
+}
+
+.contact .form_wrap {
+    display: flex;
+    gap: 44px;
+}
+
+.contact .form .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.contact .form .input_group {width: 100%;}
+
+
+.contact .form .input_group .input_tit {
+    font-family: SUIT;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 150%;
+    letter-spacing: -0.88px;
+    padding-bottom: 14px;
+    display: block;
+}
+
+
+.contact .form .input_group .input_tit span {
+    color: #F50;
+}
+
+
+.contact .form .input_group .radi_wrap {
+    display: flex;
+    gap: 12px;
+}
+
+
+.contact .form .input_group .radi_wrap label.checked {
+    color: #F50;
+    border: 1px solid #F50;
+}
+.contact .form .input_group .radi_wrap input {
+    display: none;
+}
+
+.contact .form .input_group .radi_wrap .btn_radio {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 140%;
+    text-align: center;
+    color: #fff;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: 0.4s;
+    border-radius: 12px;
+    border: 1px solid var(--neutral-gray-60001, #525252);
+    background: var(--neutral-gray-000-black, #000);
+}
+
+.contact .form .right {
+    flex: 1;
+}
+
+.contact .form .right_wrap {
+    /* flex: 1; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px 16px;
+}
+
+.contact .right .input_group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.contact .right .input_group.w50 {
+    width: calc(50% - 11px);
+}
+
+.contact .right .input_group input[type="text"] {
+    padding: 8px 22px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    border: 1px solid var(--neutral-gray-00-white, #FFF);
+    border-radius: 12px;
+    border: 1px solid var(--neutral-gray-00-white, #FFF);
+    transition: border 0.6s;
+}
+
+.contact .right .input_group input::placeholder,
+.contact .right .input_group textarea::placeholder {
+    color: #737373;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.contact .input_group textarea {
+    resize: vertical;
+    border-radius: 12px;
+    border: 1px solid var(--DarkBlue-Gray-White, #FFF);
+    padding: 16px 22px;
+    transition: border 0.6s;
+}
+
+.contact .right .input_group.chk {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contact .right .input_group.chk label,
+.contact input[type="checkbox"] {
+    cursor:pointer;
+}
+
+.contact input[type="checkbox"] {
+    appearance: unset;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    position: relative;
+}
+
+.contact input[type="checkbox"]:checked:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contact .btn_submit {
+    border-radius: 999px;
+    padding: 8px 45px;
+    background: #F50;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+
+.contact .btn_submit p {
+    color: #FFF;
+    font-family: 'SUIT';
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.88px;
+}
+
+
+.contact .input_group.chk .btn_pop {
+    position: relative;
+    display: inline-block;
+}
+
+
+.contact .input_group.chk .btn_pop:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: -1px;
+    background: #fff;
+    position: absolute;
+}
+
+/* FOCUS EFFECT */
+
+.contact .right .input_group input[type="text"]:focus,
+.contact .input_group textarea:focus {
+    border: 1px solid #F50;
+}
+
+@media screen and (max-width:1200px) {
+    .contact .form h3 {
+        text-align: center;
+        padding-bottom: 60px;
+    }
+
+    .contact .form_wrap {
+        flex-direction: column;
+    }
+
+    .contact .btn_submit {
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (max-width:980px) {
+    .contact .sc_inner {
+        padding: 80px 20px 80px;
+    }
+
+    .contact .tit {
+        font-size: 34px;
+    }
+
+    .contact .con {
+        padding: 40px 30px;
+    }
+
+    .contact .form h3 {
+        font-size: 24px;
+        padding-bottom: 40px;
+    }
+
+    .contact .form_wrap {
+        gap: 32px;
+    }
+
+    .contact .form .left {
+        gap: 32px;
+    }
+
+    .contact .form .input_group .input_tit {
+        font-size: 16px;
+    }
+
+    .contact .right .input_group.w50 {
+        width: 100%;
+    }
+
+    .contact .form .input_group .radi_wrap {
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .contact .form .input_group .radi_wrap .btn_radio {
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .contact .right .input_group {
+        align-items: center;
+        flex-direction: unset;
+    }
+
+    .contact .right .input_group label {
+        font-size: 15px;
+        min-width: 80px;
+    }
+
+    .contact .right .input_group input[type="text"] {
+        width: 100%;
+        font-size: 14px;
+        padding: 6px 14px;
+        border-radius: 8px;
+    }
+
+    .contact .input_group textarea {
+        width: 100%;
+    }
+
+    .contact .right .input_group input::placeholder,
+    .contact .right .input_group textarea::placeholder {
+        font-size: 15px;
+    }
+
+    .contact .input_group textarea {
+        border-radius: 6px;
+    }
+
+    .contact .btn_submit {
+        padding: 8px 34px;
+    }
+
+    .contact .btn_submit p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .contact .right .input_group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact .con {
+        padding: 40px 20px;
+    }
+}

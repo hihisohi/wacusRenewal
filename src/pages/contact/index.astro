@@ -1,0 +1,59 @@
+---
+title: "HompageDetail Page"
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"; //타이틀이랑 웹사이트 설명 
+import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
+
+import "../../../public/css/homepage/section6.css"
+
+import Head from '../../components/layout/Head.astro'; //메타태그들
+import Header from '../../components/layout/Header.astro'; //진정한 헤더
+
+import Homepage5 from "../../components/homepage/Homepage5.astro";  //문의하기
+import Section10 from "../../components/main/Section10.astro"; //풋터
+---
+
+<html lang="ko">
+    <head>
+        <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <!-- <ViewTransitions /> -->
+        <link rel="stylesheet" href="../../../public/css/homepage/section5.css">
+    <body>
+        <Header />
+        
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <main style="background:#0F0F0F;">
+                    <Homepage5/>
+                    <Section10/>
+                </main>
+
+            </div>
+        </div>
+    </body>
+<script is:inline>
+
+    $(document).ready(function () {
+        let $headings = $(".sec_1 h2"); // 모든 h2 요소를 선택
+        let index = 0; // 시작 인덱스
+
+        function toggleOnClass() {
+        // 현재 인덱스의 h2에 on 클래스 추가
+        $headings.eq(index).addClass("on");
+
+        // 이전 인덱스의 h2에서 on 클래스 제거
+        let prevIndex = (index - 1 + $headings.length) % $headings.length;
+        $headings.eq(prevIndex).removeClass("on");
+
+            // 다음 인덱스로 이동 (마지막 요소 이후에는 첫 번째로 돌아감)
+            index = (index + 1) % $headings.length;
+        }
+
+        // 1초 간격으로 toggleOnClass 실행
+        setInterval(toggleOnClass, 1000);
+        });
+
+</script>
+
+</html>

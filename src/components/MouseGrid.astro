@@ -1,0 +1,17 @@
+---
+// import '../../public/css/mousegrid.css';
+---
+
+<div class="mouseGrid">
+    <div class="verticalPointer"></div>
+    <div class="horizonPointer"></div>
+</div>
+<script is:inline>
+    
+    $(document).ready(function(){
+    window.addEventListener('mousemove', (event) => {
+        // console.log(event.clientX, event.clientY);
+        $('.mouseGrid').attr('style','--windowX:'+event.clientX+'px;--windowY:'+event.clientY+'px');
+    });
+});    
+</script>

@@ -1,0 +1,52 @@
+---
+title: "medical Page"
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"; //타이틀이랑 웹사이트 설명 
+import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
+
+import "../../../public/css/marketing/section1.css"
+
+import Head from '../../components/layout/Head.astro'; //메타태그들
+import Header from '../../components/layout/Header.astro'; //진정한 헤더
+
+import Loading from "../../components/Loading2.astro"; //상세로딩
+
+import Medical1 from '../../components/medical/medical1.astro'; // Your vision our marketing
+import Medical2 from "../../components/medical/medical2.astro"; // 잘 되는 병원은
+import Hospital4 from "../../components/hospital/hospital4.astro"; // project
+import Section10 from "../../components/main/Section10.astro"; //풋터
+import ScrollIndicator from "../../components/inc/ScrollIndicator.astro"; //스크롤 인디케이터
+---
+
+<html lang="ko">
+    <head>
+        <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <ScrollIndicator />
+        <!-- <ViewTransitions /> -->
+        <link rel="stylesheet" href="../../../public/km.css">
+        <link rel="stylesheet" href="../../../public/css/main/section1.css">
+        <link rel="stylesheet" href="../../../public/css/hospital/section1.css">
+        <link rel="stylesheet" href="../../../public/css/hospital/section2.css">
+        <link rel="stylesheet" href="../../../public/css/hospital/section4.css">
+        <script src="../../../public/js/hospital/index.js"></script>
+    
+    </head>
+    <body>
+        <Header />
+        <Loading />
+        
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <main class="mainpage">
+                    <Medical1 />
+                    <Medical2 />
+                    <Hospital4 />
+                    <Section10 client:load/>
+                </main>
+
+            </div>
+        </div>
+
+    </body>
+</html>

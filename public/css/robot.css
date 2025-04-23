@@ -1,0 +1,27 @@
+#robot {width:140px;height:140px;z-index:11;right:20px;position:fixed;bottom:0;cursor: pointer; transition:1s ease;overflow: hidden;}
+#robot.hide {transform:translateX(100%);}
+#robot canvas {width:100%;height:100%;}
+/* #robot.hi canvas {animation:clickScale 2s ease-in-out;} */
+#robotTxt {font-size: 18px;font-family: 'LABDigital';display: block; position: fixed;text-align: center;content:'사이트가이드';color:#59AFE3;z-index: 99;bottom: 140px;right: 30px;background:rgba(255,255,255,.1);white-space: nowrap;padding:9px 9px;border-radius: 6px;line-height: 1.3;transition: .45s all;pointer-events: none;}
+#robotTxt.hide {transform:translate(0,6px);opacity: 0;visibility: hidden;}
+
+@keyframes upDownRobot {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(7px);}
+    100% {transform: translateY(0);}
+}
+
+@keyframes clickScale {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.07);}
+    100% {transform: scale(1);}
+}
+
+@media screen and (max-width:1024px) {
+    #robot {width:120px; height:120px;right:0;bottom:0}
+    #robotTxt {bottom: 120px;right:20px;font-size: 17px;}
+}
+@media screen and (max-width: 768px) {
+    #robot {width:80px; height:80px;}
+    #robotTxt {bottom: 80px;right: 20px;font-size: 16px;}
+}

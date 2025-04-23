@@ -1,0 +1,47 @@
+/*--------------------------------------------------
+	01. General Settings
+---------------------------------------------------*/
+
+
+
+.inner {
+    display:table-cell;
+    vertical-align:middle;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+.light-section-wrapper, .dark-section-wrapper {
+    margin-left: calc(50% - 50vw)!important;
+    margin-right: calc(50% - 50vw)!important;
+    max-width: 1000%!important;
+    width: 100vw!important;
+}
+
+.light-section-container, .dark-section-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content-row {
+    position:relative;
+    width:100%;
+    margin:0 auto;
+    z-index:1;
+    opacity:1;
+    box-sizing:border-box;
+}
+
+.clip-effects {
+    overflow:hidden;
+    clip-path: inset(4% 10% round 40px);
+}
+
+.content-row::after {
+    clear: both;
+    content: " ";
+    display: table;
+}

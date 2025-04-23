@@ -1,0 +1,178 @@
+---
+title: "company Page"
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"; //타이틀이랑 웹사이트 설명 
+import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
+
+// import "../../../public/css/marketing/section3.css"
+
+import Head from '../../components/layout/Head.astro'; //메타태그들
+import Header from '../../components/layout/Header.astro'; //진정한 헤더
+
+import Section10 from "../../components/main/Section10.astro"; //풋터
+---
+
+<html lang="ko">
+    <head>
+        <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <!-- <ViewTransitions /> -->
+        <link rel="stylesheet" href="../../../public/css/marketing/section3.css">
+    <body>
+        <Header />
+        
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <main id="company_page">
+                    <section class="sec_1">
+                        <article class="sub_sec_top" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="sub_title">
+                                <h2>
+                                    BRAND IS A STORY<span></span>
+                                </h2>
+                            </div>
+                            <p class="title_info">
+                                wacus와 함께라면 브랜드는 이야기가 됩니다.
+                            </p>
+                        </article>
+                        <div class="img_box" data-aos="fade-left"  data-aos-duration="1000">
+                            <div class="none_768">
+                                <img src="../../../public/img/company/company_1.png" alt="BRAND IS A STORY">
+                            </div>
+                            <div class="block_768">
+                                <img src="../../../public/img/company/company_1_m.png" alt="BRAND IS A STORY">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_2 sec_py">
+                        <div class="sub_w">
+                            <div class="cont_1">
+                                <div class="sec_title_box" data-aos="fade-up"  data-aos-duration="1000">
+                                    <span>Why Hospital Marketing?</span>
+                                    <h3>마케팅은 왜 와커스일까?</h3>
+                                    <p>
+                                        많은 웹 에이전시들 그리고 대행사들은 사라지고 있습니다.<br class="none_768">
+                                        그 이유는 변화하는 세상의 트렌드를 따라가지 못하기 때문입니다.<br class="none_768">
+                                        클라이언트들은 원합니다. 웹과 마케팅 둘 다 한 곳에서 진행하기를<br class="none_768"> 
+                                        그렇기에 WACUS가 탄생하였습니다.
+                                    </p>
+                                </div>
+                                <div class="right_box" data-aos="fade-up"  data-aos-duration="1000">
+                                    <div class="img_box">
+                                        <img src="../../../public/img/company/company_2.png" alt="마케팅은 왜 와커스일까?">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_3">
+                        <div class="sub_w">
+                            <div class="cont_1">
+                                <h2  data-aos="fade-left"  data-aos-duration="1500">
+                                    당신의 브랜드를 알리는 <br class="block_768"><strong class="_1">홈페이지</strong>와
+                                </h2>
+                                <h2  data-aos="fade-right" data-aos-delay="500"  data-aos-duration="1500">
+                                    고객유치가 될 수 있는 <br class="block_768"><strong class="_2">마케팅</strong>이 만나다.
+                                </h2>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="sec_4 sec_py">
+                        <div class="sec_4_w">
+                           <div class="cont_1">
+                                <div class="content_box" data-aos="fade-up"  data-aos-duration="1000">
+                                    <div class="img_box">
+                                        <img src="../../../public/img/company/company_3.gif" alt="온라인 마케팅">
+                                        <div class="ani_box _1">
+                                            <img src="../../../public/img/company/company_4.png" alt="하트 이모티콘">
+                                        </div>
+                                        <div class="ani_box _2">
+                                            <img src="../../../public/img/company/company_5.png" alt="웃는 노란 얼굴 이모티콘">
+                                        </div>
+                                    </div>
+                                    <div class="text_box">
+                                        <div class="sec_title_box">
+                                            <span>Online Marketing</span>
+                                            <h3>온라인 마케팅</h3>
+                                            <p>
+                                                변화하는 디지털 환경 속에서 <strong>성공적인 비즈니스를 <br>
+                                                위해서는 전략적이고 체계적인 마케팅이 필수</strong>입니다.<br>
+                                                와커스는 웹페이지 및 홈페이지와 통합 마케팅 전략을 <br>
+                                                수립하여 <strong>맞춤형 콘텐츠와 캠페인을 통해 성과를 <br>
+                                                극대화</strong>합니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_box _res" data-aos="fade-up"  data-aos-duration="1000">
+                                    <div class="text_box">
+                                        <div class="sec_title_box">
+                                            <span>Homepage & Web development</span>
+                                            <h3>홈페이지 & 웹 개발</h3>
+                                            <p>
+                                                <strong>홈페이지는 현재 우리가 무엇을 만들고, 무엇을 하고, <br>
+                                                어떠한 브랜드를 가지고 있는지 가장 잘 나타낼 수 있는 <br>
+                                                중요한 방법</strong>입니다. 단순한 디자인을 넘어 고객님들의 <br>
+                                                아이디어와 비전이 웹 위에서 살아 숨 쉴 수 있도록 <br>
+                                                정교하고 섬세한 작업이 필요합니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="img_box hidden_img">
+                                        <img src="../../../public/img/company/company_6.gif" alt="홈페이지 & 웹 개발">
+                                        <div class="hidden_ani_img">
+                                            <img src="../../../public/img/company/company_7.png" alt="seo 이모티콘">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_box " data-aos="fade-up"  data-aos-duration="1000">
+                                    <div class="img_box">
+                                        <img src="../../../public/img/company/company_8.png" alt="퍼포먼스 마케팅">
+                                    </div>
+                                    <div class="text_box">
+                                        <div class="sec_title_box">
+                                            <span>Performance Marketing</span>
+                                            <h3>퍼포먼스 마케팅</h3>
+                                            <p>
+                                                성과 중심의 퍼포먼스 마케팅은 <strong>정확한 타겟층과 <br>
+                                                최적화된 광고 운영을 통해 최대의 ROI를 실현</strong>합니다. <br>
+                                                고객의 반응을 <strong>실시간으로 분석하고 효율적인 <br>
+                                                예산 집행</strong>을 진행하여 마케팅 성과를 극대화합니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content_box _res" data-aos="fade-up"  data-aos-duration="1000">
+                                    <div class="text_box">
+                                        <div class="sec_title_box">
+                                            <span>Video production</span>
+                                            <h3>영상 기획 · 제작</h3>
+                                            <p>
+                                                현대 마케팅의 핵심인 영상 콘텐츠는 브랜드의 메시지를 <br>
+                                                감각적으로 전달할 수 있는 <strong>소통의 창구</strong>입니다. <br>
+                                                감성과 공감을 자극하고 단순한 홍보를 넘어 <strong>브랜드와 <br >
+                                                고객 간의 감성적 연결을 해주는 강력한 도구</strong>입니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="img_box">
+                                        <img src="../../../public/img/company/company_9.png" alt="온라인 마케팅">
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </section>
+
+
+                    <Section10/>
+                </main>
+
+            </div>
+        </div>
+    </body>
+
+
+</html>

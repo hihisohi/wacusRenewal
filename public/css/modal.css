@@ -1,0 +1,137 @@
+/* 모달창 공통 */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 999999;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+.modal.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal h3 {
+    font-weight: 700;
+}
+.modal.more {
+    /* background: transparent; */
+}
+.modal_content {
+    position: absolute;
+    overflow: hidden;
+    border-radius: 20px;
+    width: 50%;
+    max-height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+}
+.modal_con::-webkit-scrollbar {
+    width: 2px;
+    background: #d9d9d9;
+    /* visibility: hidden; */
+    transition: visibility 0.3s ease;
+}
+.modal_con.scrolling::-webkit-scrollbar {
+    visibility: visible; /* 표시 */
+}
+.modal_con::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+    /* visibility: hidden; */
+}
+.modal_con.scrolling::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+/* POP ::: 개인정보취급방침, 이용약관, 환자의권리의무 공통 */
+.pop_policy .modal_content {
+    padding: 40px;
+    box-sizing: border-box;
+    max-height: 540px;
+}
+.pop_policy .modal_con {
+    margin: 0;
+    max-height: calc(540px - 170px);
+    display: block;
+    overflow-y: auto;
+    margin-top: 16px;
+}
+.pop_policy .modal_head {
+    display: flex;
+    justify-content: space-between;
+    color: var(--800, #262626);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -1.12px;
+    padding-bottom: 30px;
+    /* margin-bottom: 30px; */
+    border-bottom: 2px solid #333;
+}
+
+.pop_policy .cont {
+    width: calc(100% - 12px);
+    white-space: pre-line;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+    letter-spacing: -0.64px;
+}
+
+.pop_policy strong {
+    color: #333;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 180%;
+    letter-spacing: -0.8px;
+}
+.modal .btn_close {
+    cursor: pointer;
+}
+.modal .btn_close img {
+    transition: all 0.3s ease;
+}
+.modal .btn_close:hover img {
+    transform: rotate(180deg);
+}
+.modal button {
+    background: transparent;
+    border: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .mobile_block {
+        display: inline-block;
+    }
+    .pop_policy .modal_content {
+        padding: 30px 20px;
+        width: 90%
+    }
+    .pop_policy .modal_head {
+        font-size: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 0px;
+    }
+    .pop_policy strong {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .pop_policy .cont {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    .pop_policy .modal_head {
+        margin-bottom: 20px;
+    }
+}

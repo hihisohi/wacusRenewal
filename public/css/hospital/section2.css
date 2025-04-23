@@ -1,0 +1,130 @@
+@charset "UTF-8"; 
+
+/* common */
+.blind { position: absolute; overflow: hidden; width: 1px; height: 1px; margin: -1px; clip: rect(0, 0, 0, 0);}
+
+/* section 공통 */
+.pc { display: block;}
+.mo { display: none;}
+.section * { font: inherit; color: inherit;}
+.font-paperlogy { font-family: 'Paperlogy', serif;}
+.fw-700 { font-weight: 700;}
+.color-white { color: #fff;}
+.color-blue { color: #00D0FF;}
+.txt-gradient { background: linear-gradient(180deg, #85E4FA 24.29%, #FFF 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.btn { display: flex; align-items: center; width: 100%; max-width: 156px; padding: 7px 20px; border: 0; line-height: 1.5; cursor: pointer;}
+.btn-lg { max-width: 350px; padding: 10px 36px;}
+.btn-white { color: #262626; background-color: #fff;}
+.btn-black { color: #fff; background-color: #262626;}
+.btn-ico { width: 50px; height: 50px; border-radius: 18px; background: url('/img/hospital/arw-right-bk.svg') no-repeat center center / 24px auto #fff;}
+.main-ttl { font-family: "Origin Super Condensed", serif; font-size: 200px; letter-spacing: 4px; text-transform: uppercase;}
+
+/* identity 영역 */
+.sc-identity { padding-top: 350px; background-color: #000;}
+.sc-identity .slogan-swiper .swiper-wrapper { height: 30px;}
+.sc-identity .sub-ttl { display: flex; justify-content: center; gap: 12px; font-weight: 500; font-size: 20px; line-height: 1.5; color: #A3A3A3; letter-spacing: -0.8px;}
+.sc-identity .ttl-area { position: relative; z-index: 10;}
+.sc-identity .ttl-box { display: flex; justify-content: center; align-items: center; gap: 24px; margin-top: 18px; color: #FFF; font-size: 70px; font-weight: 600; letter-spacing: -2.8px;}
+.sc-identity .keyword-swiper { max-width: 490px; height: 100px; margin: 0; padding: 14px 30px; border: 1px solid #7F7F7F; border-radius: 20px; background: rgba(255, 255, 255, 0.10);}
+.sc-identity .keyword-swiper .swiper-slide { letter-spacing: -2.8px;}
+.sc-identity .marquee-wrap { display: flex; align-items: center; position: relative; height: 500px;}
+.sc-identity .marquee-txt { display: flex; gap: 90px; width: max-content; animation: marqueeX 50s linear infinite; opacity: .6;}
+.sc-identity .marquee-txt .txt { font-size: 400px; font-weight: 800; letter-spacing: 20px; background: linear-gradient(90deg, #929FB1 0%, #3E434B 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+.sc-identity .marquee-bg { display: flex; flex-wrap: wrap; position: absolute; top: 0; left: 0; bottom: 0; right: 0; overflow: hidden;}
+.sc-identity .marquee-bg .bg { flex-grow: 1; width: 30px; height: 100%; margin-right: 1px; background: rgba(0, 0, 0, 0.10); backdrop-filter: blur(40px);}
+
+@keyframes marqueeX {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - (90px / 2)));
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    /* identity 영역 */
+    .sc-identity { padding-top: 23.3333vw; }
+    .sc-identity .slogan-swiper .swiper-wrapper { height: 2vw;}
+    .sc-identity .sub-ttl { gap: 0.8vw;  font-size: 1.3333vw; letter-spacing: -0.0533vw;}
+    .sc-identity .ttl-box { gap: 1.6vw; margin-top: 1.2vw;  font-size: 4.6667vw; letter-spacing: -0.1867vw;}
+    .sc-identity .keyword-swiper { max-width: 32.6667vw; height: 6.6667vw; padding: 0.9333vw 2vw; border-radius: 1.3333vw;}
+    .sc-identity .keyword-swiper .swiper-slide { letter-spacing: -0.1867vw;}
+    .sc-identity .marquee-wrap { height: 33.3333vw;}
+    .sc-identity .marquee-txt { gap: 6vw;}
+    .sc-identity .marquee-txt .txt { font-size: 26.6667vw; letter-spacing: 1.3333vw;}
+    .sc-identity .marquee-bg .bg { width: 2vw;}
+
+    @keyframes marqueeX {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-50% - (6.0000vw / 2)));
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    /* common */
+    .btn { max-width: 13vw; padding: 0.5833vw 1.6667vw;}
+    .btn-lg { max-width: 29.1667vw; padding: 0.8333vw 3vw;}
+    .btn-ico { width: 4.1667vw; height: 4.1667vw; border-radius: 1.5vw;}
+    .main-ttl { font-size: 180px; letter-spacing: 0.3333vw;}
+}
+
+@media screen and (max-width: 768px) {
+    /* common */
+    .pc { display: none !important;}
+    .mo { display: block;}
+    .btn { max-width: 13vw; padding: 0.5833vw 1.6667vw;}
+    .btn-lg { max-width: 263px; padding:7px 27px;}
+    .btn-ico { width: 50px; height: 50px; border-radius: 18px;}
+    .main-ttl { font-size: 86px; letter-spacing: 1.72px;}
+
+    /* identity 영역 */
+    .sc-identity { display: flex; flex-direction: column; justify-content: flex-end; min-height: 100vh; padding-top: 0;}
+    .sc-identity .slogan-swiper .swiper-wrapper { height: 90px;}
+    .sc-identity .ttl-area { padding: 0 40px;}
+    .sc-identity .sub-ttl { flex-direction: column; align-items: center; gap: 0; font-size: 15px; letter-spacing: -0.6px; text-align: center;}
+    .sc-identity .ttl-box { flex-direction: column; gap: 16px; margin-top: 34px; font-size: 38px; letter-spacing: -1.52px;}
+    .sc-identity .keyword-swiper { max-width: 270px; height: 60px; padding: 10px 18px; border-radius: 12px;}
+    .sc-identity .keyword-swiper .swiper-slide { letter-spacing: -1.52px;}
+    .sc-identity .marquee-wrap { align-items: flex-end; margin-top: 40px; height: 256px;}
+    .sc-identity .marquee-txt { gap: 150px;}
+    .sc-identity .marquee-txt .txt { font-size: 205px; letter-spacing: 10px;}
+    .sc-identity .marquee-bg .bg { width: 15.5px; backdrop-filter: blur(20px);}
+
+    @keyframes marqueeX {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-50% - (150px / 2)));
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    /* identity 영역 */
+    .sc-identity { padding-top: 43.0556vw;}
+    .sc-identity .slogan-swiper .swiper-wrapper { height: 25vw;}
+    .sc-identity .ttl-area { padding: 0 11.1111vw;}
+    .sc-identity .sub-ttl { font-size: 4.1667vw; letter-spacing: -0.1667vw;}
+    .sc-identity .ttl-box { gap: 4.4444vw; margin-top: 9.4444vw; font-size: 10.5556vw; letter-spacing: -0.4222vw;}
+    .sc-identity .keyword-swiper { max-width: 75vw; height: 16.6667vw; padding: 2.7778vw 5vw; border-radius: 3.3333vw;}
+    .sc-identity .keyword-swiper .swiper-slide { letter-spacing: -0.4222vw;}
+    .sc-identity .marquee-wrap { margin-top: 11.1111vw; height: 71.1111vw;}
+    .sc-identity .marquee-txt { gap: 41.6667vw;}
+    .sc-identity .marquee-txt .txt { font-size: 56.6667vw; letter-spacing: 2.7778vw;}
+    .sc-identity .marquee-bg .bg { width: 4.3056vw;}
+
+    @keyframes marqueeX {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(calc(-50% - (41.6667vw / 2)));
+        }
+    }
+}

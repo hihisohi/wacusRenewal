@@ -1,0 +1,72 @@
+---
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts"; //타이틀이랑 웹사이트 설명 
+// import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
+
+
+import Head from '../components/layout/Head.astro'; //메타태그들
+import Header from '../components/layout/Header.astro'; //진정한 헤더
+import Section1 from "../components/main/Section1.astro"; //ur vision
+import Section2 from "../components/main/Section2.astro"; //행성처럼완벽하게
+import Section3 from "../components/main/Section3.astro"; //와커스 비전
+import Section4 from "../components/main/Section4.astro"; //우리의 서비스
+import Section5 from "../components/main/Section5.astro"; //어바웃 와커스
+import Section5_1 from "../components/main/Section5_1.astro"; // project
+import Section6 from "../components/main/Section6.astro"; //우리의 경험
+import Section7 from "../components/main/Section7.astro"; //온라인마케팅
+import Section8 from "../components/main/Section8.astro"; //f&Q
+import Section9 from "../components/main/Section9.astro"; //지도
+import Section10 from "../components/main/Section10.astro"; //풋터
+import Section11 from "../components/main/Section11.astro"; //와커스 이야기
+import ScrollIndicator from "../components/inc/ScrollIndicator.astro"; //스크롤 인디케이터
+import { Image } from 'astro:assets';
+
+// import Loading from "../components/Loading.astro"; //메인로딩
+import Loading from "../components/Loading2.astro"; //상세로딩
+import Robot from "../components/Robot.astro"; //챗봇
+
+import MouseGrid from "../components/MouseGrid.astro";
+import MouseEffect from "../components/MouseEffect.astro";
+
+const currentUrl = Astro.request.url;
+
+---
+
+<html lang="ko">
+    <head>
+        <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <link rel="stylesheet" href="../../public/km.css">
+        <link rel="stylesheet" href="../../../public/css/main/section1.css">
+        <link rel="stylesheet" href="../../../public/css/main/section3.css"> <!--our project css -->
+        <script is:inline src="/main.js"></script> 
+    </head>
+    <body>
+        <ScrollIndicator />
+        <Header />
+        <Loading />
+        <!-- 로딩에 h1,.digit에 해당하는 클래스가 있음 왜있는지 모르겠음 코드에는 없기때문에 오류가 나오는것이다. 근데 그냥 지우면 메인화면에서 클릭이 안된다. -->
+        <Robot />
+        <MouseGrid />
+        <MouseEffect />
+       
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <main class="mainpage">
+                    <Section1 />
+                    <Section2 />
+                    <Section3 />
+                    <Section4 />
+                    <Section5 />
+                    <Section5_1 />
+                    <Section6 />
+                    <Section7 />
+                    <Section8 />
+                    <Section11 />
+                    <!-- 지도 다시 가져오기 오류 있음  카카오 심사중 심사완료되면 넣어 보자.-->
+                    <Section9 />
+                    <Section10 />
+                </main>
+            </div>
+        </div>            
+    </body>
+</html>

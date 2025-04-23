@@ -1,0 +1,137 @@
+<section class="section sc-visual">
+    <div class="inner">
+        <div class="txt-area">
+            <h2 class="sc-ttl">
+                <strong class="txt-box"><span class="split-txt txt color-white">your</span> <span class="ani-wrap"><span class="txt">vision</span></span></strong>
+                <strong class="txt-box"><span class="split-txt txt color-white">our</span> <span class="ani-wrap"><span class="txt">Marketing</span></span></strong>
+            </h2>
+            <p class="desc split-txt">
+                와커스는 단순한123 대행사로 남지 않겠습니다. <br>
+                고객에 맞는 효율성있는 최적화된 광고로 브랜드를 알리고 <br>
+                매출로 직결될 수 있도록 함께 뛰어가는 <em class="color-white">파트너</em>가 되겠습니다.
+            </p>
+            <div class="btn-wrap"><a href="https://wacuskorea.com/marketingPage" target="_blank" class="btn btn-lg btn-white">병원 마케팅이 왜 필요할까?</a></div>
+        </div>
+
+        <div class="img-area">
+            <img src="/img/hospital/img-visual01.svg" alt="" class="img img01">
+            <img src="/img/hospital/img-visual02.svg" alt="" class="img img02">
+        </div>
+
+        <div class="scroll-down">
+            <i class="ico ico-scroll-down"></i>
+        </div>
+    </div>
+</section>
+
+<script is:inline>
+    gsap.registerPlugin(SplitText, ScrollTrigger) 
+
+    const split = new SplitText(".sc-visual .split-txt", {type: "chars"});
+
+    // ScrollTrigger.saveStyles(".mobile, .desktop");
+
+    ScrollTrigger.matchMedia({
+
+        "(min-width: 769px)": function() {
+            const visualTl = gsap.timeline({
+                delay: 2
+            })
+            .from('.sc-visual .img', {
+                opacity: 0,
+                // duration: .3,
+                scale: 0,
+                ease: 'power3.inOut'
+            })
+            .to('.sc-visual .img', {
+                // duration: .3,
+                rotate(idx) {
+                    return idx % 2 === 0 ? -4 : 3
+                },
+                repeat: 1,
+                yoyo: true,
+                ease: 'back(3)',
+                stagger: {
+                    each: .2
+                },
+                onComplete: function() {
+                    gsap.set('.sc-visual .img', { clearProps: "all" });
+                }
+            }, '-=.1')
+            .from('.sc-visual .sc-ttl .color-white *', {
+                yPercent: 10,
+                opacity: 0,
+                ease: 'power2.inOut',
+                stagger: {
+                    each: .1
+                }
+            }, '+=.5')
+            .from('.sc-visual .sc-ttl .txt:not(.color-white)', {
+                opacity: 0,
+                xPercent: -100,
+                ease: 'power2.inOut',
+                stagger: {
+                    each: .2,
+                    from: 'start'
+                }
+            }, '-=.2')
+            .to('.sc-visual', {
+                '--scaleX': 1,
+                ease: 'power2.inOut'
+            },'<')
+            .from('.sc-visual .desc *, .sc-visual .btn-wrap, .sc-visual .scroll-down', {
+                duration: .7,
+                yPercent: 10,
+                opacity: 0,
+                ease: 'linear',
+                stagger: {
+                    amount: .5
+                }
+            }, '-=.2')
+        },
+
+        "(max-width: 768px)": function() {
+            // ScrollTrigger.normalizeScroll(true);
+
+            const visualTl = gsap.timeline()
+            .from('.sc-visual .img', {
+                delay: 3,
+                opacity: 0,
+                duration: .3,
+                ease: 'power3.inOut'
+            })
+            .to('.sc-visual .img', {
+                duration: .3,
+                rotate(idx) {
+                    return idx % 2 === 0 ? -4 : 3
+                },
+                repeat: 1,
+                yoyo: true,
+                ease: 'back(3)',
+                stagger: {
+                    each: .2
+                },
+                onComplete: function() {
+                    gsap.set('.sc-visual .img', { clearProps: "all" });
+                }
+            }, '-=.1')
+            .from('.sc-visual .sc-ttl', {
+                yPercent: 10,
+                opacity: 0,
+                duration: 1,
+                ease: 'power2.inOut',
+                stagger: {
+                    each: .1
+                }
+            }, '+=.1')
+            .from('.sc-visual .desc *, .sc-visual .btn-wrap', {
+                yPercent: 10,
+                opacity: 0,
+                ease: 'linear',
+                stagger: {
+                    amount: 1
+                }
+            }, '-=.2')
+        },
+    });
+</script>

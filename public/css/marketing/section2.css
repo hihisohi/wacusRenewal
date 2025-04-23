@@ -1,0 +1,745 @@
+#marketing_page .sec_2{}
+#marketing_page .sec_2 .cont_1{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+#marketing_page .sec_2 .cont_1 .left > ul{
+    max-width: 840px;
+    width: 840px;
+    background-color: #F5F5F5;
+    border-radius: 30px;
+    padding: 25px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+#marketing_page .sec_2 .cont_1  .left > ul li{
+    width: calc(100% / 3);
+}
+#marketing_page .sec_2 .cont_1  .left > ul li .img_box{
+    /* background: 
+    url('<path-to-image>') 
+    lightgray 
+    no-repeat; */
+    background-position: -24.888px -226.725px;
+    background-size: 362.058% 383.407%;
+    mix-blend-mode: multiply;
+    text-align: center;
+}
+#marketing_page .sec_2 .cont_1  .left > ul li .img_box >img{}
+#marketing_page .sec_2 .cont_1  .left > ul li p{
+    margin-top: 25px;
+    color: #262626;
+    text-align: center;
+    font-family: "Pretendard";
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: -0.96px;
+}
+#marketing_page .sec_2 .cont_1  .left > ul li p >span{
+    font-weight: 700;
+}
+#marketing_page .sec_2 .cont_1  .right{
+    max-width: 645px;
+    width: 100%;
+}
+.graph_box{
+    position: relative;
+ 
+}
+.graph_box .graph_img{
+    position: absolute;
+    bottom: 11px;
+    left: 0;
+    overflow: hidden;
+}
+.graph_box .graph_img >img{
+    transform: translateY(100%);
+    /* opacity: 0; */
+    transition: all 0.6s;
+}
+.graph_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 225px;
+    width: 100%;
+    margin: 24px auto 0;
+    padding: 10px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #F5F5F5;
+}
+.graph_title >li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.graph_title >li:nth-child(1) span{
+    background-color:#3B7AD4;
+}
+.graph_title >li:nth-child(2) span{
+    background-color: #A4A4A4;;
+}
+.graph_title >li span{
+    width: 14px;
+    height: 14px;
+    border-radius: 100%;
+}
+.graph_title >li p{
+    color: #262626;
+    font-family: "Pretendard";
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -0.8px;
+}
+@media screen and (max-width:1600px) {
+    #marketing_page .sec_2 .cont_1{
+        gap: 20px;
+    }
+    #marketing_page .sec_2 .cont_1 >div{
+        width: 50%;
+    }
+    #marketing_page .sec_2 .cont_1 .left > ul{
+        max-width: none;
+    }
+}
+@media screen and (max-width:1400px) {
+    #marketing_page .sec_2 .cont_1 .left > ul li .img_box{
+        max-width: 100px;
+        margin: 0 auto;
+    }
+    #marketing_page .sec_2 .cont_1 .left > ul li p{
+        font-size: 18px;
+
+    }
+}
+@media screen and (max-width:1080px) {
+    #marketing_page .sec_2 .cont_1{
+        flex-direction: column;
+        align-items: center
+    }
+    #marketing_page .sec_2 .cont_1 >div{        
+        width: 100%;
+    }
+    #marketing_page .sec_2 .cont_1 .left{
+        justify-content: center;
+    }
+}
+@media screen and (max-width:768px) {
+    #marketing_page .sec_2 .cont_1 .left > ul li p{
+        font-size: 14px;
+    }
+    #marketing_page .sec_2 .cont_1 .left > ul li .img_box{
+        max-width: 75px;
+    }
+    .graph_title >li p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .graph_box .graph_img{
+        bottom: 7px;
+    }
+}
+
+#marketing_page .sec_3 .cont_1{
+    max-width: 1480px;
+    width: 100%;
+    margin: 60px auto 0;
+}
+#marketing_page .sec_3 .cont_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+#marketing_page .sec_3 .cont_box ._1{
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+#marketing_page .sec_3 .cont_box ._1 >div{
+    border-radius: 999px;
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+#marketing_page .sec_3 .cont_box ._1 >div > .img_box{}
+#marketing_page .sec_3 .cont_box ._1 >div > p{
+    margin-top: 12px;
+    color: #262626;
+    text-align: center;
+    font-family: "Pretendard";
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: -0.88px;
+}
+#marketing_page .sec_3 .cont_box ._1 .big{
+    width: 255px;
+    height: 255px;
+    bottom: -40px;
+    left: -70px;
+}
+#marketing_page .sec_3 .cont_box ._1 .small{
+    width: 175px;
+    height: 175px;
+    right: 0;
+    bottom: -40px;
+}
+#marketing_page .sec_3 .cont_box ._1 .middle{
+    width: 225px;
+    height: 225px;
+    top: 40px;
+    left: calc(50% - 117px);
+}
+#marketing_page .sec_3 .cont_box ._3{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    width: 100%;
+}
+#marketing_page .sec_3 .cont_box ._3 h3{
+    color: #262626;
+    font-family: Pretendard;
+    text-align: center;
+    font-size: 54.054px;
+    font-weight: 800;
+    line-height: 1.3; 
+    letter-spacing: -1.081px; 
+}
+@media screen and (max-width:1480px) {
+    #marketing_page .sec_3 .cont_1{
+        width: 90%;
+    }
+    #marketing_page .sec_3 .cont_box ._1{
+        max-width: 400px;
+    }
+    #marketing_page .sec_3 .cont_box ._2{
+        max-width: 400px;
+        width: 100%;
+    }
+    #marketing_page .sec_3 .cont_box ._1 .big{
+        width: 200px;
+        height: 200px;
+        left: -35px;
+    }
+    #marketing_page .sec_3 .cont_box ._1 .middle{
+        width: 200px;
+        height: 200px;
+    }
+    #marketing_page .sec_3 .cont_box ._3{
+        min-width: 285px;
+    }
+}
+@media screen and (max-width:1400px) {
+    #marketing_page .sec_3 .cont_box ._1 .small{
+        right: -40px;
+    }
+}
+@media screen and (max-width:1280px) {
+    #marketing_page .sec_3 .cont_box ._3{
+        min-width: 205px;
+    }
+    #marketing_page .sec_3 .cont_box ._3 h3{
+        font-size: 35px;
+
+    }
+    #marketing_page .sec_3 .cont_box{
+        gap: 15px;
+    }
+    #marketing_page .sec_3 .cont_box ._1{
+        max-width: 300px;
+    }
+    #marketing_page .sec_3 .cont_box ._1 >div > p{
+        font-size: 16px;
+    }
+    #marketing_page .sec_3 .cont_box ._1 .big{
+        width: 170px;
+        height: 170px;
+    }
+    #marketing_page .sec_3 .cont_box ._1 .small{
+        width: 140px;
+        height: 140px;
+        right: -40px;
+        bottom: 0px;
+    }
+    #marketing_page .sec_3 .cont_box ._1 .middle{
+        width: 160px;
+        height: 160px;
+        left: 95px;
+    }
+}
+@media screen and (max-width:1020px) {
+    #marketing_page .sec_3 .cont_box{
+        flex-direction: column; 
+    }
+    #marketing_page .sec_3 .cont_box ._1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: none;
+        gap: 10px;
+    }
+    #marketing_page .sec_3 .cont_box ._1 >div{
+        position: relative;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        width: 180px !important;
+        height: 180px !important;
+    }
+    #marketing_page .sec_3 .cont_box ._1 >div > .img_box{
+        max-width: 30px;
+    }
+    #marketing_page .sec_3 .cont_box > .arrow svg{
+        width: 30px;
+    }
+    #marketing_page .sec_3 .cont_box > .arrow{
+        transform: rotate(90deg);
+      
+    }
+}
+@media screen and (max-width:768px) {
+    #marketing_page .sec_3 .cont_1{
+        margin: 30px auto 0;
+    }
+    #marketing_page .sec_3 .cont_box{
+        gap: 20px;
+    }
+    #marketing_page .sec_3 .cont_box ._1 >div{
+        width: 110px !important;
+        height: 110px !important;
+    } 
+    #marketing_page .sec_3 .cont_box ._1 >div > .img_box{
+        max-width: 22px;
+    }
+    #marketing_page .sec_3 .cont_box ._1 >div > p{
+        margin-top: 6px;
+        font-size: 14px;
+    }
+
+
+    #marketing_page .sec_3 .cont_box ._3 h3{
+        font-size: 27px;
+    }
+    #marketing_page .sec_3 .cont_box ._2{
+        max-width: 222px;
+    }
+}
+@media screen and (max-width:375px) {
+    #marketing_page .sec_3 .cont_box ._1 >div{
+        width: 98px !important;
+        height: 98px !important;
+    } 
+}
+
+#marketing_page .sec_4 .cont_1{
+    max-width: 1120px;
+    width: 100%;
+    margin: 100px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+#marketing_page .sec_4 .cont_1 .text_list{
+
+}
+
+#marketing_page .sec_4 .cont_1 .line{
+    height: 334px;
+    width: 1px;
+    background-color: #e5e5e5;
+}
+#marketing_page .sec_4 .cont_1 .text_list .img_box{
+    text-align: center;
+}
+#marketing_page .sec_4 .cont_1 .text_list> dl{}
+#marketing_page .sec_4 .cont_1 .text_list> dl >dt{
+    color: #262626;
+    text-align: center;
+    font-family: "Pretendard";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.7; 
+    letter-spacing: -0.96px;
+}
+#marketing_page .sec_4 .cont_1 .text_list> dl >dd{
+    color: #262626;
+    text-align: center;
+    font-family: "Pretendard";
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: -0.72px;
+}
+@media screen and (max-width:1280px) {
+    #marketing_page .sec_4 .cont_1{
+        gap: 40px;
+    }
+}
+@media screen and (max-width:1120px) {
+    #marketing_page .sec_4 .cont_1{
+        width: 90%;
+    }
+}
+@media screen and (max-width:1020px) {
+    #marketing_page .sec_4 .cont_1{
+        gap: 20px;
+    }
+    #marketing_page .sec_4 .cont_1 .text_list> dl >dd{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:800px) {
+    #marketing_page .sec_4 .cont_1{
+        margin: 20px auto 0;
+        flex-direction: column;
+    }
+    #marketing_page .sec_4 .cont_1 .line{
+        width: 80%;
+        height: 1px;
+    }
+}
+@media screen and (max-width:768px) {
+    #marketing_page .sec_4 .cont_1 .text_list> dl >dt{
+        font-size: 17px;
+    }
+    #marketing_page .sec_4 .cont_1 .text_list .img_box{
+        max-width: 180px;
+        margin: 0 auto;
+    }
+}
+#marketing_page .sec_5{
+    background-color:  #FAFAFA;
+}
+#marketing_page .sec_5_price_btn_list{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+#marketing_page .sec_5_price_btn_list >li{
+    width: calc((100% / 3) - 32px);
+    border-radius: 20px;
+    background: #E5E5E5;
+    text-align: center;
+    padding: 15px 0;
+    box-sizing: border-box;
+    color:#171717;
+    height: 122px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#marketing_page .sec_5_price_btn_list >li >p{
+
+    text-align: center;
+    font-family: "Pretendard";
+    font-size: 16px;
+    font-weight: 500;
+}
+#marketing_page .sec_5_price_btn_list >li >h4{
+    margin-top: 8px;
+    text-align: center;
+    font-family: "Pretendard";
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1.12px;
+}
+#marketing_page .sec_5_price_btn_list >li >h5{
+    color: #00D0FF;
+    text-align: center;
+    font-family: "Pretendard";
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 12px;
+    display: none;
+}
+#marketing_page .sec_5_price_btn_list >li.on{
+    background-color: #262626;
+    color: #fff;
+}
+#marketing_page .sec_5_price_btn_list >li.on h5{
+    display: block;
+}
+#marketing_page .sec_5_price_content{
+    margin-top: 40px;
+    border-radius: 30px;
+    border: 1.5px solid #D4D4D4;
+    background:#FFF;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+
+}
+#marketing_page .sec_5_price_content >.plus_box{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #262626;
+    border-radius: 100%;
+    font-size: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#marketing_page .sec_5_price_content >.box{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 70px 0;
+
+}
+#marketing_page .sec_5_price_content >.box.full{
+    width: 100%;
+}
+#marketing_page .sec_5_price_content >.box > .box_w{
+    max-width: 430px;
+    width: 100%;
+    margin: 0 auto;
+}
+#marketing_page .sec_5_price_content >.box._2{
+    border-radius: 30px;
+    border: 2px solid #262626;
+}
+#marketing_page .sec_5_price_content .price_title{
+
+}
+#marketing_page .sec_5_price_content .price_title{
+    text-align: center;
+}
+#marketing_page .sec_5_price_content .price_title .img_box{}
+#marketing_page .sec_5_price_content .price_title span{
+   
+    text-align: center;
+    font-family: "Pretendard";
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 100%;
+    padding: 7px 8px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 24px;
+}
+#marketing_page .sec_5_price_content ._1 .price_title span{
+    color: #33B0CC;
+    border: 1px solid #00D0FF;
+    background: rgba(0, 208, 255, 0.15);
+}
+#marketing_page .sec_5_price_content ._2 .price_title span{
+    color: #FF3E41;
+    border: 1px solid #FF3E41;
+    background: rgba(255, 62, 65, 0.10);
+}
+#marketing_page .sec_5_price_content .price_title h4{
+    color:#262626;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -1.28px;
+    margin-top: 15px;
+}
+#marketing_page .sec_5_price_content .box .box_w>.line{
+    width: 60.408px;
+    height: 1px;
+    background-color: #A3A3A3;
+    margin: 30px  auto;
+}
+#marketing_page .sec_5_price_content .price_info{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+#marketing_page .sec_5_price_content .price_info >li{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+#marketing_page .sec_5_price_content .price_info >li .num{
+    color: #FFF;
+    text-align: center;
+    font-family: "Pretendard";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.64px;
+    min-width: 24px;
+    width: 24px;
+    height: 24px;
+    background-color: #262626;
+    border-radius: 100%;
+}
+#marketing_page .sec_5_price_content .price_info >li >dl{}
+#marketing_page .sec_5_price_content .price_info >li >dl dt{
+    color:#262626;
+    font-family: "Pretendard";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1; 
+    letter-spacing: -0.96px;
+    margin-bottom: 10px;
+}
+#marketing_page .sec_5_price_content .price_info >li >dl dd{
+    color: #262626;
+    font-family: "Pretendard";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: -0.72px;
+}
+#marketing_page .sec_5_price_content .price_info >li >dl dd > span{
+    font-weight: 700;
+}
+#marketing_page .sec_5_price_content .honey_tip{
+    margin-top: 30px;
+    border-radius: 24px;
+    background: #FFEEF1;
+    padding: 24px 36px;
+    box-sizing: border-box;
+}
+#marketing_page .sec_5_price_content .honey_tip > .title{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+#marketing_page .sec_5_price_content .honey_tip > .title h5{
+    color: #FF3E41;
+    font-family: "Pretendard";
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 140%;
+    letter-spacing: -0.8px;
+}
+#marketing_page .sec_5_price_content .honey_tip >ul{
+    margin-top: 10px;
+}
+#marketing_page .sec_5_price_content .honey_tip >ul li{
+    display: flex;
+    gap: 5px;
+}
+#marketing_page .sec_5_price_content .honey_tip >ul li span{
+    width: 3px;
+    height: 3px;
+    border-radius: 100%;
+    background-color: #262626;
+    margin-top: 10px;
+}
+#marketing_page .sec_5_price_content .honey_tip >ul li p{
+    color:#262626;
+    font-family: "Pretendard";
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: -0.72px;
+}
+@media screen and (max-width:1020px) {
+    #marketing_page .sec_5_price_content .price_title .img_box{
+        max-width: 180px;
+        margin: 0 auto;
+    }
+    #marketing_page .sec_5_price_content .price_title h4{
+        font-size: 22px;
+    }
+    #marketing_page .sec_5_price_content .box .box_w>.line{
+        margin: 20px auto;
+    }
+    #marketing_page .sec_5_price_content >.box > .box_w{
+        max-width: 300px;
+    }
+    #marketing_page .sec_5_price_content .price_info >li >dl dt{
+     font-size: 16px;   
+    }
+    #marketing_page .sec_5_price_content .price_info >li >dl dd{
+        font-size: 14px;
+    }
+    #marketing_page .sec_5_price_content .price_info >li .num{
+        min-width: 18px;
+        width: 18px;
+        height: 18px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    #marketing_page .sec_5_price_content .honey_tip{
+        padding: 20px 15px;
+    }
+    #marketing_page .sec_5_price_content .honey_tip > .title h5{
+        font-size: 15px;
+    }
+    #marketing_page .sec_5_price_content .honey_tip >ul li p{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:900px) {
+    #marketing_page .sec_5_price_btn_list >li >h4{
+        font-size: 24px;
+    }
+    
+}
+@media screen and (max-width:768px) {
+    #marketing_page .sec_5_price_btn_list{
+        margin-top: 40px;
+        gap: 10px;
+        flex-direction: column;
+    }
+    #marketing_page .sec_5_price_btn_list >li{
+        width: 100%;
+        padding: 10px 0;
+        height: auto;
+
+    }
+    #marketing_page .sec_5_price_btn_list >li >p{
+        font-size: 12px;
+    }
+    #marketing_page .sec_5_price_btn_list >li >h4{
+        font-size: 18px;
+    }
+    #marketing_page .sec_5_price_btn_list >li.on h5{
+        font-size: 18px;
+        margin-top: 6px;
+    }
+    #marketing_page .sec_5_price_content >.plus_box{
+        display: none;
+    }
+    #marketing_page .sec_5_price_content{
+        margin-top: 20px;
+        flex-direction: column;
+    }
+    #marketing_page .sec_5_price_content{
+        border: none;
+        gap: 10px;
+        background-color: transparent;
+    }
+    #marketing_page .sec_5_price_content >.box{
+        width: 100%;
+        padding: 50px 0;
+        background-color: #fff;
+    }
+    #marketing_page .sec_5_price_content >.box._1{
+        border: 1.5px solid var(--neutral-gray-30002, #D4D4D4);
+        border-radius: 14px;
+    }
+}

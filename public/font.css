@@ -1,0 +1,172 @@
+/* @import "./REVONZA/stylesheet.css"; */
+/* font-family: 'REVONZA'; */
+/* @import "./aAccountantSignature/stylesheet.css"; */
+/* font-family: 'a Accountant Signature'; */
+/* @import url('https://webfontworld.github.io/gmarket/GmarketSans.css'); */
+/* font-family: 'GmarketSans'; */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+@font-face {font-family: "High Summit"; src: url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.eot"); src: url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.woff") format("woff"), url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.svg#High Summit") format("svg"); }
+/* font-family: 'Nanum Myeongjo', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* font-family: "Noto Serif KR", serif; */
+/* font-family: "Poppins", sans-serif; */
+/* font-family: "Advent Pro", sans-serif; */
+/* font-family: "Spectral", serif; */
+/* font-family: "Poppins", sans-serif; */
+
+@font-face {
+    font-family: 'Oswald';
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/oswald/v53/TK3iWkUHHAIjg752GT8G.woff2) format('woff2');
+}
+
+
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Paperlogy */
+/*  font-family: 'Paperlogy'; */
+@font-face {
+    font-family: 'Paperlogy';
+    font-weight: 600;
+    font-display: swap;
+    font-style: normal;
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'Paperlogy';
+    font-weight: 700;
+    font-display: swap;
+    font-style: normal;
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+}
+
+/* origin-super-condensed */
+/*  font-family: 'origin-super-condensed'; */
+@font-face {
+    font-family:"Origin Super Condensed";
+    font-weight:300;
+    font-display:auto;
+    font-style:normal;
+    font-stretch:normal;
+    src:url("https://use.typekit.net/af/b7b1a0/000000000000000077525264/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/b7b1a0/000000000000000077525264/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/b7b1a0/000000000000000077525264/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3") format("opentype");
+}
+    
+@font-face {
+    font-family:"Origin Super Condensed";
+    font-weight:400;
+    font-display:auto;
+    font-style:normal;
+    font-stretch:normal;
+    src:url("https://use.typekit.net/af/4c82af/000000000000000077525266/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/4c82af/000000000000000077525266/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/4c82af/000000000000000077525266/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+}
+    
+@font-face {
+    font-family:"Origin Super Condensed";
+    font-weight:700;
+    font-display:auto;
+    font-style:normal;
+    font-stretch:normal;
+    src:url("https://use.typekit.net/af/5a1ecb/00000000000000007752526a/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/5a1ecb/00000000000000007752526a/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/5a1ecb/00000000000000007752526a/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+}
+
+
+
+
+/* Pretendard */
+/*  font-family: 'Pretendard'; */
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard Black'), url('/fonts/Pretendard/Pretendard-Black.woff2') format('woff2'), url('/fonts/Pretendard/Pretendard-Black.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 800;
+	font-display: swap;
+	src: local('Pretendard ExtraBold'), url('/fonts/Pretendard/Pretendard-ExtraBold.woff2') format('woff2'), url('/fonts/Pretendard/Pretendard-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 700;
+	font-display: swap;
+	src: local('Pretendard Bold'), url('/fonts/Pretendard/Pretendard-Bold.woff2') format('woff2'), url('/fonts/Pretendard/Pretendard-Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 600;
+	font-display: swap;
+	src: local('Pretendard SemiBold'), url('/fonts/Pretendard/Pretendard-SemiBold.woff2') format('woff2'), url('/fonts/Pretendard/Pretendard-SemiBold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 500;
+	font-display: swap;
+	src: local('Pretendard Medium'), url('/fonts/Pretendard/Pretendard-Medium.woff2') format('woff2'), url('/fonts/Pretendard/Pretendard-Medium.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 400;
+	font-display: swap;
+	src: local('Pretendard Regular'), url('/fonts/Pretendard/Pretendard-Regular.woff2') format('woff2'), url('/fonts/Pretendard/Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 300;
+	font-display: swap;
+	src: local('Pretendard Light'), url('/fonts/Pretendard/Pretendard-Light.woff2') format('woff2'), url('/fonts/Pretendard/Pretendard-Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 200;
+	font-display: swap;
+	src: local('Pretendard ExtraLight'), url('/fonts/Pretendard/Pretendard-ExtraLight.woff2') format('woff2'), url('/fonts/Pretendard/Pretendard-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Pretendard';
+	font-weight: 100;
+	font-display: swap;
+	src: local('Pretendard Thin'), url('/fonts/Pretendard/Pretendard-Thin.woff2') format('woff2'), url('/fonts/Pretendard/Pretendard-Thin.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'LABDigital';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fonts/LABDigital.woff') format('woff');
+    font-display: swap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,207 @@
+<section class="section sc-vision">
+    <div class="inner">
+        <div class="ttl-area">
+            <h2 class="sc-ttl main-ttl split-txt">Our Vision</h2>
+            <h3 class="sc-sub-ttl"><span class="color-blue split-txt">와커스의 비전</span></h3>
+        </div>
+
+        <div class="vision-swiper swiper">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <div class="card">
+                        <div class="img-area">
+                            <img src="/img/hospital/img-vision01.png" alt="" class="img">
+                        </div>
+                        <div class="txt-area">
+                            <h3 class="ttl">
+                                독창적인 아이디어와 최신 트렌드를 반영
+                            </h3>
+                            <p class="desc">
+                                와커스는 고객의 브랜드를 널리 알리기 위해 타사와 차별화된 아이디어를 제공하며,<br class="pc">
+                                최신 트렌드에 민감하게 반응하여 남들보다 빠르게 시장을 선도합니다.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="card">
+                        <div class="img-area">
+                            <img src="/img/hospital/img-vision02.png" alt="" class="img">
+                        </div>
+                        <div class="txt-area">
+                            <h3 class="ttl">
+                                각 분야의 전문가의 퍼스널 브랜딩
+                            </h3>
+                            <p class="desc">
+                                와커스는 각 분야별 전문가가 고객님의 현 상황을 파악하고 철저한 시장조사를 통해<br class="pc">
+                                꼭, 필요한 부분을 캐치하여 먼저 제안드립니다.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="card">
+                        <div class="img-area">
+                            <img src="/img/hospital/img-vision03.png" alt="" class="img">
+                        </div>
+                        <div class="txt-area">
+                            <h3 class="ttl">
+                                내 사업에 가장 도움이 되는 최고 효율만을 선택
+                            </h3>
+                            <p class="desc">
+                                와커스는 필요하지 않는 부분을 신경쓰지 않습니다. 오직 내 사업에 필요한 부분만을<br class="pc">
+                                집중 공략하여 더 적은 비용 더 높은 효율을 만들어냅니다.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="swiper-slide">
+                    <div class="card">
+                        <div class="img-area">
+                            <img src="/img/hospital/img-vision04.png" alt="" class="img">
+                        </div>
+                        <div class="txt-area">
+                            <h3 class="ttl">
+                                고객이 원하는 광고가 우리가 해야 하는 광고
+                            </h3>
+                            <p class="desc">
+                                와커스는 고객 중심의 마케팅을 통해 고객이 원하는 광고 방향성을 경청하고<br class="pc">
+                                함께 걸어가는 파트너로서 최대한의 도움을 드립니다.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-controller">
+                <button class="btn btn-ico btn-prev"><span class="blind">이전</span></button>
+                <button class="btn btn-ico btn-next"><span class="blind">다음</span></button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script is:inline>
+    $(document).ready(() => {
+        gsap.registerPlugin(SplitText, ScrollTrigger) 
+
+        let visionSwiper
+        function initSwiper() {
+            visionSwiper = new Swiper('.sc-vision .swiper', {
+                slidesPerView: 'auto',
+                spaceBetween: 12,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: true,
+                    enabled: false
+                },
+                pagination: {
+                    el: '.sc-vision .swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".sc-vision .btn-next",
+                    prevEl: ".sc-vision .btn-prev",
+                },
+                breakpoints: {
+                    768: {
+                        loop: true,
+                        centeredSlides: true,
+                        spaceBetween: vwToPx(7.8125),
+                    }
+                }
+            })
+            return visionSwiper
+        }
+
+        ScrollTrigger.create({
+            trigger: '.sc-vision .swiper',
+            start: 'top 80%',
+            end: 'bottom 20%',
+            onEnter: () => visionSwiper.autoplay.start(),
+            onLeave: () => visionSwiper.autoplay.stop(),
+            onEnterBack: () => visionSwiper.autoplay.start(),
+            onLeaveBack: () => visionSwiper.autoplay.stop()
+        });
+
+        function vwToPx(vw) {
+            let px = $(window).innerWidth() * (vw / 100);
+            $('.sc-vision').css('--margin-left', px)
+            return px;
+        }
+
+        let swiper = initSwiper();
+
+        $(window).on('resize', function() {
+            if(window.innerWidth > 768) {
+                swiper.destroy(true, true);
+                swiper = initSwiper(); 
+            }
+        });
+
+        const split = new SplitText(".sc-vision .split-txt", {type: "chars"});
+
+        ScrollTrigger.matchMedia({
+            
+            "(min-width: 769px)": function() {
+                
+                const tl = gsap.timeline({ paused: true })
+                .from(split.chars, {
+                    yPercent: 10, 
+                    opacity: 0, 
+                    stagger: 0.05,
+                    ease: 'back(3)',
+                })
+                .to('.sc-vision', {
+                    '--scaleX': 1
+                }, '<')
+                .from('.sc-vision .swiper-slide, .sc-vision .btn, .sc-vision .swiper-pagination', {
+                    yPercent: 10,
+                    opacity: 0,
+                    stagger: {
+                        each: .1
+                    }
+                }, '-=.1')
+
+                ScrollTrigger.create({
+                    trigger: '.sc-vision',
+                    start: '0% 50%',
+                    end: '100% 50%',
+                    animation: tl,
+                    toggleActions: 'restart none none reverse',
+                })
+            },
+
+            "(max-width: 768px)": function() {
+                const tl = gsap.timeline({ paused: true })
+                .from(split.chars, {
+                    yPercent: 10, 
+                    opacity: 0, 
+                    stagger: 0.05,
+                    ease: 'back(3)',
+                })
+                .to('.sc-vision', {
+                    '--scaleX': 1
+                }, '<')
+                .from('.sc-vision .swiper-slide, .sc-vision .swiper-pagination', {
+                    yPercent: 10,
+                    opacity: 0,
+                    stagger: {
+                        each: .1
+                    }
+                }, '-=.1')
+
+                ScrollTrigger.create({
+                    trigger: '.sc-vision',
+                    start: '0% 70%',
+                    end: '100% 70%',
+                    animation: tl,
+                    toggleActions: 'restart none none reverse',
+                })
+            },
+        });
+    })
+</script>

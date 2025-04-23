@@ -1,0 +1,903 @@
+@font-face {
+    font-family: 'PTBandocheB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/PTBandocheB.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Attila Sans Black";
+    src: url("https://db.onlinewebfonts.com/t/e6ecebce74f9ee16345813d47cb3cff9.eot");
+    src: url("https://db.onlinewebfonts.com/t/e6ecebce74f9ee16345813d47cb3cff9.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/e6ecebce74f9ee16345813d47cb3cff9.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/e6ecebce74f9ee16345813d47cb3cff9.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/e6ecebce74f9ee16345813d47cb3cff9.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/e6ecebce74f9ee16345813d47cb3cff9.svg#Attila Sans Black")format("svg");
+}
+
+main {
+    overflow: hidden;
+}
+
+.s4 {
+    background: #fff;
+    overflow: hidden;
+}
+
+.s4 .sc_inner {
+    padding: 120px 0 60px;
+}
+
+.s4 .tit_area {
+    color: #000;
+    padding: 0 100px;
+}
+
+.s4 .tit_area h2 {
+    font-family: "Attila Sans Black";
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 100%;
+    padding-bottom: 8px;
+}
+
+.s4 .tit_area p {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.88px;
+}
+
+.s4 .flowing_wrap {
+    /* position: absolute; */
+    padding: 80px 0 160px;
+    transform: rotate(-5deg) translateX(-100%);
+}
+
+.s4 .tag_list {
+    display: flex;
+    gap: 10px;
+    transition: 1.2s;
+}
+
+.s4 .tag_list+.tag_list {
+    padding-top: 16px;
+}
+
+.s4 .tag_list .tag_item {
+    display: flex;
+    padding: 12px 24px;
+    background: var(--Black, linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), #050505);
+    border-radius: 12px;
+}
+
+.s4 .tag_list .tag_item h3 {
+    color: #FFF;
+    font-family: "PTBandocheB";
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -1.12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-wrap: nowrap;
+    word-break: keep-all;
+    text-transform: uppercase;
+}
+
+.tag_item .ico {
+    display: block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 30px;
+    height: 30px;
+}
+
+.tag_item .ico.blog {
+    background-image: url(/img/marketing/ico_blog.svg);
+}
+
+.tag_item .ico.seo {
+    background-image: url(/img/marketing/ico_seo.svg);
+}
+
+.tag_item .ico.google {
+    background-image: url(/img/marketing/ico_google.svg);
+}
+
+.tag_item .ico.kakao {
+    background-image: url(/img/marketing/ico_kakao.svg);
+}
+
+.tag_item .ico.web {
+    background-image: url(/img/marketing/ico_web.svg);
+}
+
+@keyframes slideRight {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    to {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    to {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+
+.s4 .tag_list.right {
+    animation: slideRight 40s linear infinite;
+}
+
+.s4 .tag_list.left {
+    animation: slideLeft 40s linear infinite;
+}
+
+.s4 .tag_list:hover {
+    animation-play-state: paused;
+}
+
+.s4 .rolling_wrap {
+    padding-bottom: 35px;
+}
+
+.s4 .rolling_wrap .rolling_txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 12px;
+}
+
+.s4 .rolling_wrap .rolling_txt>p {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.96px;
+}
+
+.s4 .rolling_wrap .rolling_box {
+    width: 200px;
+    height: 66px;
+    border-radius: 12px;
+    border: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 6px;
+}
+
+.s4 .rolling_wrap .rolling_box p {
+    color: #050505;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 150%;
+    letter-spacing: -1.12px;
+    padding: 12px 0;
+    transition: 0.4s;
+}
+
+.rolling_box p.hide {
+    opacity: 0;
+}
+
+.rolling_box p.show {
+    opacity: 1;
+}
+
+.s4 .scr_down {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.s4 .scr_down .ico {
+    animation: swing 0.8s infinite ease-in-out alternate;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(/img/marketing/ico_down.svg) center center/100% 100% no-repeat;
+}
+
+@keyframes swing {
+    0% {
+        transform: translateY(-5%);
+    }
+
+    100% {
+        transform: translateY(5%);
+    }
+}
+
+.s4 .scr_down p {
+    color: #737373;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.64px;
+}
+
+@media screen and (max-width:980px) {
+    .s4 .tit_area {
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .s4 .tit_area h2 {
+        font-size: 44px;
+        padding-bottom: 14px;
+    }
+
+    .s4 .tit_area p {
+        font-size: 18px;
+    }
+
+    .s4 .flowing_wrap {
+        padding: 80px 0 90px;
+    }
+
+    .s4 .tag_list {
+        gap: 6px;
+    }
+
+    .s4 .tag_list+.tag_list {
+        padding-top: 10px;
+    }
+
+    .s4 .tag_list .tag_item {
+        padding: 10px 20px;
+    }
+
+    .s4 .tag_list .tag_item h3 {
+        font-size: 16px;
+    }
+
+    .s4 .rolling_wrap .rolling_txt>p {
+        font-size: 18px;
+    }
+
+    .s4 .rolling_wrap .rolling_box {
+        width: 150px;
+        border-radius: 10px;
+        height: 47px;
+        margin-left: 2px;
+    }
+
+    .s4 .rolling_wrap .rolling_box p {
+        font-size: 18px;
+        padding: 8px 0;
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+    .s4 .tag_list .tag_item {
+        padding: 6px 18px;
+    }
+
+    .s4 .tag_list .tag_item h3 {
+        font-size: 15px;
+    }
+
+    .tag_item .ico {
+        width: 20px;
+        height: 20px;
+    }
+
+}
+
+
+@media screen and (max-width:480px) {
+    .s4 .rolling_wrap .rolling_box {
+        width: 100px;
+        border-radius: 8px;
+    }
+}
+
+.m.s5 {
+    background: #F4F4F4;
+}
+
+.m.s5 .sc_inner {
+    padding: 90px 100px;
+}
+
+.m.s5 .tit_area h2 {
+    font-family: "Attila Sans Black";
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 100%;
+    padding-bottom: 106px;
+}
+
+.m.s5 .step_list {
+    display: flex;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.m.s5 .step_list:after{
+    content:'';
+    display: block;
+    position: absolute;
+    bottom:0;
+    left:var(--left);
+    width:20%;
+    height:3px;
+    background-color: #586AD9;
+    transition: all .45s ease;
+}
+
+.m.s5 .step_item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.m.s5 .step_item p {
+    color: #A3A3A3;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: -0.64px;
+    padding-bottom: 6px;
+}
+
+.m.s5 .step_item .line {
+    background: #d4d4d4;
+    height: 3px;
+}
+
+.m.s5 .step_item.on p {
+    color: #050505;
+}
+
+.m.s5 .step_item.on .line {
+    width: 100%;
+    /* background: #586AD9; */
+}
+
+.m.s5 .question_wrap {
+    position: relative;
+    min-height: 400px;
+}
+
+.m.s5 .question_item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.m.s5 .question_item .tit {
+    color: #050505;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -1.12px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.m.s5 .question_item .tit .num {
+    display: inline-block;
+    width: 74px;
+    padding-right: 10px;
+    font-family: "Attila Sans Black";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 100%;
+}
+
+.m.s5 .form_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.m.s5 .question_item .tit strong {
+    font-weight: 600;
+}
+
+.m.s5 .form .btn_submit {
+    position: relative;
+    gap: 10px;
+    display: flex;
+    align-items: end;
+    font-family: "Attila Sans Black";
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 50px;
+    cursor: pointer;
+    transition: 0.6s;
+    color: #D4D4D4;
+    background: #F4F4F4;
+    border: none;
+}
+
+.m.s5 .form .btn_submit .ico {
+    display: block;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.6s;
+}
+
+.form .btn_submit .ico svg {
+    transition: color 0.1s;
+}
+
+.form .btn_submit {
+    color: #D4D4D4;
+    /* cursor: default; */
+}
+
+/* .m.s5 .form .btn_submit:after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: url(/img/marketing/ico_next.svg) center center/100% no-repeat;
+} */
+
+.option_group {
+    display: flex;
+    gap: 8px 10px;
+}
+
+.form .question_wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 100%;
+    max-width: 1070px;
+}
+
+.option_group .label_checkbox {
+    cursor: pointer;
+}
+
+.option_group label input {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.option_group label .label {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #050505;
+    height: 50px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: 2px solid #050505;
+    transition: background 0.5s;
+    transition-delay: 0.06s;
+}
+
+
+.option_group label .input_tit {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    z-index: 2;
+    font-family: 'PTBandocheB';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.72px;
+}
+
+.option_group label .input_tit span {
+    display: block;
+    text-align: center;
+    transform-origin: left top;
+    transition: color 0.2s, transform 0.4s;
+}
+
+.option_group .label .input_tit span:after {
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    top: 150%;
+    left: 0;
+    transform: skewY(5deg);
+    transform-origin: left top;
+    transition: transform 0.4s;
+}
+
+.option_group label .label .ripple {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    transform: translateZ(0);
+    border-radius: inherit;
+}
+
+
+.option_group label .label .ripple span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: translateY(105%);
+    background: #000;
+    border-radius: 50%;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0, 1), border-radius 0.5s cubic-bezier(0.4, 0, 0, 1);
+    animation: none;
+}
+
+.form .form_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 10px;
+}
+
+.form .form_list .input_group {
+    width: calc(25% - 8px);
+}
+
+.form .form_list .input_group label {
+    display: block;
+    padding-bottom: 10px;
+}
+
+.form .form_list .input_group label em {
+    color: #FF2C2C;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.64px;
+}
+
+.form .form_list .input_group input[type="text"] {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #050505;
+    color: #050505;
+    font-family: 'PTBandocheB';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.72px;
+    display: flex;
+    padding: 10px 20px;
+}
+
+.form .form_list .input_group.w100 {
+    width: 100%;
+}
+
+.form .form_list .input_group textarea {
+    color: #050505;
+    font-family: 'PTBandocheB';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.72px;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 12px;
+    resize: vertical;
+    border: 2px solid #050505;
+    color: #050505;
+}
+
+.form .form_list .input_group.chk {
+    display: flex;
+    align-content: center;
+    gap: 6px;
+}
+
+.form .form_list .input_group.chk label {
+    padding-bottom: 0;
+    cursor: pointer;
+}
+
+.form .input_group.chk .btn_pop {
+    position: relative;
+}
+
+.form .input_group.chk .btn_pop:after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: -1px;
+    height: 1px;
+    width: 100%;
+    background: #050505;
+}
+
+.input_group.chk input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    background: #a3a3a3 url(/img/marketing/ico_check.svg) center center/10px auto no-repeat;
+    transition: background .4s;
+}
+
+.input_group.chk input[type="checkbox"]:checked {
+    background-color: rgba(88, 106, 217, 1);
+}
+
+.form .form_list .input_group textarea::placeholder {
+    color: #A3A3A3;
+}
+
+
+@media screen and (max-width:1680px) {
+    .m.s5 .sc_inner {
+        padding: 90px 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .m.s5 .question_wrap {
+        min-height: 400px;
+    }
+
+    .form .option_group {
+        flex-wrap: wrap;
+        width: calc(100% - 200px);
+    }
+
+    .form .form_list {
+        width: calc(100% - 100px);
+    }
+
+    .form .form_list .input_group {
+        width: calc(50% - 8px);
+    }
+}
+
+@media screen and (max-width:980px) {
+    .m.s5 .sc_inner {
+        width: 100%;
+        padding: 80px 20px;
+        margin: 0 auto;
+    }
+
+    .m.s5 .tit_area h2 {
+        font-size: 40px;
+        padding-bottom: 80px;
+    }
+    .m.s5 .question_item {
+        position: relative;
+    }
+
+    .m.s5 .question_item .tit {
+        font-size: 20px;
+    }
+
+    .m.s5 .question_item .tit .num {
+        width: 55px;
+        padding-right: 0;
+        font-size: 26px;
+    }
+
+    .m.s5 .form_inner {
+        flex-direction: column;
+        position: relative;
+        gap:20px;
+    }
+
+    .m.s5 .question_wrap {
+        min-height: auto;
+    }
+
+    .form .form_list .input_group {
+        width: calc(100%);
+    }
+
+    .option_group label .input_tit {
+        font-size: 15px;
+    }
+
+    .form .option_group {
+        width: 100%;
+    }
+
+    .option_group label .label {
+        height: 44px;
+        padding: 0 14px;
+        border-radius: 8px;
+    }
+
+    .form .form_list {
+        width: 100%;
+    }
+
+    .form .form_list .input_group input[type="text"] {
+        border-radius: 8px;
+        font-size: 16px;
+    }
+
+    .form .form_list .input_group textarea {
+        font-size: 16px;
+    }
+
+    .m.s5 .form .btn_submit {
+        font-size: 40px;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .m.s5 .form .btn_submit .ico {
+        width: 40px;
+        height: 40px;
+    }
+
+    .m.s5 .form .btn_submit .ico svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .m.s5 .form .btn_submit[data-index="0"],
+    .m.s5 .form .btn_submit[data-index="1"],
+    .m.s5 .form .btn_submit[data-index="2"],
+    .m.s5 .form .btn_submit[data-index="3"] {
+        position: relative;
+        right: 0;
+        bottom: 0;
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    .m.s5 .form .btn_submit[data-index="0"],
+    .m.s5 .form .btn_submit[data-index="1"],
+    .m.s5 .form .btn_submit[data-index="2"],
+    .m.s5 .form .btn_submit[data-index="3"] {
+        bottom: 0;
+    }
+
+    .m.s5 .question_item .tit {
+        flex-wrap: wrap;
+    }
+
+    .m.s5 .form .btn_submit {
+        font-size: 36px;
+    }
+}
+/* FORM STEP */
+.form .question_wrap .question_item {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    /* transition: opacity 0.5s ease, visibility 0.5s ease */
+}
+
+.form .question_wrap .question_item.on {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+/* FOCUS/ON EFFECT */
+.form .form_list .input_group input[type="text"],
+.form .form_list .input_group textarea {
+    transition: background-color 0.5s, border 0.5s;
+}
+
+.form .form_list .input_group input[type="text"]:focus,
+.form .form_list .input_group textarea:focus {
+    border: 2px solid #586AD9;
+    background-color: rgba(88, 106, 217, 0.10);
+}
+
+.label_checkbox input[type="checkbox"]:checked~.label,
+.label_checkbox input[type="radio"]:checked~.label {
+    background: #000;
+}
+
+.label_checkbox input[type="checkbox"]:checked~.label .input_tit span,
+.label_checkbox input[type="radio"]:checked~.label .input_tit span {
+    color: #fff;
+    transform: translateY(-150%) skewY(-7deg);
+}
+
+.label_checkbox input[type="checkbox"]:checked~.label .input_tit span:after {
+    transform: skewY(7deg);
+}
+
+.label_checkbox input[type="checkbox"]:checked~.label .ripple span {
+    border-radius: 0;
+    transform: translateY(0);
+    transition-duration: 0s, 0s;
+    animation: roundedRippleIn 0.5s cubic-bezier(0.4, 0, 0, 1);
+}
+
+.label_checkbox input[type="radio"]:checked~.label .ripple span {
+    border-radius: 0;
+    transform: translateY(0);
+    transition-duration: 0s, 0s;
+    animation: roundedRippleIn 0.5s cubic-bezier(0.4, 0, 0, 1);
+}
+.form .btn_submit.completed {
+    color: #586AD9 !important;
+}
+.form .btn_submit.completed:hover {
+    color: #586AD9 !important;
+}
+
+
+.form .btn_submit.completed .ico svg {
+    color: #586AD9;
+
+}
+
+
+
+@keyframes roundedRippleIn {
+    0% {
+        border-radius: 100%;
+        transform: translateY(-105%) translateZ(0);
+    }
+
+    100% {
+        border-radius: 0;
+        transform: translateY(0) translateZ(0);
+    }
+}
+
+/* HOVER EFFECT */
+.m.s5 .form .btn_submit:hover {
+    color: #586AD9;
+}
+
+.m.s5 .form .btn_submit:hover .ico {
+    transform: translateX(6px);
+}
+
+.m.s5 .form .btn_submit:hover .ico svg {
+    color: #586AD9;
+}
+
+
+@media screen and (min-width:1351px) {
+
+    .option_group label .label:hover .input_tit span {
+        transform: translateY(-150%) skewY(-7deg);
+    }
+
+    .option_group label .label:hover .input_tit span:after {
+        transform: skewY(7deg);
+    }
+
+    .option_group .label:hover .input_tit span:after {
+        transform: skewY(7deg);
+    }
+}

@@ -1,0 +1,202 @@
+
+<div id="robot">
+    <div id="robotTxt"></div>
+</div>
+
+
+
+<script is:inline>
+        
+
+        
+
+
+
+</script>
+    
+
+<script>
+
+        $(window).resize(function(){
+            windowW2 = $(window).innerWidth();
+            if(windowW - windowW2 !== 0) {
+                setTimeout(() => {
+                    conW = $('#robot').innerWidth();
+                    conH = $('#robot').innerHeight();
+                    camera.aspect = 1 / 1;
+                    camera.updateProjectionMatrix();
+                    $('#robot canvas').attr('style','display: block; width: '+conW+'px; height: '+conH+'px; touch-action: none;');
+                    renderer.setSize( conW, conH);
+                }, 500);
+            };
+            windowW = $(window).innerWidth();
+        });
+        function animate() {
+                delta = clock.getDelta();
+                mixer.update( delta );
+                controls.update();
+                renderer.render( scene, camera );
+        }
+
+
+
+
+        import * as THREE from 'three';
+        // import Stats from 'three/addons/libs/stats.module.js';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+        import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+        import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+        import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+        import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
+
+        let mixer, delta, clock, container, controls, renderer, scene, pmremGenerator, camera, sr, contents2, chBtn2, conW, conH, chBtn;
+        let windowW,windowW2;
+        $(document).ready(function(){
+                (function(){var w=window;if(w.ChannelIO){return w.console.error("ChannelIO script included twice.");}var ch=function(){ch.c(arguments);};ch.q=[];ch.c=function(args){ch.q.push(args);};w.ChannelIO=ch;function l(){if(w.ChannelIOInitialized){return;}w.ChannelIOInitialized=true;var s=document.createElement("script");s.type="text/javascript";s.async=true;s.src="https://cdn.channel.io/plugin/ch-plugin-web.js";var x=document.getElementsByTagName("script")[0];if(x.parentNode){x.parentNode.insertBefore(s,x);}}if(document.readyState==="complete"){l();}else{w.addEventListener("DOMContentLoaded",l);w.addEventListener("load",l);}})();
+                            ChannelIO('boot', {
+                                "pluginKey": "9fd855f9-6aa8-48d3-a6c1-cfbd19c432a5"
+                            });
+                            createRobot();
+        });
+
+
+        function createRobot() {
+            var hash = "#robotopen"; // 추가할 해시 값
+            var hashRemove = "#robotclose"; // 추가할 해시 값
+            var currentUrl = window.location.href.split("#")[0]; // 기존 해시 제거
+            windowW = $(window).innerWidth();
+            conW = $('#robot').innerWidth();
+            conH = $('#robot').innerHeight();
+            clock = new THREE.Clock();
+            container = document.getElementById('robot');
+            // const stats = new Stats();
+            // container.appendChild( stats.dom );
+            renderer = new THREE.WebGLRenderer( { antialias: true } );
+            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setSize( conW, conH);
+            container.appendChild( renderer.domElement );
+            pmremGenerator = new THREE.PMREMGenerator( renderer );
+            scene = new THREE.Scene();
+            // scene.background = new THREE.Color( 0xffffffff );
+            new RGBELoader().load('/@fs/home/ubuntu/wacus/src/assets/textures/royal_esplanade_1k.hdr', function(texture){
+                scene.environment = texture;
+            });
+            renderer.setClearAlpha(0);
+            scene.environment = pmremGenerator.fromScene( new RoomEnvironment(), 0.04 ).texture;
+            //light
+            const light = new THREE.PointLight( 0xffffff, 5, 40 );
+            light.position.set( 2, 1, 0 );
+            scene.add( light );
+            const light2 = new THREE.PointLight( 0xffffff, 30, 50 );
+            light2.position.set( -1, 2, 0 );
+            scene.add( light2 );
+            const light4 = new THREE.PointLight( 0x00ffff, 20, 10 );
+            light4.position.set( 0, -3, 0 );
+            scene.add( light4 );
+            camera = new THREE.PerspectiveCamera( 20, 200 / 200, 1, 150 );
+            camera.position.set( 2, 1, 5 );
+            controls = new OrbitControls( camera, renderer.domElement );
+            controls.target.set( 0, 0.5, 0 );
+            controls.update();
+            controls.enablePan = false;
+            controls.enableDamping = true;
+            controls.enableZoom = false;
+            controls.enableRotate = false;
+            const dracoLoader = new DRACOLoader();
+            dracoLoader.setDecoderPath( '/@fs/home/ubuntu/wacus/src/assets/models/gltf/robot/' );
+            const loader = new GLTFLoader();
+            loader.setDRACOLoader( dracoLoader );
+            loader.load( '/@fs/home/ubuntu/wacus/src/assets/models/gltf/robot/robots_3.glb', function ( gltf ) {
+                const model = gltf.scene;
+                model.position.set( 0, -0.2, 0 );
+                model.scale.set( 5, 5, 5 );
+                scene.add( model );
+                mixer = new THREE.AnimationMixer( model );
+                mixer.clipAction( gltf.animations[ 0 ] ).play(); // 위아래 무브
+                mixer.clipAction( gltf.animations[ 1 ] ).play(); // 팔까딱
+                mixer.clipAction( gltf.animations[ 3 ] ).play(); // 목흔들기
+                mixer.clipAction( gltf.animations[ 4 ] ).play(); // 얼굴표정
+                renderer.setAnimationLoop( animate );
+
+              //  채널봇 클릭 이벤트 //
+              setTimeout(() => {
+                if(window.ChannelIO) {
+                        contents2 = $('#ch-plugin-entry').children('div');
+                                sr = $(contents2)[0].shadowRoot;
+                                console.log(sr);
+                                 let chBtn = $(sr).find('div').find("[class^='Launcherstyled']");
+                                chBtn = $(sr).find("#ch-shadow-root-wrapper");
+                                chBtn.attr('style','display:none;');
+                }else{
+                    console.log("없음")
+                };
+            }, 2000);  
+
+                
+                function gtag_report_conversion_robot(url) {
+                    var callback = function () {
+                        if (typeof(url) != 'undefined') {
+                        window.location = url;
+                        }
+                    };
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-16997367498/BC64CNf0nLgaEMr9_Kg_',
+                        'value': 5.0,
+                        'currency': 'KRW',
+                        'event_callback': callback
+                    });
+                    return false;
+                }
+
+                $('#robot').on('click touchstart', function(event) {
+                    var chMobile = $('.ch-mobile-messenger');
+                    var chDesk = $('.ch-desk-messenger');
+                    if (chDesk.length > 0) { //PC버전일때
+                        event.preventDefault(); // 기본 이벤트 방지
+                        let chBtn2 = $(sr).find('div').find("[class^='IconButton']");
+                        if (chDesk.hasClass('ch-messenger-hidden')) {
+                            mixer.clipAction(gltf.animations[2]).play();
+                            $('#robotTxt').addClass('hide');
+                            chBtn2.click();
+                            $(this).removeClass('hi');
+                            gtag_report_conversion_robot();
+                            history.pushState(null, null, window.location.href);
+                        } else {
+                            mixer.clipAction(gltf.animations[2]).stop();
+                            $('#robotTxt').removeClass('hide');
+                            chBtn2.click();
+                            $(this).addClass('hi');
+                        }
+                    } else if (chMobile.length > 0) {
+                        event.preventDefault(); // 기본 이벤트 방지
+                        let chBtn2 = $(sr).find('div').find("[class^='IconButton']");
+                        if (chMobile.hasClass('ch-messenger-hidden')) {
+                            mixer.clipAction(gltf.animations[2]).play();
+                            chBtn2.click();
+                            $(this).removeClass('hi');
+                            gtag_report_conversion_robot();
+                            history.pushState(null, null, window.location.href);
+                        } else {
+                            mixer.clipAction(gltf.animations[2]).stop();
+                            $('#robotTxt').removeClass('hide');
+                            chBtn2.click();
+                            $(this).addClass('hi');
+                        }
+                    }
+                });
+                $(window).on("popstate", () => {
+                    window.onpopstate = function (event) { history.go(1); };
+                        var chMobile = $('.ch-mobile-messenger');
+                        var chDesk = $('.ch-desk-messenger');
+                        let chBtn2 = $(sr).find('div').find("[class^='IconButton']");
+                        if (chMobile.length > 0 && chMobile.hasClass('ch-messenger-hidden') == false) {
+                            window.ChannelIO('hideMessenger');
+                        } else if (chDesk.length > 0 && chDesk.hasClass('ch-messenger-hidden') == false) {
+                            chBtn2.click();
+                        };
+                });
+            }, undefined, function ( e ) {
+                console.error( e );
+            } );
+        };
+</script>

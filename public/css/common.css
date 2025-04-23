@@ -1,0 +1,180 @@
+:root {
+    color-scheme: light only;
+}
+body.modal_active {
+    overflow: hidden;
+}
+.none_768{
+    display: block;
+}
+.block_768{
+    display: none;
+}
+.w_90{
+    width: 90%;
+    margin: 0 auto;
+}
+@media screen and (max-width:768px) {
+    .none_768{
+        display: none;
+    }
+    .block_768{
+        display: block;
+    } 
+}
+.sub_sec_top{
+    padding: 210px 0 80px 107px;
+    box-sizing: border-box;
+}
+.sub_sec_top >.sub_title{}
+
+.sub_sec_top >.sub_title h2{
+    color: #000;
+    font-family: "origin-super-condensed", sans-serif;
+    font-size: 160px;
+    font-weight: 400;
+    letter-spacing: 3.2px;
+    text-transform: uppercase;
+}
+.sub_sec_top >.sub_title h2 > span{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #00d0ff;
+    border-radius: 100%;
+    margin-left: 5px;
+}
+.sub_sec_top >.title_info{
+    color: #737373;
+    font-family: "Pretendard";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.7; 
+}
+
+@media screen and (max-width:768px) {
+    .sub_sec_top{
+        padding: 70px 0 35px 20px;
+    }
+    .sub_sec_top >.sub_title h2{
+        font-size: 76px;
+    }
+    .sub_sec_top >.sub_title h2 >span{
+        width: 8px;
+        height: 8px;
+    }
+    .sub_sec_top >.title_info{
+        font-size: 14px;
+    }
+}
+
+.sec_py{
+    padding: 90px 0 130px 0;
+    box-sizing: border-box;
+}
+.sub_w{
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+}
+.sub_w1400{
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+@media screen and (max-width:1600px) {
+    .sub_w{
+        width: 90%;
+    }
+
+}
+@media screen and (max-width:1400px) {
+    .sub_w1400{
+        width: 90%;
+    }
+}
+.sec_title_box{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column; 
+    gap: 15px;
+}
+.sec_title_box.center{
+    align-items: center;
+}
+.sec_title_box.center >p{
+    text-align: center;
+}
+.sec_title_box >span{
+    color:#050505;
+    font-family: "PT Bandoche";
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: solid 1.5px #000;
+    border-radius: 12px;
+}
+.sec_title_box.white >span{
+    color: #fff;
+    border-color: #fff;
+}
+.sec_title_box >h3{
+    color: #262626;
+    font-family: "Pretendard";
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.3; 
+    letter-spacing: -2px;
+}
+.sec_title_box.white >h3{
+    color: #fff;
+}
+.sec_title_box >p{
+    color: #262626;
+    font-family: "Pretendard";
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: -0.96px;
+}
+.sec_title_box.white >p{
+    color:#D4D4D4
+}
+.sec_title_box.white >p strong{
+    color: #fff;
+}
+.sec_title_box >p >strong{
+    font-weight: 700;
+}
+@media screen and (max-width:768px) {
+    .sec_py{
+        padding: 50px 0;
+    }
+    .sec_title_box{
+        gap: 8px;
+    }
+    .sec_title_box >span{
+        font-size: 13px;
+    }
+    .sec_title_box >h3{
+        font-size: 20px;
+    }
+    .sec_title_box >p{
+        font-size: 15px;
+    }
+}
+
+.ani{
+    position: absolute;
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+}

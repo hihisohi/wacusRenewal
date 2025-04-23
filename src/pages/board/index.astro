@@ -1,0 +1,176 @@
+---
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"; //타이틀이랑 웹사이트 설명 
+import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
+
+
+import Head from '../../components/layout/Head.astro'; //메타태그들
+import Header from '../../components/layout/Header.astro'; //진정한 헤더
+import Section1 from "../../components/main/Section1.astro"; //메인 첫번째
+
+
+import Loading from "../../components/Loading.astro"; //로딩
+
+import MouseGrid from "../../components/MouseGrid.astro";
+import MouseEffect from "../../components/MouseEffect.astro";
+import Board1 from "../../components/board/Board1.astro";
+import Section10 from "../../components/main/Section10.astro";
+
+const currentUrl = Astro.request.url;
+
+---
+
+<html lang="ko">
+    <head>
+        <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <link rel="stylesheet" href="../../../public/css/board/board.css">
+    </head>
+    <body>
+            <Header />
+            <!-- <Loading /> -->
+            <!-- <ViewTransitions /> -->
+            <div id="smooth-wrapper">
+                <div id="smooth-content">
+                  <section>
+                    <div class="comm_sec">
+                        <div class="cont_top">
+                            <div class="comm_title">
+                                <h3>OUR STORY</h3>
+                                <span></span>
+                            </div>
+                            <!-- <ul class="comm_tab">
+                                <li class="on">
+                                    <a href="/board">All</a>
+                                </li>
+                                <li>
+                                    <a href="/board?cate=Workshop">Workshop</a>                                   
+                                </li>
+                                <li>
+                                    <a href="/board?cate=Contents">Contents</a>
+                                </li>
+                                <li>
+                                    <a href="/board?cate=Culture">Culture</a>
+                                </li>
+                                <li>
+                                    <a href="/board?cate=News">News</a>
+                                </li>
+                            </ul> -->
+                        </div>
+                        <!-- 관리자에서 선택한 것만 나오기 최대 6개 -->
+                        <div class="cont_mid_1">
+                            <div class="swiper import_swiper">
+                                <div class="swiper-wrapper" id="bringDataPost">
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="cont_mid_2" id="bringDataPost2">
+                        </ul>
+                
+                        <!-- <div class="btn_sec">
+                            <button>
+                                More View
+                            </button>
+                        </div> -->
+                    </div>
+                </section>
+                
+                
+                <script is:inline>
+                  var swiper = new Swiper(".import_swiper", {
+                    slidesPerView: 1.2,
+                    // centeredSlides: true,
+                    spaceBetween: 20,
+                    speed:1200,
+                    loop:true,
+                    autoplay:true,
+                    breakpoints:{
+                      768:{
+                          slidesPerView: 2.8,
+                          spaceBetween: 20,
+                      }
+                    }
+                   
+                  });
+                </script>
+                
+                
+
+                <Section10 />
+                </div>
+            </div>
+            <script is:inline>
+              $(document).ready(function() {
+                var cate = getQueryParam('cate');
+            
+                console.log(cate);
+              // AJAX 요청을 설정합니다
+              $.ajax({
+                  url: "https://wacus.co.kr/api/bringPostData2.php", // 데이터를 가져올 서버의 URL
+                  type: "POST", // HTTP 요청 메소드 (GET, POST 등)
+                  dataType: "json",
+                  data : {cate : cate},
+                  success: function(response) {
+                    console.log(response);
+                    console.log(response.seq.length);
+            
+                    var contentHtml = '';
+                    var contentHtml2 = '';
+            
+                    for (let index = 0; index < response.seq.length; index++) {
+                      
+                      // 각 항목별로 HTML 문자열을 생성
+                      contentHtml += '<div class="swiper-slide" >' +
+                              '<div class="import_card">' +
+                                  '<a href="/boardView?seq='+response.seq[index]+'">' +
+                                      '<div class="img_box">' +
+                                          '<img src="' + response.img[index]+'" alt="">' +
+                                      '</div>' +
+                                      '<div class="text_box">' +
+                                          '<h3>' + response.title[index] + '</h3>' +
+                                          '<span>' + response.category[index] + '</span>' +
+                                      '</div>' +
+                                  '</a>' +
+                              '</div>' +
+                          '</div>';
+            
+                      contentHtml2 += '<li  onclick="window.location=`/boardView?seq='+response.seq[index]+'`">'+
+                            '<div class="img_box">'+
+                                '<img src="' + response.img[index]+'" alt="">'+
+                            '</div>'+                
+                            '<div class="text_box">'+
+                                '<div class="title">'+
+                                    '<h3>'+ response.title[index]+'</h3>'+
+                                    '<div class="date">'+
+                                        '<p>2024.12.01</p>'+
+                                        '<span>|</span>'+
+                                        '<p>' + response.category[index] + '</p>'+
+                                    '</div>'+
+                                '</div>'+
+                                '<div class="icon_box">'+
+                                    '<img src="/img/list_icon.svg" alt="">'+
+                                '</div>'+
+                            '</div>'+
+                        '</li>';
+            
+                    }
+                    // 'bringDataPost' ID를 가진 div에 생성된 HTML을 삽입 
+                    $('#bringDataPost').html(contentHtml);
+                    $('#bringDataPost2').html(contentHtml2);
+                      
+                  },
+                  error: function(xhr, status, error) {
+                      // 요청이 실패하면, 에러 로그를 콘솔에 출력합니다.
+                      console.error("AJAX 요청 실패: " + status + ", " + error);
+                  }
+              });
+            });
+            
+            function getQueryParam(param) {
+                var urlParams = new URLSearchParams(window.location.search);
+                return urlParams.has(param) ? urlParams.get(param) : '';
+            }
+            
+            
+            </script>
+    </body>
+</html>

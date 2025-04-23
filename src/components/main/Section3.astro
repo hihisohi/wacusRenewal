@@ -1,0 +1,267 @@
+---
+---
+<div class="section3" id="mouseEffect">
+    <div data-scroll class="s3_con">
+        <div class="s3_tit">
+            <h2>
+                OUR VISION
+            </h2>
+            <h3>
+                와커스의 비전
+            </h3>
+        </div>
+        <div class="s3_list_group">
+            <ul>
+                <li>
+                    <div class="s3_list_img" id="s3_container1">
+                        <img src="/img/main_s3_01.webp" alt="아이디어와_최신_트렌드" class="js-image" >
+                    </div>
+                    <div class="s3_list_txt_group" >
+                         <div class="s3_list_txt_group_1">
+                            01
+                        </div>
+                        <div class="s3_list_txt_group_2">
+                            <h4>독창적인 <span class="c2">아이디어와 최신 트렌드</span>를 반영</h4>
+                            <p>
+                                와커스는 고객의 브랜드를 널리 알리기 위해 타사와 차별화된 아이디어를 제공하며,  <br class="DT">
+                                최신 트랜드에 민감하게 반응하여 남들보다 빠르게 시장을 선도합니다. 
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="s3_list_img" id="s3_container2">
+                        <!-- <img src="/img/s3_container2.png" alt="" class="js-image" id="texture"> -->
+                        <img src="/img/main_s3_02.webp" alt="퍼스널_브랜딩" class="js-image" >
+                    </div>
+                    <div class="s3_list_txt_group"  >
+                         <div class="s3_list_txt_group_1">
+                            02
+                        </div>
+                        <div class="s3_list_txt_group_2">
+                            <h4>각 분야의 전문가의 <span class="c2">퍼스널 브랜딩</span></h4>
+                            <p>
+                                와커스는 각 분야별 전문가가 고객님의 현 상황을 파악하고 철저한 시장조사를 통해 <br class="DT">
+                                꼭, 필요한 부분을 캐치하여 먼저 제안드립니다.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="s3_list_img" id="s3_container3">
+                        <!-- <img src="/img/s3_container3.png" alt="" class="js-image"> -->
+                        <img src="/img/main_s3_03.webp" alt="최고_효율만을_선택" class="js-image" >
+                    </div>
+                    <div class="s3_list_txt_group"  >
+                        <div class="s3_list_txt_group_1">
+                            03
+                        </div>
+                        <div class="s3_list_txt_group_2">
+                            <h4>내 사업에 가장 도움이 되는  <span class="c2"> 최고 효율만을 선택</span></h4>
+                            <p>
+                                와커스는 필요하지 않는 부분을 신경쓰지 않습니다.  <br class="DT">
+                                오직 내 사업에 필요한 부분만을 집중 공략하여 더 적은 비용 더 높은 효율을 만들어냅니다.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="s3_list_img" id="s3_container4">
+                        <!-- <img src="/img/s3_container4.png" alt="" class="js-image"> -->
+                        <img src="/img/main_s3_04.webp" alt="우리가_해야하는_광고" class="js-image" >
+                    </div>
+                    <div class="s3_list_txt_group"  >
+                         <div class="s3_list_txt_group_1">
+                            04
+                        </div>
+                        <div class="s3_list_txt_group_2">
+                            <h4>고객이 원하는 광고가 <span class="c2">우리가 해야하는 광고</span></h4>
+                            <p>
+                                와커스는 고객 중심의 마케팅을 통해 고객이 원하는 광고 방향성을 경청하고  <br class="DT">
+                                함께 걸어가는 파트너로서 최대한의 도움을 드립니다.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+
+</style>
+
+
+
+
+
+</script>
+<!-- 2번 -->
+
+<!-- <script>
+ import * as THREE from 'three';
+
+// import Stats from 'three/addons/libs/stats.module.js';
+
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
+document.addEventListener('astro:page-load', () => {
+    setTimeout(() => {
+    if (document.querySelector('.section3')) {
+      
+    create3D('s3_container1',3,0.5,1); //모델&ID명,애니메이션숫자,Y위치,크기
+    create3D('s3_container2',4,0,0.8); //모델&ID명,애니메이션숫자,Y위치,크기
+    create3D('s3_container3',5,1,1.2); //모델&ID명,애니메이션숫자,Y위치,크기
+    create3D('s3_container4',5,2,0.2); //모델&ID명,애니메이션숫자,Y위치,크기
+} else {
+        console.warn('Error: .section3 element not found.');
+    }
+     }, 100);
+});
+
+
+
+function create3D(e,i,p,s) {
+    let windowW,windowW2;
+    windowW = $(window).innerWidth();
+    let mixer;
+
+    const clock = new THREE.Clock();
+    const container = document.getElementById(e);
+
+    // const stats = new Stats();
+    // container.appendChild( stats.dom );
+
+    let createWidth = $('#'+e).innerWidth();
+    let createHeight = $('#'+e).innerHeight();
+
+
+    const renderer = new THREE.WebGLRenderer( { antialias: true } );
+    renderer.setPixelRatio( window.devicePixelRatio );
+    renderer.setSize( createWidth, createHeight );
+    container.appendChild( renderer.domElement );
+
+
+    const pmremGenerator = new THREE.PMREMGenerator( renderer );
+
+    const scene = new THREE.Scene();
+    scene.background = new THREE.Color( 0x0f0e0e );
+    scene.environment = pmremGenerator.fromScene( new RoomEnvironment(), 0.04 ).texture;
+    
+    // light
+
+    const light = new THREE.PointLight( 0xffffff, 50, 30 );
+    light.position.set( -2, 0, 5 );
+    scene.add( light );
+
+    const camera = new THREE.PerspectiveCamera( 40, createWidth / createHeight, 1, 100 );
+    camera.position.set( 0, 0, 10 );
+
+    const controls = new OrbitControls( camera, renderer.domElement );
+    controls.target.set( 0, 2, 0 );
+    controls.update();
+    controls.enablePan = false;
+    controls.enableDamping = false;
+    controls.enableZoom = false;
+    controls.enableRotate = false;
+
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath( '/@fs/home/ubuntu/wacus/src/assets/models/gltf/wacus_turnTable/' );
+
+    const loader = new GLTFLoader();
+    loader.setDRACOLoader( dracoLoader );
+    loader.load( '/@fs/home/ubuntu/wacus/src/assets/models/gltf/s3/'+e+'.glb', function ( gltf ) {
+        new RGBELoader().load('/@fs/home/ubuntu/wacus/src/assets/textures/jwel.hdr', function(texture){
+            texture.mapping = THREE.EquirectangularReflectionMapping;
+            scene.environment = texture;
+            scene.environmentIntensity = 1;
+            scene.environmentRotation.set(1,0,1);
+        });
+        const model = gltf.scene;
+        model.position.set( 0, p, 0 );
+        model.scale.set( s, s, s );
+
+        scene.add( model );
+
+        mixer = new THREE.AnimationMixer( model );
+        for (let f = 0; f < i; f++) {
+            mixer.clipAction( gltf.animations[ f ] ).play();
+        };
+        renderer.setAnimationLoop( animate );
+
+        let wt = 0;
+        let wb = 0;
+        let st = 0;
+        let sh = 0;
+        let sb = 0;
+        visibleCheck();
+        $(window).scroll(function(){
+            visibleCheck();
+        });
+        function visibleCheck() {
+            model.visible = true;
+            wt = $(window).scrollTop();
+            wb = wt + $(window).innerHeight();
+            st = $('.section3').position().top;
+            // st = $('.section3').offset().top;
+            sh = $('.section3').outerHeight();
+            sb = st + sh;
+                if(wt < sb && wb > st ) {
+                    model.visible = true;
+                } else {
+                    model.visible = false;
+                }
+
+        }
+        
+    }, undefined, function ( e ) {
+
+        console.error( e );
+
+    } );
+
+   
+
+
+    $(window).resize(function(){
+        windowW2 = $(window).innerWidth();
+        if(windowW - windowW2 !== 0) {
+            setTimeout(() => {
+                createWidth = $('#'+e).innerWidth();
+                createHeight = $('#'+e).innerHeight();
+                camera.aspect = createWidth / createHeight;
+                camera.updateProjectionMatrix();
+                $('#'+e+' canvas').attr('style','display: block; width: '+createWidth+'px; height: '+createHeight+'px; touch-action: none;');
+                renderer.setSize( createWidth, createHeight );
+            }, 500);
+        };
+        windowW = $(window).innerWidth();
+    });
+
+
+    function animate() {
+
+        const delta = clock.getDelta();
+
+        mixer.update( delta );
+
+        controls.update();
+
+        // stats.update();
+
+        // renderer.render( scene, camera );
+        renderer.render( scene, camera );
+
+    }
+    
+};
+
+
+
+
+</script> -->

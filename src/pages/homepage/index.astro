@@ -1,0 +1,70 @@
+---
+title: "Marketing Page"
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"; //타이틀이랑 웹사이트 설명 
+import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
+
+import "../../../public/css/homepage/section1.css"
+
+import Head from '../../components/layout/Head.astro'; //메타태그들
+import Header from '../../components/layout/Header.astro'; //진정한 헤더
+
+import Loading from "../../components/Loading2.astro"; //상세 로딩
+import MouseGrid from "../../components/MouseGrid.astro"; //필요한 섹션에만 주기위해서 컴포넌트로 안가져옴
+  
+
+import Homepage1 from "../../components/homepage/Homepage1.astro"; //롤링섹션
+import Homepage2 from "../../components/homepage/Homepage2.astro"; //get on track
+import Homepage3 from "../../components/homepage/Homepage3.astro"; //다이아몬드 3d
+import Homepage4 from "../../components/homepage/Homepage4.astro"; //홈페이지 제작하고픔?
+import Homepage5 from "../../components/homepage/Homepage5.astro";  //문의하기
+import Homepage6 from "../../components/homepage/Homepage6.astro"; //문의하기
+import Section10 from "../../components/main/Section10.astro";  //풋터
+import ScrollIndicator from "../../components/inc/ScrollIndicator.astro"; //스크롤 인디케이터
+import MouseGrid from "../../components/MouseGrid.astro";
+---
+
+<html lang="ko">
+    <head>
+        <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <ScrollIndicator />
+        <!-- <ViewTransitions /> -->
+        <link rel="stylesheet" href="../../../public/css/homepage/section1.css">
+        <link rel="stylesheet" href="../../../public/css/homepage/section2.css">
+        <link rel="stylesheet" href="../../../public/css/homepage/section3.css">
+        <link rel="stylesheet" href="../../../public/css/homepage/section4.css">
+        <link rel="stylesheet" href="../../../public/css/homepage/section5.css">
+        <link rel="stylesheet" href="../../../public/css/homepage/section7.css"> <!-- 문의하기 CSS -->
+
+        <script src="../../../public/js/homepage/homepage1.js"></script>
+        <script src="../../../public/js/homepage/homepage2.js"></script>
+        <script src="../../../public/js/homepage/homepage3.js"></script>
+        <script src="../../../public/js/homepage/homepage4.js"></script>
+
+        <script src="../../../public/js/marketing/section5.js"></script> <!-- 마케팅 문의하기 폼 -->
+
+        
+    </head>
+    <body>
+        <Header />
+        <Loading />   
+        <MouseGrid />  
+        
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <div style="background:#000;">
+                    <Homepage1 /> 
+                    <Homepage2 /> 
+                    <!-- 3d 오류있음 -->
+                    <Homepage3 />
+                    <Homepage4 />
+                    <!-- section5 js문제있음 따로 뺄 경우 클릭이 작동을 안함 -->
+                    <!-- <Homepage5 /> -->
+                    <Homepage6 client:load />
+                    <Section10 />
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

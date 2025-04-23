@@ -1,0 +1,175 @@
+---
+
+---
+<link rel="stylesheet" href="../../../public/css/main/section2.css">
+<div class="section11"> 
+    <div class="s11_con">
+         <div class="s11_tit_group11">
+             <h2>OUR STORY</h2>
+             <h3><span>와커스 이야기</span></h3>
+         </div>
+         <div class="section8_swiper_box">
+            <div class="view_more_box">
+                <a href="/board">More View <img src="/img/arrow_W.png" alt=""></a>
+            </div>
+            <div class="swiper import_swiper">
+                <div class="swiper-wrapper" id="bringDataPost">
+
+
+                    <!-- <div class="swiper-slide">
+                        <div class="import_card">
+                            <a href="">
+                                <div class="img_box">
+                                    <img src="/img/test_top_img_1.png" alt="">
+                                </div>
+                                <div class="text_box">
+                                    <h3>2024 와커스 가을 워크샵</h3>
+                                    <span>Workshop</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div> -->
+
+
+                    <!-- <div class="swiper-slide">
+                        <div class="import_card">
+                            <a href="">
+                                <div class="img_box">
+                                    <img src="/img/test_top_img_2.png" alt="">
+                                </div>
+                                <div class="text_box">
+                                    <h3>2024 와커스</h3>
+                                    <span>Workshop</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="import_card">
+                            <a href="">
+                                <div class="img_box">
+                                    <img src="/img/test_top_img_3.png" alt="">
+                                </div>
+                                <div class="text_box">
+                                    <h3>가을 워크샵</h3>
+                                    <span>Workshop</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="import_card">
+                            <a href="">
+                                <div class="img_box">
+                                    <img src="/img/test_top_img_1.png" alt="">
+                                </div>
+                                <div class="text_box">
+                                    <h3>2024 와커스 가을 워크샵</h3>
+                                    <span>Workshop</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="import_card">
+                            <a href="">
+                                <div class="img_box">
+                                    <img src="/img/test_top_img_2.png" alt="">
+                                </div>
+                                <div class="text_box">
+                                    <h3>2024 와커스</h3>
+                                    <span>Workshop</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="import_card">
+                            <a href="">
+                                <div class="img_box">
+                                    <img src="/img/test_top_img_3.png" alt="">
+                                </div>
+                                <div class="text_box">
+                                    <h3>가을 워크샵</h3>
+                                    <span>Workshop</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div> -->
+
+                    
+                </div>
+                <div class="swiper-button-next">
+                    <img src="/img/import_swiper_right.png" alt="">
+                </div>
+                <div class="swiper-button-prev">
+                    <img src="/img/import_swiper_left.png" alt="">
+                </div>
+            </div>
+         </div>
+    </div>
+ </div>
+ 
+ <script>
+    var swiper = new Swiper(".import_swiper", {
+      slidesPerView: 1.2,
+      centeredSlides: false,
+      spaceBetween: 20,
+      speed:1200,
+      loop:true,
+    //   autoplay:true,
+      breakpoints:{
+        768:{
+            slidesPerView: 2.8,
+            spaceBetween: 20,
+        }
+      },
+      navigation: {
+        nextEl: ".import_swiper .swiper-button-next",
+        prevEl: ".import_swiper .swiper-button-prev",
+      },
+    });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+    // AJAX 요청을 설정합니다
+    $.ajax({
+        url: "https://wacus.co.kr/api/bringPostData.php", // 데이터를 가져올 서버의 URL
+        type: "POST", // HTTP 요청 메소드 (GET, POST 등)
+        dataType: "json",
+        success: function(response) {
+          console.log(response);
+          console.log(response.seq.length);
+
+          var contentHtml = '';
+
+          for (let index = 0; index < response.seq.length; index++) {
+            
+            // 각 항목별로 HTML 문자열을 생성
+            contentHtml += '<div class="swiper-slide" onclick="location.href=`/boardView?seq='+response.seq[index]+'`" >' +
+                    '<div class="import_card">' +
+                        '<a href="/boardView?seq='+response.seq[index]+'">' +
+                            '<div class="img_box">' +
+                                '<img src="' + response.img[index]+'" alt="" loading="lazy">' +
+                            '</div>' +
+                            '<div class="text_box">' +
+                                '<h3>' + response.title[index] + '</h3>' +
+                                '<span>' + response.category[index] + '</span>' +
+                            '</div>' +
+                        '</a>' +
+                    '</div>' +
+                '</div>';
+
+          }
+          // 'bringDataPost' ID를 가진 div에 생성된 HTML을 삽입 
+          $('#bringDataPost').html(contentHtml);
+            
+        },
+        error: function(xhr, status, error) {
+            // 요청이 실패하면, 에러 로그를 콘솔에 출력합니다.
+            console.error("AJAX 요청 실패: " + status + ", " + error);
+        }
+    });
+});
+  </script>

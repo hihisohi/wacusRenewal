@@ -1,0 +1,20 @@
+:root {
+  --color-point: #ff5500;
+}
+
+html {
+  /* font-size: 62.5%; */ /* 10px = 62.5% = 0.52084vw */
+  font-size: calc(7px + 0.15625vw);
+}
+
+body {
+  font-size: 1.6rem;
+  color: #fff;
+  background: #000;
+  line-height: 1.5;
+}
+
+/* commercial hompage 페이지 내 공통 스타일 */
+.color-or {
+  color: var(--color-point);
+}

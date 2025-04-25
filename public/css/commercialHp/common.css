@@ -1,20 +1,133 @@
 :root {
   --color-point: #ff5500;
+  --color-white: #fff;
+  --color-black: #000;
+  --font-mbc: "MBC 1961", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-paperlogy: "Paperlogy", sans-serif;
 }
 
 html {
   /* font-size: 62.5%; */ /* 10px = 62.5% = 0.52084vw */
-  font-size: calc(7px + 0.15625vw);
+  font-size: 0.52084vw;
 }
 
 body {
   font-size: 1.6rem;
-  color: #fff;
-  background: #000;
+  color: var(--color-white);
+  background: var(--color-black);
   line-height: 1.5;
 }
 
 /* commercial hompage 페이지 내 공통 스타일 */
-.color-or {
+
+/* font 관련 */
+#commercialHpPage .color-or {
   color: var(--color-point);
+}
+
+#commercialHpPage .bold {
+  font-weight: 600;
+}
+
+#commercialHpPage .mark-or {
+  background: var(--color-point);
+  color: var(--color-white);
+  font-weight: 700;
+  padding: 0.12em 0;
+}
+
+/* 말풍선 */
+#commercialHpPage .speech-bubble {
+  display: inline-block;
+
+  position: relative;
+
+  font-size: 4.4rem;
+  font-weight: 600;
+  color: var(--color-black);
+
+  border-radius: 0.5em;
+  background: var(--color-white);
+
+  padding: 0.54em 1.09em;
+
+  margin-left: 0.45em;
+}
+
+#commercialHpPage .speech-bubble::before {
+  content: "";
+
+  position: absolute;
+  bottom: 0;
+
+  width: 8rem;
+  height: 8rem;
+
+  background: url("/public/img/commercialHp/speech_bubble_tail.png") no-repeat 0
+    0 / contain;
+}
+
+#commercialHpPage .speech-bubble[data-direction="left"]::before {
+  left: 0;
+  transform: translate(-15%, 85%);
+}
+
+#commercialHpPage .speech-bubble[data-direction="right"]::before {
+  right: 0;
+  transform: translate(-15%, 85%) scaleX(-1);
+}
+
+/* 섹션 타이틀, 서브타이틀, 설명글 */
+.cmhp-heading {
+  font-family: var(--font-mbc);
+  font-size: 8rem;
+  line-height: 1.2;
+}
+
+.cmhp-heading.lg {
+  font-size: 10rem;
+  line-height: 1.1;
+}
+
+.cmhp-heading.sm {
+  font-size: 6rem;
+}
+
+.cmhp-sub-heading {
+  display: inline-block;
+
+  font-family: var(--font-poppins);
+  font-size: 3rem;
+  margin-bottom: 1.6rem;
+}
+
+.cmhp-desc {
+  font-size: 2.4rem;
+  line-height: 1.6;
+}
+
+/* section */
+.cmhp-section {
+  position: relative;
+  z-index: 1;
+}
+
+.scroll-pin-warp {
+  position: relative;
+}
+
+/* container */
+.cmhp-container {
+  position: relative;
+  width: 100%;
+  max-width: calc(1500px + 12vw);
+  padding: 0 6vw;
+  margin: 0 auto;
+}
+
+.full-sticky-container {
+  position: relative;
+
+  height: 100vh;
 }

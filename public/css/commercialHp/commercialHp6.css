@@ -1,0 +1,27 @@
+#commercialHpMethod {
+  background: linear-gradient(0deg, #131313 0%, #000 100%);
+
+  padding: 10rem 0;
+}
+
+.cmhp-method__title {
+  text-align: center;
+}
+
+.cmhp-method__title .cmhp-desc {
+  margin-top: 3rem;
+}
+
+.cmhp-method__polygon-slider {
+  width: 60rem;
+  height: 50rem;
+}
+
+.cmhp-method__text {
+  font-family: var(--font-paperlogy);
+  font-size: 3.8rem;
+  font-weight: 300;
+  text-align: center;
+
+  margin-top: 8rem;
+}

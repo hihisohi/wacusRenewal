@@ -1,0 +1,116 @@
+#commercialHpIssue {
+  background: linear-gradient(90deg, #171717 0%, #000 100%);
+
+  padding: 8rem 0 10rem;
+}
+
+.cmhp-issue__image {
+  width: 100%;
+  padding-top: 36%;
+
+  margin-top: 8rem;
+
+  background: url("/public/img/commercialHp/section4_img.jpg") no-repeat 50% 50% /
+    cover;
+}
+
+.cmhp-issue__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+
+  margin-top: 6rem;
+}
+
+.cmhp-issue__list li {
+  position: relative;
+
+  width: calc(50% - 4rem);
+  height: 6rem;
+
+  padding-left: 8rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.cmhp-issue__list li:before {
+  content: "";
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+
+  width: 6rem;
+  height: 6rem;
+
+  background: no-repeat 0 50% / contain;
+}
+
+.cmhp-issue__list li:nth-child(1):before {
+  background-image: url("/public/img/commercialHp/section4_icon01.png");
+}
+
+.cmhp-issue__list li:nth-child(2):before {
+  background-image: url("/public/img/commercialHp/section4_icon02.png");
+}
+
+.cmhp-issue__list li:nth-child(3):before {
+  background-image: url("/public/img/commercialHp/section4_icon03.png");
+}
+
+.cmhp-issue__list li:nth-child(4):before {
+  background-image: url("/public/img/commercialHp/section4_icon04.png");
+}
+
+.cmhp-issue__list li p {
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #c4c4c4;
+}
+
+.cmhp-issue__list li p .bold {
+  color: var(--color-white);
+}
+
+.cmhp-issue__text {
+  position: relative;
+
+  margin-top: 18rem;
+  padding: 3em 0;
+
+  font-size: 4rem;
+  font-weight: 250;
+  text-align: center;
+}
+
+.cmhp-issue__text:before,
+.cmhp-issue__text:after {
+  content: "";
+  display: block;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  width: 0.8em;
+  height: 0.8em;
+
+  background: url("/public/img/commercialHp/icon_quot.png") no-repeat 50% 50% /
+    contain;
+}
+
+.cmhp-issue__text:before {
+  top: 0;
+}
+
+.cmhp-issue__text:after {
+  bottom: 0;
+  transform: translate(-50%, 0) rotate(180deg);
+}
+
+.cmhp-issue__text p + p {
+  margin-top: 1rem;
+}

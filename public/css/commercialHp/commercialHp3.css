@@ -1,0 +1,66 @@
+#commercialHpNeed {
+  background: linear-gradient(90deg, #171717 0%, #000 100%);
+}
+
+.cmhp-need__images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* 임시 중앙선 */
+.cmhp-need__images:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  transform: translateY(-50%);
+
+  background: red;
+}
+
+.cmhp-need__images > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: 105% 0;
+  background-image: url("/public/img/commercialHp/section3_bg01.png");
+}
+
+.cmhp-need__scrolling-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-100% / 3 / 2));
+  z-index: 10;
+
+  width: 100%;
+}
+
+.cmhp-need__scrolling-text .text-item {
+  font-family: var(--font-mbc);
+  font-size: 5rem;
+  text-align: center;
+  color: #383838;
+}
+
+.cmhp-need__scrolling-text .text-item.on {
+  font-size: 6.2rem;
+  color: var(--color-white);
+}
+
+.cmhp-need__scrolling-text .text-item.on > span {
+  color: var(--color-point);
+}

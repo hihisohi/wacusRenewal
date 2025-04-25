@@ -1,0 +1,209 @@
+.cmhp-intro__marquees {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(0, -35%);
+
+  width: 100%;
+  height: 25%;
+}
+
+.cmhp-intro__marquees .marquee {
+  display: block;
+  overflow: hidden;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 200%;
+
+  box-shadow: 0px 1.845px 9.227px 0px #000;
+}
+
+.cmhp-intro__marquees .marquee:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(-4deg);
+}
+
+.cmhp-intro__marquees .marquee:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(4deg);
+}
+
+.cmhp-intro__marquees .marquee[data-bgColor="or"] {
+  color: var(--color-white);
+  background: var(--color-point);
+}
+
+.cmhp-intro__marquees .marquee[data-bgColor="wh"] {
+  color: var(--color-black);
+  background: var(--color-white);
+}
+
+.cmhp-intro__marquees .marquee-track {
+  display: flex;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.cmhp-intro__marquees .marquee-item {
+  display: flex;
+  width: max-content;
+}
+
+.cmhp-intro__marquees .marquee-item > div {
+  font-family: var(--font-poppins);
+  font-size: 4.6rem;
+  font-style: italic;
+
+  padding: 0.2em 0;
+
+  white-space: nowrap;
+}
+
+#commercialHpPoint {
+  width: 100%;
+
+  z-index: 10;
+
+  background: linear-gradient(90deg, #171717 0%, #000 100%);
+
+  padding-top: 22rem;
+}
+
+#commercialHpPoint .cmhp-desc {
+  margin-top: 4rem;
+}
+
+.cmhp-point__title {
+  text-align: center;
+}
+
+.cmhp-point__top-area {
+  padding: 4rem 0 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#commercialHpPoint .full-sticky-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.cmhp-point__bottom-area {
+  position: relative;
+
+  flex-grow: 1;
+  min-height: 0;
+  overflow-y: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cmhp-point__indicator {
+  padding: 6rem 0 3rem;
+
+  font-family: var(--font-mbc);
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.cmhp-point__indicator .indicator-wrapper {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+}
+
+.cmhp-point__indicator .indicator-item {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  width: 10em;
+}
+
+.cmhp-point__indicator .indicator-item .indicator-dot {
+  position: relative;
+
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+
+  background: #101010;
+  box-shadow: 0px 0px 0 1rem #1a110c inset;
+}
+
+.cmhp-point__indicator .indicator-item .indicator-dot::before {
+  content: "";
+  display: block;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+
+  background: #391706;
+}
+
+.cmhp-point__indicator .indicator-item .indicator-text {
+  opacity: 0.1;
+}
+
+.cmhp-point__indicator .indicator-progress-bar {
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: calc(10em * 3 + 3rem * 2 - 5em * 2);
+  height: 1px;
+
+  background: #797979;
+
+  z-index: 1;
+}
+
+.cmhp-point__indicator .progress-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 100%;
+
+  background: var(--color-point);
+}
+
+.cmhp-point__images {
+  width: 60%;
+  height: 60%;
+  border-radius: 5rem;
+  opacity: 0.5;
+
+  overflow: hidden;
+}
+
+.cmhp-point__images .image-item {
+  width: 100%;
+  height: 100%;
+}
+
+.cmhp-point__images .image-item img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}

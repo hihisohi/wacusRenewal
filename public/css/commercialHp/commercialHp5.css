@@ -1,0 +1,103 @@
+#commercialHpDef {
+  padding: 10rem 0;
+  background: linear-gradient(90deg, #171717 0%, #000 100%);
+}
+
+#commercialHpDef .cmhp-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cmhp-def__title {
+  text-align: center;
+}
+
+.cmhp-def__title .cmhp-desc {
+  margin-top: 3rem;
+}
+
+.cmhp-def__content {
+  width: 100%;
+
+  margin-top: 10rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cmhp-def__fade-slider {
+  width: 79rem;
+  height: 60rem;
+}
+
+.cmhp-def__pagination {
+  width: calc(100% - 79rem);
+  height: 100%;
+
+  padding-left: 14rem;
+}
+
+.cmhp-def__fade-slider .slider-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cmhp-def__fade-slider .slider-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cmhp-def__fade-slider .slider-item .item-img {
+  border-radius: 4rem;
+  overflow: hidden;
+}
+
+.cmhp-def__fade-slider .slider-item .item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cmhp-def__pagination > div {
+  display: flex;
+
+  opacity: 0.2;
+}
+
+.cmhp-def__pagination > div p .highlight-or {
+  color: var(--color-wh);
+}
+
+.cmhp-def__pagination > div + div {
+  margin-top: 4rem;
+}
+
+.cmhp-def__pagination .paging__number {
+  font-family: var(--font-mbc);
+  font-size: 4.4rem;
+}
+
+.cmhp-def__pagination > div > p {
+  font-size: 3rem;
+
+  margin-top: 1.4rem;
+  margin-left: 1.4rem;
+}
+
+.cmhp-def__pagination > div.active {
+  font-weight: 600;
+  opacity: 1;
+}
+
+.cmhp-def__pagination > div.active p .highlight-or {
+  color: var(--color-point);
+}

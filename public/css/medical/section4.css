@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+button {
+  border: none;
+  padding: 0;
+  background: none;
+  margin: 0;
+}
+.mobile_block {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .pc_block {
+    display: none;
+  }
+  .mobile_block {
+    display: block;
+  }
+}
+.sc_strategy {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.sc_strategy_1 {
+  height: 100%;
+  background: url('/img/medical/sc_strategy_bg.png') no-repeat center center /
+    cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.sc_strategy_1:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.sc_strategy_1 .txt_wrap {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  transform: translateY(30px);
+}
+.sc_strategy_1.active .txt_wrap {
+  opacity: 1;
+  transform: translateY(0);
+}
+.sc_strategy_1 .txt_wrap h3 {
+  color: var(--neutral-gray-00-white, #fff);
+  font-family: Paperlogy;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+}
+.sc_strategy_1 .txt_wrap p {
+  color: var(--neutral-gray-00-white, #fff);
+  font-family: Pretendard;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: -0.8px;
+}
+@media screen and (max-width: 768px) {
+  .sc_strategy_1 {
+    min-height: 100svh;
+    max-height: 100svh;
+  }
+}
+.sc_strategy_2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  display: flex;
+  z-index: 2;
+  transform: translateX(100%);
+}
+.sc_strategy_2 .big_con {
+  width: 50%;
+  text-align: center;
+  background: url('/img/medical/sc_strategy_2_bg.png') no-repeat center center /
+    cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sc_strategy_2 .txt02 {
+  height: 3.8vw;
+  overflow: hidden;
+}
+.sc_strategy_2 .change_wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sc_strategy_2 .big_con strong {
+  color: #fff;
+  font-family: Paperlogy;
+  font-size: 3.6vw;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: -0.14vw;
+}
+.sc_strategy_2 .big_con strong b {
+  color: var(--web-main, #f50);
+  font-weight: 600;
+}
+.sc_strategy_2 .big_con .change {
+  transition: 1s;
+}
+.sc_strategy_2 .big_con .change li {
+  opacity: 0;
+  transition: 1s;
+}
+.sc_strategy_2 .big_con .change.first {
+  transform: translateY(0);
+}
+.sc_strategy_2 .big_con .change.first li:nth-child(1) {
+  opacity: 1;
+}
+.sc_strategy_2 .big_con .change.second {
+  transform: translateY(-33.3%);
+}
+.sc_strategy_2 .big_con .change.second li:nth-child(2) {
+  opacity: 1;
+}
+.sc_strategy_2 .big_con .change.third {
+  transform: translateY(-66.6%);
+}
+.sc_strategy_2 .big_con .change.third li:nth-child(3) {
+  opacity: 1;
+}
+.sc_strategy_2 .list_con {
+  width: 50%;
+}
+.sc_strategy_2 .list {
+  transition: 1s;
+  height: 97px;
+  padding: 0 2vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.sc_strategy_2 .list .txt {
+  /* max-height: 0; */
+  overflow: hidden;
+  transition: 1s;
+}
+/* .sc_strategy_2 .list.on .txt {
+  max-height: unset;
+} */
+.sc_strategy_2 .list:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+.sc_strategy_2 .list.on {
+  height: calc(100% - 194px);
+  padding: 80px 2vw 60px;
+}
+.sc_strategy_2 .list .tit {
+  display: flex;
+  align-items: center;
+  height: 98px;
+}
+.sc_strategy_2 .list.on .tit {
+  height: calc(3.6vw * 1.3 + 40px);
+}
+.sc_strategy_2 .list h4 {
+  color: var(--neutral-gray-000-black, #000);
+  font-family: Paperlogy;
+  font-size: 1.8vw;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: -0.07vw;
+  width: 100%;
+  transition: 1s;
+}
+.sc_strategy_2 .list.on h4 {
+  margin-bottom: 40px;
+  font-size: 3.6vw;
+  line-height: 1.3;
+}
+.sc_strategy_2 .list p {
+  color: var(--neutral-gray-60001, #525252);
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: -0.72px;
+}
+@media screen and (max-width: 768px) {
+  .sc_strategy {
+    height: auto;
+  }
+  .sc_strategy_2 {
+    flex-direction: column;
+    position: static;
+    transform: translateX(0);
+  }
+  .sc_strategy_2 .big_con {
+    width: 100%;
+    background: url('/img/medical/sc_strategy_2_bg_m.png') no-repeat center
+      center / cover;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    justify-content: flex-start;
+  }
+  .sc_strategy_1 .txt_wrap {
+    opacity: 1;
+  }
+  .sc_strategy_1 .txt_wrap h3 {
+    font-size: 24px;
+    letter-spacing: -0.96px;
+    margin-bottom: 20px;
+  }
+  .sc_strategy_1 .txt_wrap p {
+    font-size: 15px;
+    letter-spacing: -0.6px;
+  }
+  .sc_strategy_2 .change_wrap {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+  .sc_strategy_2 .txt01 {
+    margin-bottom: 6px;
+  }
+  .sc_strategy_2 .txt02 {
+    height: 46px;
+  }
+  .sc_strategy_2 .list_con {
+    width: 100%;
+  }
+  .sc_strategy_2 .big_con strong {
+    font-size: 33px;
+    letter-spacing: -1.44px;
+  }
+  .sc_strategy_2 .list.on h4 {
+    font-size: 30px;
+    letter-spacing: -1.2px;
+  }
+  .sc_strategy_2 .list {
+    padding: 0 18px;
+    height: 79px;
+  }
+  .sc_strategy_2 .list .tit {
+    height: 79px;
+  }
+  .sc_strategy_2 .list h4 {
+    font-size: 30px;
+    letter-spacing: -1.2px;
+    flex: 1;
+  }
+  .sc_strategy_2 .list p {
+    font-size: 15px;
+    letter-spacing: -0.6px;
+  }
+  .sc_strategy_2 .list .txt {
+    max-height: 0;
+  }
+  .sc_strategy_2 .list.on {
+    padding: 20px 18px;
+  }
+  .sc_strategy_2 .list.on .txt {
+    max-height: 200px;
+  }
+  .sc_strategy_2 .list.on h4 {
+    margin-bottom: 00px;
+  }
+  .sc_strategy_2 .list.on .tit {
+    height: calc(30px * 1.3 + 20px);
+    margin-bottom: 20px;
+  }
+  .sc_strategy_2 .list .tit button {
+    position: relative;
+    display: block;
+    width: 15px;
+    height: 15px;
+  }
+  .sc_strategy_2 .list .tit button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-1px);
+    width: 100%;
+    height: 2px;
+    width: 100%;
+    background: #262626;
+  }
+  .sc_strategy_2 .list .tit button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-1px);
+    width: 2px;
+    background: #262626;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+  .sc_strategy_2 .list.on .tit button:after {
+    transform: rotate(-90deg);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+  }
+}
+.sc_wacus_bg {
+  background: url('/img/medical/sc_wacus_bg.png') no-repeat center center /
+    cover;
+  height: 100vh;
+  position: relative;
+}
+.sc_wacus_bg .cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  background-blend-mode: normal, exclusion, normal;
+}
+@media screen and (max-width: 768px) {
+  .sc_wacus_bg {
+    height: fit-content;
+    background: none;
+  }
+  .sc_wacus_bg img {
+    font-size: 0;
+  }
+}

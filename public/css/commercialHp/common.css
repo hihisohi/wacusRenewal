@@ -64,7 +64,8 @@ body {
   width: 8rem;
   height: 8rem;
 
-  background: url("/public/img/commercialHp/speech_bubble_tail.png") no-repeat 0 0 / contain;
+  background: url("/public/img/commercialHp/speech_bubble_tail.png") no-repeat 0
+    0 / contain;
 }
 
 #commercialHpPage .speech-bubble[data-direction="left"]::before {

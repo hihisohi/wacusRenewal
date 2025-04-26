@@ -16,7 +16,8 @@ const isBoard = boardPaths.includes(currentPath);
 
 
 <!-- 메인페이지 헤더 -->
-<header class={`${isMarketingPage || isBoard || isMarketingPage2 || isCompany || isWorks ? "w_header" : ""} ${isMarketingPage ? "marketing_on" : ""}`}>
+<!-- <header> -->
+<header class={`${isMarketingPage || isBoard || isMarketingPage2 || isCompany || isWorks ? "w_header" : ""} ${isMarketingPage ? "marketing_on" : ""}`}>    
     <div class="left">
         <div class="headerLogo" >
             <!-- <a onclick="gsapToScroll(0)"> -->
@@ -39,47 +40,47 @@ const isBoard = boardPaths.includes(currentPath);
             </div>
         </div>
     </div>
-    <div class="right">
+    <div class="center">
         <nav>
             <ul class="nav_list">               
-                <li class={isMain ? "on" : " "}>
+                <!-- <li class={isMain ? "on" : " "}> -->
+                <li>
                     <a href="#" onclick="window.location='/'">
                         ABOUT WACUS
-                        <span><img src="/public/img/index_menu_on.png" alt=""></span>
                     </a>
                 </li>
-                <li class={isHomePage ? "on" : " "}>
+                <!-- <li class={isHomePage ? "on" : " "}> -->
+                <li>
                     <a href="#" onclick="window.location='/homepage'">HOMEPAGE
-                        <span><img src="/public/img/web_menu_on.png" alt=""></span>
                     </a>
                 </li>
-                <li class={isMarketingPage ? "on" : " "}>
+                <!-- <li class={isMarketingPage ? "on" : " "}> -->
+                <li>
                     <a href="#" onclick="window.location='/marketing'">MARKETING
-                        <span><img src="/public/img/marketing_menu_on.png" alt=""></span>
                     </a>
                 </li>
                 <li class="">
                     <a href="https://wacus.co.kr/portfolio/index.php?cate=web" target="_blank"  rel="external">
                         PORTFOLIO
-
                     </a>
-                </li>
-               
+                </li>               
             </ul>
         </nav>
+    </div>
+    <div class="right">
         <div class="ham">
             <span></span>
             <span></span>
             <span></span>
-            <!-- <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" >
-                <mask id="mask0_1630_761" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
-                <rect width="48" height="48" fill="#D9D9D9"/>
-                </mask>
-                <g mask="url(#mask0_1630_761)">
-                <path d="M8 34.5385V33H40V34.5385H8ZM8 24.769V23.231H40V24.769H8ZM8 15V13.4615H40V15H8Z" fill="white"/>
-                </g>
-            </svg>  -->
         </div>
+        <a href="/contact" rel="external" class="contactBtn">
+            CONTACT
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="13px" height="13px">
+                      <path class="cls-1" d="M1.4,15l-1.4-1.4L11.6,2h-6.6V0h10v10h-2V3.4L1.4,15Z"/>
+                </svg>
+            </span>
+        </a>
     </div>
 </header>
 
@@ -251,7 +252,10 @@ const isBoard = boardPaths.includes(currentPath);
                 <h4 onclick="window.location='/marketing'">Marketing</h4>
                 <ul>
                     <li>
-                        <a href="/marketingPage">Hospital Marketing</a>
+                        <a href="/marketingPage">Medical Marketing</a>
+                    </li>
+                    <li>
+                        <a href="/cm">Commercial Marketing</a>
                     </li>
                 </ul>
             </div>
@@ -259,15 +263,19 @@ const isBoard = boardPaths.includes(currentPath);
                 <h4 onclick="window.location='/homepage'">Homepage</h4>
                 <ul>
                     <li>
-                        <a href="/homePageDetail">Home page</a>
+                        <a href="/medical">Medical Home page</a>
                     </li>
+                    <li>
+                        <a href="#" onClick="alert('준비중입니다.')">Commercial Home page</a>
+                    </li>
+                    
                     <li>
                         <a href="/seo">SEO</a>
                     </li>
                 </ul>
             </div>
             <div class="menu_title">
-                <h4 onclick="window.location='https://wacus.co.kr/portfolio/index.php?cate=web;'">Portfolio</h4>
+                <h4 onclick="window.location='https://wacus.co.kr/portfolio/index.php?cate=web'">Portfolio</h4>
             </div>
             <div class="menu_title">
                 <h4 id="header_contact_link" onclick="window.location='/contact'">Contact</h4>

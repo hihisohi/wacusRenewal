@@ -1,0 +1,26 @@
+/* sc-05 */
+.sc-05 { display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; height: 100vh; text-align: center; background: linear-gradient(180deg, #131313 0%, #020202 100%);}
+.sc-05::before { content: ''; position: absolute; top: 50%; right: 0; width: 20.83vw; aspect-ratio: 400 / 413; background: url('../../img/cm/bg-blur.svg') no-repeat center center / 100% auto; transform: translateY(-50%);}
+.sc-05 .txt-area { display: flex; flex-direction: column; gap: 2.2rem;}
+.sc-05 .sc-ttl { font-family: Pretendard;}
+.sc-05 .line { width: 1px; height: 5rem; margin: 0 auto; background-color: #fff;}
+.sc-05 .desc { font-family: Pretendard; font-size: 2.2rem; font-weight: 300; line-height: 1.6; letter-spacing: -0.88px;}
+.sc-05 .link-area { display: flex; gap: 4rem; width: 100%; max-width: 85.6rem; margin-top: 10.5rem;}
+.sc-05 .link { flex: 1; position: relative; padding: 2.2rem 3rem; border: 1px solid #525252; background: rgba(255, 255, 255, 0.05); box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); backdrop-filter: blur(10px); border-radius: 2rem; font-family: Poppins; font-size: 2rem; line-height: 1.5; letter-spacing: -0.4px; text-align-last: left;}
+.sc-05 .link::after { content: ''; position: absolute; display: block; top: 50%; right: 3rem; width: 2.4rem; height: 2.4rem; background: url('../../img/cm/arw-r-w.svg') no-repeat center center / 100% auto; transform: translateY(-50%);}
+.sc-05 .link .txt-dot { display: flex; align-items: flex-end; gap: 4px; position: relative;}
+.sc-05 .link .txt-dot::after { content: ''; width: 5px; height: 5px; margin-bottom: 3px; border-radius: 50%; background-color: var(--marketing-main, #586AD9);}
+
+@media screen and (max-width: 768px) {
+    /* sc-05 */
+    .sc-05 { height: unset; padding: 10rem 2.7rem;}
+    .sc-05::before { content: none;}
+    .sc-05 .txt-area { gap: 1rem;}
+    .sc-05 .line { height: 3rem;}
+    .sc-05 .desc { font-size: 1.5rem; line-height: 1.7; letter-spacing: -0.6px;}
+    .sc-05 .link-area { flex-direction: column; gap: 1.6rem; margin-top: 4rem;}
+    .sc-05 .link { padding: 1.6rem 2.2rem; box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25); backdrop-filter: blur(7px); border-radius: 1.6rem; font-size: 1.6rem; letter-spacing: -0.32px;}
+    .sc-05 .link::after { right: 2.2rem; width: 1.8rem; height: 1.8rem;}
+    .sc-05 .link .txt-dot { gap: 3px;}
+    .sc-05 .link .txt-dot::after { width: 4px; height: 4px;}
+}

@@ -10,11 +10,16 @@
   font-family: "High Summit";
   src: url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.eot");
   src:
-    url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.eot?#iefix") format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.woff2") format("woff2"),
-    url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.woff") format("woff"),
-    url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.svg#High Summit") format("svg");
+    url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/2a587fe805b000b2a41861c629096fb9.svg#High Summit")
+      format("svg");
 }
 /* font-family: 'Nanum Myeongjo', serif; */
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700&display=swap");
@@ -31,12 +36,14 @@
   font-style: normal;
   font-weight: 200 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/oswald/v53/TK3iWkUHHAIjg752GT8G.woff2) format("woff2");
+  src: url(https://fonts.gstatic.com/s/oswald/v53/TK3iWkUHHAIjg752GT8G.woff2)
+    format("woff2");
 }
 
 @font-face {
   font-family: "GmarketSansBold";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -48,21 +55,24 @@
   font-weight: 300;
   font-display: swap;
   font-style: normal;
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2") format("woff2");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2")
+    format("woff2");
 }
 @font-face {
   font-family: "Paperlogy";
   font-weight: 600;
   font-display: swap;
   font-style: normal;
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2") format("woff2");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2")
+    format("woff2");
 }
 @font-face {
   font-family: "Paperlogy";
   font-weight: 700;
   font-display: swap;
   font-style: normal;
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2") format("woff2");
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2")
+    format("woff2");
 }
 
 /* origin-super-condensed */

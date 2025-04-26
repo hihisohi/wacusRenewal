@@ -8,7 +8,7 @@ $(document).ready(function(){
 
     let smoother = null;
     // Desktop
-    if (window.matchMedia("(min-width: 1025px)").matches) {
+    if (window.matchMedia("(min-width: 1025px)").matches && $('#smooth-wrapper').length > 0) {
         smoother = ScrollSmoother.create({
             smooth: 2,
             smoothTouch: true,

@@ -1,0 +1,34 @@
+/* sc-04 */
+.sc-04 { background: linear-gradient(0deg, #050505 0%, #050505 100%), #1C1C1C;}
+.sc-04 .sticky { display: flex; align-items: center;}
+.sc-04 .inner { display: flex; gap: 6.25vw;}
+.sc-04 .left { width: 39.5%;}
+.sc-04 .right { flex: 1; padding: 15rem 0;}
+.sc-04 .process-item { --rotate: 0; display: flex; align-items: center; gap: 3.4rem; opacity: 0;}
+.sc-04 .process-item + .process-item { margin-top: 1rem;}
+.sc-04 .right .num-area { position: relative; width: 24.5rem; height: 24.5rem; padding: 1.25rem;}
+.sc-04 .right .num-area::before { content: ''; position: absolute; top: 50%; left: 50%; width: 100%; height: 100%; border-radius: 50%; background: url('../../img/cm/ico-process-dot.svg') no-repeat center center / 100% auto; transform: translate(-50%, -50%) rotate(calc(var(--rotate) * 1deg));}
+.sc-04 .right .num-box { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1rem; width: 100%; height: 100%; border-radius: 50%; border: 2px solid var(--marketing-main, #586AD9);}
+.sc-04 .right .num-area .num { font-family: Pretendard; font-size: 5rem; font-weight: 700; line-height: 1;}
+.sc-04 .right .num-area .ico { width: 7rem; height: 7rem; background-repeat: no-repeat; background-position: center center; background-size: 100% auto;}
+.sc-04 .right .num-area .ico.ico-process-01 { background-image: url('../../img/cm/ico-process01.svg');}
+.sc-04 .right .num-area .ico.ico-process-02 { background-image: url('../../img/cm/ico-process02.svg');}
+.sc-04 .right .num-area .ico.ico-process-03 { background-image: url('../../img/cm/ico-process03.svg');}
+.sc-04 .right .num-area .ico.ico-process-04 { background-image: url('../../img/cm/ico-process04.svg');}
+.sc-04 .right .num-area .ico.ico-process-05 { background-image: url('../../img/cm/ico-process05.svg');}
+.sc-04 .right .txt-area .process-txt { display: block; font-family: Pretendard; font-size: 2.4rem; font-weight: 600; line-height: 1; letter-spacing: -0.96px; transform: translateY(101%);}
+
+@media screen and (max-width: 768px) {
+    /* sc-04 */
+    .sc-04 .sticky { position: static; display: block; height: unset;}
+    .sc-04 .inner { display: block;}
+    .sc-04 .left { width: 100%;}
+    .sc-04 .right { padding: 8rem 1.8rem;}
+    .sc-04 .process-item { gap: 1rem;}
+    .sc-04 .process-item + .process-item { margin-top: 1.4rem;}
+    .sc-04 .right .num-area { flex-shrink: 0; width: 14.8rem; height: 14.8rem; padding: .5rem;}
+    .sc-04 .right .num-box { gap: .5rem; border-width: 1px;}
+    .sc-04 .right .num-area .num { font-size: 2.8rem;}
+    .sc-04 .right .num-area .ico { width: 4rem; height: 4rem;}
+    .sc-04 .right .txt-area .process-txt { font-size: 1.5rem; line-height: 1.4; letter-spacing: -0.6px;}
+}

@@ -1,0 +1,59 @@
+:root {
+  --web-main: #f50;
+}
+.sc-identity {
+  color: #fff;
+}
+.color-orange {
+  color: var(--web-main);
+}
+._cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.txt-gradient {
+  background: linear-gradient(180deg, #ff5500 24.29%, #fff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.sc-identity .ttl-box {
+  margin-bottom: 37px;
+}
+.sc-identity .tt2_box {
+  color: #fff;
+  text-align: center;
+  font-size: 1.04vw;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: -0.8px;
+}
+@media screen and (max-width: 768px) {
+  .mobile_block {
+    display: block;
+  }
+  .pc_block {
+    display: none;
+  }
+  .sc-identity .ttl-area {
+    padding: 0 8.1vw;
+  }
+  .sc-identity .ttl-box {
+    text-align: center;
+    line-height: 1.3;
+    flex-direction: unset;
+    flex-wrap: wrap;
+  }
+  .sc-identity .tt2_box {
+    font-size: 15px;
+    letter-spacing: -0.6px;
+  }
+  .sc-identity .slogan-swiper .swiper-wrapper {
+    height: fit-content;
+  }
+  .sc-identity .keyword-swiper .swiper-slide {
+    line-height: 1;
+  }
+}

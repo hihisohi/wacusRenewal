@@ -1,5 +1,5 @@
 ---
-title: "Marketing Page"
+title: "Home Page"
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts"; //타이틀이랑 웹사이트 설명 
 import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
@@ -19,6 +19,7 @@ import Homepage3 from "../../components/homepage/Homepage3.astro"; //다이아�
 import Homepage4 from "../../components/homepage/Homepage4.astro"; //홈페이지 제작하고픔?
 import Homepage5 from "../../components/homepage/Homepage5.astro";  //문의하기
 import Homepage6 from "../../components/homepage/Homepage6.astro"; //문의하기
+import Homepage8 from "../../components/homepage/Homepage8.astro"; //커미셜 병원 분기점
 import Section10 from "../../components/main/Section10.astro";  //풋터
 import ScrollIndicator from "../../components/inc/ScrollIndicator.astro"; //스크롤 인디케이터
 import MouseGrid from "../../components/MouseGrid.astro";
@@ -35,6 +36,7 @@ import MouseGrid from "../../components/MouseGrid.astro";
         <link rel="stylesheet" href="../../../public/css/homepage/section4.css">
         <link rel="stylesheet" href="../../../public/css/homepage/section5.css">
         <link rel="stylesheet" href="../../../public/css/homepage/section7.css"> <!-- 문의하기 CSS -->
+        <link rel="stylesheet" href="../../../public/css/homepage/section8.css"> <!-- 커미셜 병원 분기점 CSS -->
 
         <script src="../../../public/js/homepage/homepage1.js"></script>
         <script src="../../../public/js/homepage/homepage2.js"></script>
@@ -54,8 +56,8 @@ import MouseGrid from "../../components/MouseGrid.astro";
             <div id="smooth-content">
                 <div style="background:#000;">
                     <Homepage1 /> 
+                    <Homepage8 />
                     <Homepage2 /> 
-                    <!-- 3d 오류있음 -->
                     <Homepage3 />
                     <Homepage4 />
                     <!-- section5 js문제있음 따로 뺄 경우 클릭이 작동을 안함 -->

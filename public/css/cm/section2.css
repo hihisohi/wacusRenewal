@@ -1,0 +1,44 @@
+/* sc-02 */
+.sc-02 { position: relative; background: linear-gradient(180deg, #000 0%, #131313 100%);}
+.sc-02 .sticky-wrapper { height: 150vh;}
+.sc-02 .ttl-area { height: 100vh; padding: 29.5rem 0 21rem; text-align: center;}
+.sc-02 .ttl-area .sc-ttl { position: relative;}
+.sc-02 .ttl-area .ttl-txt { font-size: 7rem; font-weight: 600;}
+.sc-02 .ttl-area .ttl-txt + .ttl-txt { position: absolute; top: 50%; left: 50%; width: 100%; transform: translate(-50%, -50%);}
+.sc-02 .ttl-area .ttl-txt .char { opacity: 0; transform: translateY(10%);}
+.sc-02 .sticky { display: flex; justify-content: center; align-items: center;}
+.sc-02 .strategy-area { width: 80.21vw; margin: 0 auto; overflow: hidden; border-radius: 2rem;}
+.sc-02 .strategy-list { display: flex; align-items: center;  border-radius: 2rem; gap: 2rem; margin: 0 auto;}
+.sc-02 .strategy-item { flex-shrink: 0; position: relative; width: 42.7vw;}
+.sc-02 .strategy-item .img-area { border-radius: 2rem; overflow: hidden;}
+.sc-02 .strategy-item .img-area img { width: 100%; height: 100%; object-fit: cover;}
+.sc-02 .strategy-item .strategy-ttl { position: absolute; left: 5rem; bottom: 4rem; font-weight: 600; font-size: 4rem; line-height: 1.17; opacity: 0; transition: .3s ease-in-out;}
+.sc-02 .strategy-item.active .strategy-ttl { opacity: 1;}
+.sc-02 .vertical { margin-top: -150vh; height: 200vh;}
+.sc-02 .vertical .sticky-wrapper { height: 300vh;}
+.sc-02 .vertical .strategy-area { position: absolute; top: 0; height: 100vh;}
+.sc-02 .vertical .strategy-list { justify-content: center;}
+.sc-02 .vertical .strategy-item { width: 16.3vw; transform: translateY(calc(var(--vh, 1vh) * 63));}
+.sc-02 .vertical .strategy-item.first img { object-position: right top;}
+.sc-02 .vertical .strategy-item.end img { object-position: left top;}
+.sc-02 .horizon { opacity: 0; height: 500vh;}
+.sc-02 .horizon .strategy-list { width: max-content;}
+
+@media screen and (max-width: 768px) {
+    /* sc-02 */
+    .sc-02 .ttl-area { height: unset; padding: 8rem 0 6rem;}
+    .sc-02 .ttl-area .sc-ttl { position: relative;}
+    .sc-02 .ttl-area .ttl-txt { font-size: 3.8rem;}
+    .sc-02 .ttl-area .ttl-txt.txt02 { font-size: 2rem;}
+    .sc-02 .sticky-wrapper { height: 100vh;}
+    .sc-02 .sticky-wrapper .sticky { height: 50vh;}
+    .sc-02 .vertical .sticky,
+    .sc-02 .horizon .sticky { height: unset;}
+    .sc-02 .strategy-area { width: 100%;}
+    .sc-02 .strategy-item { flex-shrink: 0; width: 100%;}
+    .sc-02 .strategy-item .strategy-ttl { left: 3rem; bottom: 2rem; font-size: 2.4rem; opacity: 1;}
+    .sc-02 .strategy-item.active .strategy-ttl { opacity: 1;}
+    .sc-02 .vertical { display: none;}
+    .sc-02 .horizon { opacity: 1; height: unset;}
+    .sc-02 .horizon .strategy-list { flex-direction: column; width: 100%; padding: 0 1.8rem; border-radius: 0;}
+}

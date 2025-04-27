@@ -1,10 +1,13 @@
+/* commercialHpIntro section */
 #commercialHpIntro {
-  min-height: 100vh;
+  height: 56.25vw;
+  overflow: hidden;
   background: linear-gradient(90deg, #171717 0%, #000 100%);
 }
 
 #commercialHpIntro .cmhp-heading {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
   gap: 0.2em;
@@ -13,18 +16,31 @@
 }
 
 #commercialHpIntro .cmhp-heading .color-or {
-  font-size: 13rem;
+  font-size: 1.3em;
+}
+
+#commercialHpIntro .cmhp-desc {
+  width: 70%;
+  margin: 0 auto;
 }
 
 .cmhp-intro__content {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+
   width: 100%;
-  padding-top: 25vh;
-  background: url("/public/img/commercialHp/section1_bg.jpg") no-repeat 50% 50% /
-    cover;
+  height: 100%;
+
+  padding-top: 14.0625vw;
+  background: url("/public/img/commercialHp/section1_bg.jpg") no-repeat 50% 50% / cover;
+
+  overflow: hidden;
 }
 
 .cmhp-intro__title {
+  padding: 0 20px;
   text-align: center;
 }
 
@@ -34,34 +50,40 @@
   padding: 0 5.2vw;
   margin-top: -3%;
 
+  flex-grow: 1;
+  min-height: 0;
+
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 .cmhp-intro__images .cmhp-intro__person {
   display: flex;
   gap: 1.04vw;
+
+  height: 100%;
 }
 
 .cmhp-intro__images .cmhp-intro__person[data-direction="right"] {
   flex-direction: row-reverse;
 }
 
-.cmhp-intro__images .cmhp-intro__person .person__img-inner {
-  width: 38rem;
-  height: 64rem;
-  background: no-repeat 50% 100% / contain;
+.cmhp-intro__images .cmhp-intro__person .person_img {
+  overflow: hidden;
 }
 
-.cmhp-intro__images
-  .cmhp-intro__person[data-direction="left"]
-  .person__img-inner {
+.cmhp-intro__images .cmhp-intro__person .person__img-inner {
+  width: 20vw;
+  padding-top: 300%;
+  background: no-repeat 50% 0% / contain;
+}
+
+.cmhp-intro__images .cmhp-intro__person[data-direction="left"] .person__img-inner {
   background-image: url("/public/img/commercialHp/section1_men_left.png");
 }
 
-.cmhp-intro__images
-  .cmhp-intro__person[data-direction="right"]
-  .person__img-inner {
+.cmhp-intro__images .cmhp-intro__person[data-direction="right"] .person__img-inner {
   background-image: url("/public/img/commercialHp/section1_men_right.png");
 }
 
@@ -71,4 +93,53 @@
 
 .cmhp-intro__images .cmhp-intro__person[data-direction="right"] .person__txt {
   margin-top: 30%;
+}
+
+@media (max-aspect-ratio: 4/3) {
+  #commercialHpIntro {
+    height: 120vw;
+    max-height: 100vh;
+  }
+
+  .cmhp-intro__content {
+    padding-top: 14vh;
+  }
+
+  .cmhp-intro__images {
+    margin-top: 16rem;
+    padding: 0;
+
+    justify-content: center;
+    gap: 40vw;
+  }
+
+  .cmhp-intro__images .cmhp-intro__person {
+    position: relative;
+  }
+
+  .cmhp-intro__images .cmhp-intro__person .person__img-inner {
+    width: 40vw;
+  }
+
+  .cmhp-intro__images .cmhp-intro__person .person__txt {
+    position: absolute;
+    top: 0;
+  }
+
+  .cmhp-intro__images .cmhp-intro__person[data-direction="left"] .person__txt {
+    margin-top: 0;
+    left: 76%;
+  }
+
+  .cmhp-intro__images .cmhp-intro__person[data-direction="right"] .person__txt {
+    margin-top: 0;
+    top: 16%;
+    right: 110%;
+  }
+}
+
+@media (max-aspect-ratio: 9/16) {
+  #commercialHpIntro {
+    height: 160vw;
+  }
 }

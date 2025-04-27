@@ -14,6 +14,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  font-size: calc(14px + 0.2rem);
   color: var(--color-white);
   background: var(--color-black);
   line-height: 1.5;
@@ -37,6 +38,10 @@ body {
   padding: 0.12em 0;
 }
 
+#commercialHpPage .brx {
+  display: none;
+}
+
 /* 말풍선 */
 #commercialHpPage .speech-bubble {
   display: inline-block;
@@ -44,14 +49,15 @@ body {
   position: relative;
 
   font-size: 4.4rem;
+  font-size: calc(12px + 3.2rem);
   font-weight: 600;
   color: var(--color-black);
+  white-space: nowrap;
 
   border-radius: 0.5em;
   background: var(--color-white);
 
   padding: 0.54em 1.09em;
-
   margin-left: 0.45em;
 }
 
@@ -64,8 +70,7 @@ body {
   width: 8rem;
   height: 8rem;
 
-  background: url("/public/img/commercialHp/speech_bubble_tail.png") no-repeat 0
-    0 / contain;
+  background: url("/public/img/commercialHp/speech_bubble_tail.png") no-repeat 0 0 / contain;
 }
 
 #commercialHpPage .speech-bubble[data-direction="left"]::before {
@@ -82,16 +87,19 @@ body {
 .cmhp-heading {
   font-family: var(--font-mbc);
   font-size: 8rem;
+  font-size: calc(26px + 5.4rem);
   line-height: 1.2;
 }
 
 .cmhp-heading.lg {
   font-size: 10rem;
+  font-size: calc(26px + 7.4rem);
   line-height: 1.1;
 }
 
 .cmhp-heading.sm {
   font-size: 6rem;
+  font-size: calc(26px + 3.4rem);
 }
 
 .cmhp-sub-heading {
@@ -99,11 +107,14 @@ body {
 
   font-family: var(--font-poppins);
   font-size: 3rem;
+  font-size: calc(14px + 1.6rem);
   margin-bottom: 1.6rem;
 }
 
 .cmhp-desc {
   font-size: 2.4rem;
+  font-size: calc(12px + 1.2rem);
+  /* font-size: clamp(15px, 2.4rem, 2.4rem); */
   line-height: 1.6;
 }
 
@@ -130,4 +141,10 @@ body {
   position: relative;
 
   height: 100vh;
+}
+
+@media (max-aspect-ratio: 4/3) {
+  #commercialHpPage .brx {
+    display: block;
+  }
 }

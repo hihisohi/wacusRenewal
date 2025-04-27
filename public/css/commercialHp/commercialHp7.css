@@ -18,7 +18,12 @@
 }
 
 .cmhp-contact__line {
-  margin-top: 4rem;
+  width: 1px;
+  height: 5rem;
+
+  background: var(--color-white);
+
+  margin: 0 auto 4rem;
 }
 
 .cmhp-contact__text {
@@ -40,8 +45,7 @@
   font-weight: 300;
 
   padding-left: 1.5em;
-  background: url("/public/img/commercialHp/icon_check_circle_or.png") no-repeat
-    0 50% / 1.1em;
+  background: url("/public/img/commercialHp/icon_check_circle_or.png") no-repeat 0 50% / 1.1em;
 }
 
 .cmhp-contact__text p {
@@ -67,7 +71,7 @@
   font-size: 2rem;
 
   width: 20em;
-  padding: 1.2em 1.5em;
+  padding: 1em 1.5em;
 
   border-radius: 20px;
   border: 1px solid #525252;
@@ -91,8 +95,7 @@
   width: 2.4rem;
   height: 2.4rem;
 
-  background: url("/public/img/commercialHp/icon_arrow_wh.png") no-repeat 50%
-    50% / contain;
+  background: url("/public/img/commercialHp/icon_arrow_wh.png") no-repeat 50% 50% / contain;
 }
 
 .cmhp-contact__link .link-item > div > span {

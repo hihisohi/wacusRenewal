@@ -1,11 +1,14 @@
+/* marquee */
 .cmhp-intro__marquees {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translate(0, -35%);
+  transform: translate(0, -40%);
 
   width: 100%;
   height: 25%;
+
+  overflow: hidden;
 }
 
 .cmhp-intro__marquees .marquee {
@@ -16,7 +19,7 @@
   top: 50%;
   left: 50%;
 
-  width: 200%;
+  width: 200vw;
 
   box-shadow: 0px 1.845px 9.227px 0px #000;
 }
@@ -53,6 +56,7 @@
 .cmhp-intro__marquees .marquee-item > div {
   font-family: var(--font-poppins);
   font-size: 4.6rem;
+  font-size: calc(16px + 3rem);
   font-style: italic;
 
   padding: 0.2em 0;
@@ -60,6 +64,7 @@
   white-space: nowrap;
 }
 
+/* commercialHpPoint section */
 #commercialHpPoint {
   width: 100%;
 
@@ -67,7 +72,7 @@
 
   background: linear-gradient(90deg, #171717 0%, #000 100%);
 
-  padding-top: 22rem;
+  padding-top: 30vh;
 }
 
 #commercialHpPoint .cmhp-desc {
@@ -79,7 +84,7 @@
 }
 
 .cmhp-point__top-area {
-  padding: 4rem 0 0;
+  padding: 4vh 0 0;
 
   display: flex;
   flex-direction: column;
@@ -105,11 +110,12 @@
 }
 
 .cmhp-point__indicator {
-  padding: 6rem 0 3rem;
-
   font-family: var(--font-mbc);
   font-size: 2.4rem;
+  font-size: calc(14px + 1rem);
   text-align: center;
+
+  padding: 2.5em 20px 1.5em;
 }
 
 .cmhp-point__indicator .indicator-wrapper {
@@ -117,7 +123,7 @@
 
   display: flex;
   justify-content: space-between;
-  gap: 6rem;
+  gap: 2.5em;
 }
 
 .cmhp-point__indicator .indicator-item {
@@ -127,7 +133,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  gap: 0.83em;
 
   width: 10em;
 }
@@ -135,12 +141,14 @@
 .cmhp-point__indicator .indicator-item .indicator-dot {
   position: relative;
 
-  width: 6rem;
-  height: 6rem;
+  width: 2.5em;
+  height: 2.5em;
   border-radius: 50%;
 
   background: #101010;
-  box-shadow: 0px 0px 0 1rem #1a110c inset;
+  box-shadow: 0px 0px 0 0.4em #1a110c inset;
+
+  transition: boxShadow 0.4s ease;
 }
 
 .cmhp-point__indicator .indicator-item .indicator-dot::before {
@@ -152,29 +160,45 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 44%;
+  height: 44%;
   border-radius: 50%;
 
   background: #391706;
+
+  transition: background 0.4s ease;
 }
 
 .cmhp-point__indicator .indicator-item .indicator-text {
   opacity: 0.1;
+
+  transition: opacity 0.4s ease;
 }
 
 .cmhp-point__indicator .indicator-progress-bar {
   position: absolute;
-  top: 3rem;
+  top: 1.25em;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: calc(10em * 3 + 3rem * 2 - 5em * 2);
+  width: calc(10em * 3 + 1.25em * 2 - 5em * 2);
   height: 1px;
 
   background: #797979;
 
   z-index: 1;
+}
+
+.cmhp-point__indicator .indicator-item.active .indicator-dot {
+  box-shadow: 0px 0px 0 0.4em #562710 inset;
+}
+
+.cmhp-point__indicator .indicator-item.active .indicator-dot::before {
+  background: var(--color-point);
+}
+
+.cmhp-point__indicator .indicator-item.active .indicator-text {
+  opacity: 1;
 }
 
 .cmhp-point__indicator .progress-bar-fill {
@@ -188,17 +212,35 @@
 }
 
 .cmhp-point__images {
+  position: relative;
+
   width: 60%;
   height: 60%;
   border-radius: 5rem;
   opacity: 0.5;
 
   overflow: hidden;
+
+  background: url("/public/img/commercialHp/section2_bg01.jpg") no-repeat 50% 50% / cover;
 }
 
 .cmhp-point__images .image-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+
   width: 100%;
   height: 100%;
+
+  opacity: 0;
+  z-index: -1;
+
+  transition: all 0.5s ease;
+}
+
+.cmhp-point__images .image-item.active {
+  opacity: 1;
+  z-index: 1;
 }
 
 .cmhp-point__images .image-item img {
@@ -206,4 +248,24 @@
   height: 100%;
 
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .cmhp-point__indicator .indicator-item {
+    width: 30%;
+  }
+
+  .cmhp-point__indicator .indicator-progress-bar {
+    width: 70%;
+  }
+}
+
+@media (max-aspect-ratio: 4/3) {
+  #commercialHpPoint {
+    padding-top: 20vh;
+  }
+
+  .cmhp-point__top-area {
+    padding: 12vh 0 4vh;
+  }
 }

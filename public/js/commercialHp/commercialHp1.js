@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(SplitText);
 
-  const commercialHpPoint = document.querySelector("#commercialHpIntro");
-  const pinWrapper = commercialHpPoint.querySelector(".pin-wrapper");
+  const commercialHpIntro = document.querySelector("#commercialHpIntro");
+  const introPinWrapper = commercialHpIntro.querySelector(".pin-wrapper");
 
   // 홈페이지 첫번째 섹션 고정
-  const activeScrollHeight = commercialHpPoint.offsetHeight;
+  const introActiveScrollHeight = commercialHpIntro.offsetHeight;
 
   ScrollTrigger.create({
-    trigger: pinWrapper,
+    trigger: introPinWrapper,
     start: "top top",
-    end: `+=${activeScrollHeight}`,
+    end: `+=${introActiveScrollHeight}`,
     pin: true,
     pinSpacing: false,
     // markers: true,
@@ -20,15 +20,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const personImageLeft = document.querySelector('.cmhp-intro__person[data-direction="left"]');
   const personImageRight = document.querySelector('.cmhp-intro__person[data-direction="right"]');
 
-  function initSplitText() {
+  function initIntroSplitText() {
     let splitChars, splitLines, animation;
 
     splitChars && splitChars.revert();
     splitLines && splitLines.revert();
     animation && animation.revert();
 
-    splitChars = SplitText.create("#commercialHpIntro .split--chars", { type: "chars" });
-    splitLines = SplitText.create("#commercialHpIntro .split--lines", { type: "lines" });
+    splitChars = SplitText.create("#commercialHpIntro .split--chars", {
+      type: "chars",
+    });
+    splitLines = SplitText.create("#commercialHpIntro .split--lines", {
+      type: "lines",
+    });
 
     const tl = gsap.timeline();
 
@@ -37,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       opacity: 0,
       duration: 0.8,
       ease: "power4",
-      stagger: 0.08,
+      stagger: 0.06,
       onComplete: () => {
         console.log("Character animation complete!");
       },
@@ -62,9 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
           y: 5,
           scale: 0.96,
           opacity: 0,
-          duration: 1.6,
+          duration: 1.4,
           ease: "power4",
-          stagger: 0.4,
+          stagger: 0.3,
           onComplete: () => {
             console.log("Line animation complete!");
           },
@@ -72,42 +76,42 @@ document.addEventListener("DOMContentLoaded", () => {
         "-=0.6"
       );
   }
-  initSplitText();
+  initIntroSplitText();
 
   // 페럴럭스
-  const tl = gsap.timeline({
+  const introParallax = gsap.timeline({
     scrollTrigger: {
-      trigger: commercialHpPoint,
+      trigger: commercialHpIntro,
       start: "top top",
       end: "100% top",
       scrub: true,
-      markers: true,
+      // markers: true,
     },
   });
 
-  function updateParallax() {
-    gsap.utils.toArray(".parallax").forEach((layer) => {
+  function updateIntroParallax() {
+    gsap.utils.toArray("#commercialHpIntro .parallax").forEach((layer) => {
       const depth = layer.dataset.depth;
       const movement = -(layer.offsetHeight * depth);
-      tl.to(layer, { y: movement, ease: "none" }, 0);
+      introParallax.to(layer, { y: movement, ease: "none" }, 0);
 
       if (layer.classList.contains("parallax-op")) {
         // const opacityValue = gsap.utils.clamp(0, 1, 1 + movement / 500);
         const opacityValue = movement / 300;
-        tl.to(layer, { opacity: opacityValue, ease: "none" }, 0);
+        introParallax.to(layer, { opacity: opacityValue, ease: "none" }, 0);
       }
     });
   }
-  updateParallax();
+  updateIntroParallax();
 
   window.addEventListener("resize", () => {
     // Update activeScrollHeight for new window size
-    activeScrollHeight = commercialHpPoint.offsetHeight;
+    introActiveScrollHeight = commercialHpIntro.offsetHeight;
 
     // Re-initialize text animation
-    initSplitText();
+    initIntroSplitText();
 
     // Update parallax layers
-    updateParallax();
+    updateIntroParallax();
   });
 });

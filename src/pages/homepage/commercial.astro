@@ -18,6 +18,7 @@ import CommercialHp4 from "../../components/commercialHp/CommercialHp4.astro";
 import CommercialHp5 from "../../components/commercialHp/CommercialHp5.astro";
 import CommercialHp6 from "../../components/commercialHp/CommercialHp6.astro";
 import CommercialHp7 from "../../components/commercialHp/CommercialHp7.astro";
+import Section10 from "../../components/main/Section10.astro";
 
 ---
 
@@ -26,8 +27,12 @@ import CommercialHp7 from "../../components/commercialHp/CommercialHp7.astro";
         <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
         <ScrollIndicator />
     
-        <!-- commercialHp 공통 css (각 섹션 css는 각 컴포넌트에 import) -->
+        <!-- CSS : commercialHp 공통 css (각 섹션 css는 각 컴포넌트에 import) -->
         <link rel="stylesheet" href="../../../public/css/commercialHp/common.css">
+
+        <!-- JS -->
+        <script src="../../../public/js/aos-init.js"></script>
+        <script src="../../../public/js/commercialHp/index.js"></script>
     </head>
     <body>
         <Header /> 
@@ -42,14 +47,15 @@ import CommercialHp7 from "../../components/commercialHp/CommercialHp7.astro";
                     <CommercialHp5 />
                     <CommercialHp6 />
                     <CommercialHp7 />
-                </main>
 
+                    <Section10 client:load/>
+                </main>
             </div>
         </div>
     </body>
     <script is:inline>
         document.addEventListener("DOMContentLoaded", () => {
-
+   
         });
     </script>
 </html>

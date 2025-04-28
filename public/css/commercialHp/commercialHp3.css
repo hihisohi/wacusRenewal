@@ -11,21 +11,7 @@
   z-index: 1;
 }
 
-/* 임시 중앙선 */
-.cmhp-need__images:before {
-  content: "";
-  width: 100%;
-  height: 1px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-
-  transform: translateY(-50%);
-
-  background: red;
-}
-
-.cmhp-need__images > div {
+.cmhp-need__images .image-item {
   position: absolute;
   top: 0;
   left: 0;
@@ -34,9 +20,29 @@
   height: 100%;
 
   background-repeat: no-repeat;
-  background-size: 60%;
   background-position: 110% 0;
+  background-size: 60%;
+
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.cmhp-need__images .image-item.on {
+  opacity: 1;
+}
+
+.cmhp-need__images .image-item:nth-child(1) {
+  background-position: 105% 0;
   background-image: url("/public/img/commercialHp/section3_bg01.png");
+}
+.cmhp-need__images .image-item:nth-child(2) {
+  background-position: -20% 100%;
+  background-image: url("/public/img/commercialHp/section3_bg02.png");
+}
+
+.cmhp-need__images .image-item:nth-child(3) {
+  background-position: 100% 50%;
+  background-image: url("/public/img/commercialHp/section3_bg03.png");
 }
 
 .cmhp-need__scrolling-text {
@@ -49,14 +55,26 @@
   width: 100%;
 }
 
+.cmhp-need__scrolling-text .text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
 .cmhp-need__scrolling-text .text-item {
   font-family: var(--font-mbc);
   font-size: 5rem;
   font-size: calc(18px + 3.2rem);
+  line-height: 1.2;
   text-align: center;
   color: #383838;
 
-  transition: all 0.6s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1.6em;
+
+  transition: all 0.4s ease-in-out;
 }
 
 .cmhp-need__scrolling-text .text-item.on {
@@ -65,6 +83,35 @@
   color: var(--color-white);
 }
 
-.cmhp-need__scrolling-text .text-item.on > span {
+.cmhp-need__scrolling-text .text-item.on > p > span {
   color: var(--color-point);
+}
+
+@media (max-width: 768px) {
+  .cmhp-need__scrolling-text .text-wrapper {
+    gap: 6rem;
+  }
+}
+
+@media (max-aspect-ratio: 4/3) {
+  .cmhp-need__images .image-item {
+    background-size: 120%;
+  }
+
+  .cmhp-need__images .image-item:nth-child(1) {
+    background-position: -50% 40%;
+  }
+  .cmhp-need__images .image-item:nth-child(2) {
+    background-position: 120% 80%;
+  }
+
+  .cmhp-need__images .image-item:nth-child(3) {
+    background-position: -50% 60%;
+  }
+}
+
+@media (max-aspect-ratio: 9/16) {
+  .cmhp-point__top-area {
+    padding: 18vh 0 6vh;
+  }
 }

@@ -5,6 +5,9 @@
   --font-mbc: "MBC 1961", sans-serif;
   --font-poppins: "Poppins", sans-serif;
   --font-paperlogy: "Paperlogy", sans-serif;
+  --gradient-angle: 90deg;
+  --gradient-start: #171717;
+  --gradient-end: #000000;
 }
 
 html {
@@ -21,6 +24,13 @@ body {
 }
 
 /* commercial hompage 페이지 내 공통 스타일 */
+
+/* commercialHpPage 페이지  */
+#commercialHpPage {
+  background: linear-gradient(var(--gradient-angle), var(--gradient-start) 0%, var(--gradient-end) 100%);
+  /* background: linear-gradient(90deg, #171717 0%, #000 100%); */
+  overflow: hidden;
+}
 
 /* font 관련 */
 #commercialHpPage .color-or {
@@ -40,6 +50,15 @@ body {
 
 #commercialHpPage .brx {
   display: none;
+}
+
+#commercialHpPage .br-500,
+#commercialHpPage .br-768 {
+  display: inline-block;
+}
+
+#commercialHpPage .not-br-768 {
+  display: block;
 }
 
 /* 말풍선 */
@@ -146,5 +165,26 @@ body {
 @media (max-aspect-ratio: 4/3) {
   #commercialHpPage .brx {
     display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  #commercialHpPage .br-768 {
+    display: block;
+  }
+
+  #commercialHpPage .not-br-768 {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  #commercialHpPage .br-500 {
+    display: block;
+  }
+
+  .cmhp-heading.lg {
+    font-size: 8rem;
+    font-size: calc(24px + 5.6rem);
   }
 }

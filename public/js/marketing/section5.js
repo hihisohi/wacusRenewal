@@ -1,5 +1,7 @@
 // document.addEventListener('astro:page-load', () => { 
     $(document).ready(function(){
+        const falsesText = 'Next <span class="ico"> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 51 51"> <mask id="mask0_1200_1959" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="51" height="51"> <rect x="0.403809" y="0.617188" width="50" height="50" fill="currentColor"></rect> </mask> <g mask="url(#mask0_1200_1959)"> <path d="M29.6001 38.8327L26.3496 35.6218L34.1282 27.8431H7.9126V23.252H34.1282L26.3147 15.4192L29.5652 12.228L42.9142 25.5478L29.6001 38.8327Z" fill="currentColor"></path> </g> </svg></span>'
+        const trueText = 'Submit <span class="ico"> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 51 51"> <mask id="mask0_1200_1959" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="51" height="51"> <rect x="0.403809" y="0.617188" width="50" height="50" fill="currentColor"></rect> </mask> <g mask="url(#mask0_1200_1959)"> <path d="M29.6001 38.8327L26.3496 35.6218L34.1282 27.8431H7.9126V23.252H34.1282L26.3147 15.4192L29.5652 12.228L42.9142 25.5478L29.6001 38.8327Z" fill="currentColor"></path> </g> </svg></span>'
     // STEP 
         function checkChange() {
                 const inputs = document.querySelectorAll('.question_item.on .label_checkbox input'); // 현재 단계에서만 체크박스를 선택
@@ -12,6 +14,11 @@
                     submitBtn.classList.add('completed');
                 } else {
                     submitBtn.classList.remove('completed');
+                }
+                if($('.step_item').eq('4').hasClass('on') == true) {
+                    $('.m.s5 .btn_submit').html(trueText);
+                } else {
+                    $('.m.s5 .btn_submit').html(falsesText);
                 }
            
         }
@@ -50,6 +57,7 @@
 
                     submitBtn.setAttribute('data-index',index);
                     checkChange()
+
                 });
             });
         }

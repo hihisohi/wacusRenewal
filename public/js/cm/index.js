@@ -2,18 +2,8 @@ $(document).ready(function(){
     gsap.registerPlugin(ScrollTrigger, SplitText);
     gsap.defaults({ ease: 'linear'});
 
-    const lenis = new Lenis({
-        duration: mob() ? 2.5 : 1.2,
-        // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-        // orientation: 'vertical',
-        // gestureOrientation: 'vertical',
-        // smoothWheel: true,
-        // wheelMultiplier: 1,
-        // smoothTouch: false,
-        // touchMultiplier: 2,
-        // infinite: false,
-        syncTouch: true,
-    })
+    /** FUNCTION Lenis Scroll */
+    const lenis = new Lenis()
 
     lenis.on('scroll', ScrollTrigger.update)
 
@@ -22,6 +12,14 @@ $(document).ready(function(){
     })
 
     gsap.ticker.lagSmoothing(0)
+
+    // FUNCTION 리사이즈시 scrolltrigger refresh
+    const resizeObserver = new ResizeObserver((entries) => {
+        entries.forEach((entry) => {
+            ScrollTrigger.refresh();
+        });
+    });
+    resizeObserver.observe(document.querySelector('html'));
 
     // helper
     let ww = $(window).width();
@@ -52,7 +50,6 @@ $(document).ready(function(){
     
     let resizeClear;
     $(window).resize(function () {
-        ScrollTrigger.refresh();
         clearTimeout(resizeClear);
 
         setTimeout(function () {
@@ -64,7 +61,6 @@ $(document).ready(function(){
             if (ww <= 768) {
                 $('.sc-02 .vertical').css('opacity', 0);
                 $('.sc-02 .horizon').css('opacity', 1);
-            } else {
             }
         }, 200);
     });
@@ -452,5 +448,5 @@ $(document).ready(function(){
                 });
             });
         }
-    })
+    })    
 });

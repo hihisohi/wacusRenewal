@@ -379,6 +379,8 @@ main.mainpage{min-height: 200vh;background-color: #000;}
 .mainpage .s7_con_group1 {top: 110px;left: 0;}
 .mainpage .s7_con_group2 {top: 110px;left: calc(100% - 115px - 130px);}
 .mainpage .s7_con .s7_con_group.on {top: 50%;right: auto; left: 50%;transform: translate(-50%, -50%);}
+.mainpage .s7_con .s7_con_group img {pointer-events: none;}
+.mainpage .s7_con .s7_con_group.on img {pointer-events: all;}
 
 .mainpage .s7_con_group.on .s7_img:hover ~ .s7_hover_bx{opacity: 1;}
 .mainpage .s7_con_group.on .s7_hover_bx:hover{opacity: 1;}

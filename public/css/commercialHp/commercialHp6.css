@@ -1,27 +1,220 @@
 #commercialHpMethod {
   background: linear-gradient(0deg, #131313 0%, #000 100%);
 
-  padding: 10rem 0;
+  padding: 16vh 0 10vh;
 }
 
 .cmhp-method__title {
   text-align: center;
 }
 
+.cmhp-method__content {
+  margin-top: 14vh;
+}
+
 .cmhp-method__title .cmhp-desc {
   margin-top: 3rem;
 }
 
-.cmhp-method__polygon-slider {
-  width: 60rem;
-  height: 50rem;
+.cmhp-method__polygon {
+  position: relative;
+
+  font-size: 3rem;
+  font-size: calc(12px + 1.8rem);
+}
+
+.cmhp-method__polygon .polygon-wrap {
+  position: relative;
+
+  width: 26.67em;
+  height: 25.6em;
+  max-width: 100%;
+
+  padding-top: 2em;
+  margin: 0 auto;
+}
+
+.cmhp-method__polygon-img {
+  position: absolute;
+  top: 2em;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  width: 26.67em;
+  height: 25.6em;
+}
+
+.cmhp-method__polygon-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cmhp-method__polygon-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cmhp-method__polygon-text > div {
+  position: absolute;
+  left: 50%;
+
+  font-family: var(--font-mbc);
+  font-size: 3rem;
+  font-size: calc(12px + 1.8rem);
+  white-space: nowrap;
+}
+
+.cmhp-method__polygon-text > div:nth-child(1) {
+  top: 0;
+  transform: translate(-50%, 0);
+
+  text-align: center;
+}
+
+.cmhp-method__polygon-text > div:nth-child(2) {
+  top: 42%;
+  transform: translate(-220%, -50%);
+  text-align: right;
+}
+
+.cmhp-method__polygon-text > div:nth-child(3) {
+  top: 82%;
+  transform: translate(-200%, -50%);
+  text-align: right;
+}
+
+.cmhp-method__polygon-text > div:nth-child(4) {
+  top: 82%;
+  transform: translate(80%, -50%);
+  text-align: left;
+}
+
+.cmhp-method__polygon-text > div:nth-child(5) {
+  top: 42%;
+  transform: translate(110%, -50%);
+  text-align: left;
 }
 
 .cmhp-method__text {
   font-family: var(--font-paperlogy);
   font-size: 3.8rem;
+  font-size: calc(18px + 2rem);
   font-weight: 300;
   text-align: center;
+}
 
-  margin-top: 8rem;
+.cmhp-method__polygon-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.cmhp-method__polygon-dot .polygon-dot {
+  position: absolute;
+  left: 50%;
+
+  width: 1.86em;
+  height: 1.86em;
+
+  box-shadow: 0 0 0 calc(2px + 0.2rem) var(--color-point) inset;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cmhp-method__polygon-dot .polygon-dot:nth-child(1) {
+  top: 0;
+  transform: translate(-50%, 190%);
+}
+
+.cmhp-method__polygon-dot .polygon-dot:nth-child(2) {
+  top: 38%;
+  transform: translate(-510%, 0%);
+}
+
+.cmhp-method__polygon-dot .polygon-dot:nth-child(3) {
+  top: 78%;
+  transform: translate(-330%, 0%);
+}
+
+.cmhp-method__polygon-dot .polygon-dot:nth-child(4) {
+  top: 78%;
+  transform: translate(240%, 0%);
+}
+
+.cmhp-method__polygon-dot .polygon-dot:nth-child(5) {
+  top: 38%;
+  transform: translate(410%, 0%);
+}
+
+.cmhp-method__polygon-dot .polygon-dot span {
+  display: block;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background: var(--color-point);
+}
+
+/* active 스타일 */
+.cmhp-method__polygon-text > div > p {
+  opacity: 0.2;
+  transition: all 0.6s ease-in-out;
+}
+
+.cmhp-method__polygon-dot .polygon-dot {
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+
+.cmhp-method__polygon-text > div.active > p {
+  opacity: 1;
+}
+
+.cmhp-method__polygon-dot .polygon-dot.active {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .cmhp-method__content {
+    margin-top: 0;
+  }
+
+  .cmhp-method__polygon-text,
+  .cmhp-method__polygon-text > div {
+    position: static;
+  }
+
+  .cmhp-method__polygon-text > div {
+    font-size: 3rem;
+    font-size: calc(16px + 1.4rem);
+  }
+
+  .cmhp-method__polygon-text > div + div {
+    margin-top: 0.6em;
+  }
+
+  .cmhp-method__polygon-text > div:nth-child(1),
+  .cmhp-method__polygon-text > div:nth-child(2),
+  .cmhp-method__polygon-text > div:nth-child(3),
+  .cmhp-method__polygon-text > div:nth-child(4),
+  .cmhp-method__polygon-text > div:nth-child(5) {
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    transform: translate(0, 0);
+    text-align: center;
+  }
+
+  .cmhp-method__text {
+    margin-top: 4vh;
+  }
 }

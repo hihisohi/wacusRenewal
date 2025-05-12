@@ -203,9 +203,9 @@ $(document).ready(function(){
                     }
                 },
             });
-            /* section3 */
+        /* section3 */
 
-            var split = new SplitText(".s3_tit", { type: "chars" });
+        var split = new SplitText(".s3_tit", { type: "chars" });
         gsap.fromTo(split.chars, {
             y: 20,
             opacity: 0,
@@ -234,8 +234,8 @@ $(document).ready(function(){
                 stagger: 0
             }, {scrollTrigger: {
                     trigger: $(this).find('.s3_list_img'),
-                    start: "top-=20% top+=50%",
-                    // end: "top+=300 top+=50%",
+                    start: "top top+=80%",
+                    end: "bottom-=50% bottom-=80%",
                     scrub: 1,
                     // markers: true,
                     invalidateOnRefresh: true,
@@ -247,8 +247,8 @@ $(document).ready(function(){
                 stagger: 0
             },{scrollTrigger: {
                     trigger: $(this).find('.s3_list_img'),
-                    start: "top-=20% top+=50%",
-                    // end: "top top",
+                    start: "top top+=80%",
+                    end: "bottom-=50% bottom-=80%",
                     scrub: 1,
                     // markers: true,
                     invalidateOnRefresh: true,
@@ -261,8 +261,8 @@ $(document).ready(function(){
                 stagger: 0
             },{scrollTrigger: {
                     trigger: $(this).find('.s3_list_img'),
-                    start: "top-=20% top+=50%",
-                    // end: "top top",
+                    start: "top top+=80%",
+                    end: "bottom-=50% bottom-=80%",
                     scrub: 1,
                     // markers: true,
                     invalidateOnRefresh: true,
@@ -598,30 +598,60 @@ $(document).ready(function(){
 
             /* section7 */
             $(".s7_con_group").click(function () {
-                if ($(this).hasClass('on') == false) {
+                if (!$(this).hasClass('on')) {
                     $(".s7_con_group").removeClass("on");
                     $(this).addClass("on");
-                    const h3Text = $(this).find('h3');
-                    var s7split = new SplitText($(this).find('h2'), { type: "chars" });
-                    var s7split2 = new SplitText($(this).find('p'), { type: "chars" });
-                    gsap.from(s7split.chars, {
-                        duration: 1,
-                        y: 20,
-                        opacity: 0,
-                        stagger: 0.1,
+            
+                    const $this = $(this);
+                    const h3Text = $this.find('h3');
+                    const $h2 = $this.find('h2');
+                    const $p = $this.find('p');
+            
+                    // 새로 SplitText 적용
+                    const s7split = new SplitText($h2, { type: "chars" });
+                    const s7split2 = new SplitText($p, { type: "chars" });
+            
+                    // opacity만 애니메이션
+                    gsap.fromTo(
+                        s7split.chars,
+                        { opacity: 0 },
+                        { duration: 1, opacity: 1, stagger: 0.1 }
+                    );
+            
+                    gsap.fromTo(
+                        h3Text,
+                        { opacity: 0 },
+                        { duration: 1, opacity: 1, stagger: 0.1 }
+                    );
+            
+                    gsap.fromTo(
+                        s7split2.chars,
+                        { opacity: 0 },
+                        { duration: 1, opacity: 1, stagger: 0.01 }
+                    );
+            
+                    // 나머지 요소 SplitText 정리
+                    $(".s7_con_group").not('.on').each(function () {
+                        const $other = $(this);
+                        const otherH2 = $other.find('h2');
+                        const otherP = $other.find('p');
+            
+                        if (otherH2[0]._splitText) {
+                            otherH2[0]._splitText.revert();
+                            otherH2[0]._splitText.kill();
+                            delete otherH2[0]._splitText;
+                        }
+            
+                        if (otherP[0]._splitText) {
+                            otherP[0]._splitText.revert();
+                            otherP[0]._splitText.kill();
+                            delete otherP[0]._splitText;
+                        }
                     });
-                    gsap.from(h3Text, {
-                        duration: 1,
-                        x: -40,
-                        opacity: 0,
-                        stagger: 0.1,
-                    });
-                    gsap.from(s7split2.chars, {
-                        duration: 1,
-                        y: 5,
-                        opacity: 0,
-                        stagger: 0.01,
-                    });
+            
+                    // 현재 SplitText 저장
+                    $h2[0]._splitText = s7split;
+                    $p[0]._splitText = s7split2;
                 }
             });
             /* section08 */

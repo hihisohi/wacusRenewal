@@ -5,7 +5,7 @@ const currentPath = Astro.url.pathname;
 const isMain = currentPath === "/";
 const isHomePage = currentPath === "/homepage";
 const isMarketingPage = currentPath === "/marketing";
-const isMarketingPage2 = currentPath === "/marketingPage";
+const isMarketingPage2 = currentPath === "/marketing/medical";
 const isCompany = currentPath === "/company";
 const isWorks = currentPath === "/works";
 
@@ -249,28 +249,28 @@ const isBoard = boardPaths.includes(currentPath);
                 <h4 onclick="window.location='/works'">Works</h4>
             </div>
             <div class="menu_title">
-                <h4 onclick="window.location='/marketing'">Marketing</h4>
+                <h4 onclick="window.location='/homepage'">Homepage</h4>
                 <ul>
                     <li>
-                        <a href="/marketingPage">Medical Marketing</a>
+                        <a href="/homepage/medical">Medical Home page</a>
                     </li>
                     <li>
-                        <a href="/cm">Commercial Marketing</a>
+                        <a href="/homepage/commercial">Commercial Home page</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/homepage/seo">SEO</a>
                     </li>
                 </ul>
             </div>
             <div class="menu_title">
-                <h4 onclick="window.location='/homepage'">Homepage</h4>
+                <h4 onclick="window.location='/marketing'">Marketing</h4>
                 <ul>
                     <li>
-                        <a href="/medical">Medical Home page</a>
+                        <a href="/marketing/medical">Medical Marketing</a>
                     </li>
                     <li>
-                        <a href="#" onClick="alert('준비중입니다.')">Commercial Home page</a>
-                    </li>
-                    
-                    <li>
-                        <a href="/seo">SEO</a>
+                        <a href="/marketing/commercial">Commercial Marketing</a>
                     </li>
                 </ul>
             </div>

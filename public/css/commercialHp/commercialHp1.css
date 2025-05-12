@@ -34,7 +34,8 @@
   height: 100%;
 
   padding-top: 14.0625vw;
-  background: url("/public/img/commercialHp/section1_bg.jpg") no-repeat 50% 50% / cover;
+  background: url("/public/img/commercialHp/section1_bg.jpg") no-repeat 50% 50% /
+    cover;
 
   overflow: hidden;
 }
@@ -79,20 +80,26 @@
   background: no-repeat 50% 0% / contain;
 }
 
-.cmhp-intro__images .cmhp-intro__person[data-direction="left"] .person__img-inner {
+.cmhp-intro__images
+  .cmhp-intro__person[data-direction="left"]
+  .person__img-inner {
   background-image: url("/public/img/commercialHp/section1_men_left.png");
 }
 
-.cmhp-intro__images .cmhp-intro__person[data-direction="right"] .person__img-inner {
+.cmhp-intro__images
+  .cmhp-intro__person[data-direction="right"]
+  .person__img-inner {
   background-image: url("/public/img/commercialHp/section1_men_right.png");
 }
 
 .cmhp-intro__images .cmhp-intro__person[data-direction="left"] .person__txt {
   margin-top: 15%;
+  min-width: 18em;
 }
 
 .cmhp-intro__images .cmhp-intro__person[data-direction="right"] .person__txt {
   margin-top: 30%;
+  min-width: 9em;
 }
 
 @media (max-aspect-ratio: 4/3) {

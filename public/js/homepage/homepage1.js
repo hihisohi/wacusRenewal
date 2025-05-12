@@ -34,9 +34,9 @@ var swiper200 = new Swiper(".big_img_list", {
     thumbs: {
         swiper: swiper100,
     },
-    // autoplay : {
-    //     delay:5500,
-    // },
+    autoplay : {
+        delay:4000,
+    },
 });
 
 swiper100.on('click', function (swiper) {
@@ -45,6 +45,11 @@ swiper100.on('click', function (swiper) {
         const realIndex = swiper.slides[clickedIndex].getAttribute('data-swiper-slide-index');
         swiper100.slideToLoop(realIndex); // 클릭한 슬라이드의 실제 인덱스로 이동
     }
+});
+
+swiper200.on('slideChangeTransitionEnd', function () {
+    const realIndex = swiper200.realIndex;
+    swiper100.slideToLoop(realIndex); // swiper100도 같은 슬라이드로 이동
 });
 
 // swiper100.on('slideChangeTransitionEnd', function () {

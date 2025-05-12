@@ -8,7 +8,7 @@ import "../../../public/css/marketing/section2.css"
 
 import Head from '../../components/layout/Head.astro'; //메타태그들
 import Header from '../../components/layout/Header.astro'; //진정한 헤더
-
+import CommerceMarketing5 from '../../components/cm/commerceMarketing5.astro'; // 포트폴리오 & 문의바로가기
 import Section10 from "../../components/main/Section10.astro"; //풋터
 ---
 <style>
@@ -19,7 +19,11 @@ import Section10 from "../../components/main/Section10.astro"; //풋터
 <html lang="ko">
     <head>
         <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <link rel="stylesheet" href="../../../public/css/cm/section5.css">
         <!-- <ViewTransitions /> -->
+        <link rel="stylesheet" href="../../../public/css/cm/section1.css">
+        <script src="../../../public/js/aos-init.js"></script>
+        <script src="../../../public/js/cm/index.js"></script>
     <body>
         <Header />
         
@@ -689,7 +693,7 @@ import Section10 from "../../components/main/Section10.astro"; //풋터
                             </div>
                         </div>
                     </section>
-
+                    <CommerceMarketing5 />
                     <Section10/>
                 </main>
 

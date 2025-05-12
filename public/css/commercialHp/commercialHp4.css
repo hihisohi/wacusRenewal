@@ -1,7 +1,40 @@
 #commercialHpIssue {
-  background: linear-gradient(90deg, #171717 0%, #000 100%);
-
+  position: relative;
+  /* background: linear-gradient(90deg, #171717 0%, #000 100%); */
   padding: 8rem 0 10rem;
+}
+
+#commercialHpIssue .bg-circle-or {
+  position: absolute;
+
+  background: var(--color-point);
+  mix-blend-mode: screen;
+  filter: blur(13rem);
+}
+#commercialHpIssue .bg-circle-or.bg-circle-or-1 {
+  top: 90%;
+  right: -10rem;
+
+  border-radius: 50%;
+
+  width: 47rem;
+  height: 42rem;
+  min-width: 260px;
+  min-height: 220px;
+
+  opacity: 0.2;
+}
+#commercialHpIssue .bg-circle-or.bg-circle-or-2 {
+  top: 100%;
+  left: -4rem;
+
+  width: 32rem;
+  height: 32rem;
+
+  min-width: 220px;
+  min-height: 180px;
+
+  opacity: 0.1;
 }
 
 .cmhp-issue__image {
@@ -17,7 +50,7 @@
 .cmhp-issue__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 6rem;
 
   margin-top: 6rem;
 }
@@ -26,12 +59,16 @@
   position: relative;
 
   width: calc(50% - 4rem);
-  height: 6rem;
 
-  padding-left: 8rem;
+  padding-left: 3em;
 
   display: flex;
   align-items: center;
+
+  font-size: 2.8rem;
+  font-size: calc(18px + 1rem);
+  font-weight: 300;
+  color: #c4c4c4;
 }
 
 .cmhp-issue__list li:before {
@@ -43,8 +80,8 @@
   left: 0;
   transform: translate(0, -50%);
 
-  width: 6rem;
-  height: 6rem;
+  width: 2.14em;
+  height: 2.14em;
 
   background: no-repeat 0 50% / contain;
 }
@@ -66,9 +103,6 @@
 }
 
 .cmhp-issue__list li p {
-  font-size: 2.8rem;
-  font-weight: 300;
-  color: #c4c4c4;
 }
 
 .cmhp-issue__list li p .bold {
@@ -78,10 +112,12 @@
 .cmhp-issue__text {
   position: relative;
 
-  margin-top: 18rem;
-  padding: 3em 0;
+  margin-top: 14vh;
+  padding: 2.4em 0;
 
+  font-family: var(--font-paperlogy);
   font-size: 4rem;
+  font-size: calc(18px + 2.2rem);
   font-weight: 250;
   text-align: center;
 }
@@ -113,4 +149,31 @@
 
 .cmhp-issue__text p + p {
   margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .cmhp-issue__list {
+    justify-content: center;
+    gap: 10rem;
+
+    margin-top: 10rem;
+  }
+
+  .cmhp-issue__list li {
+    width: 100%;
+    max-width: 26em;
+  }
+}
+
+@media (max-width: 500px) {
+  .cmhp-issue__list li {
+    max-width: 16em;
+  }
+
+  #commercialHpIssue .bg-circle-or.bg-circle-or-1 {
+    right: -30%;
+  }
+  #commercialHpIssue .bg-circle-or.bg-circle-or-2 {
+    left: -20%;
+  }
 }

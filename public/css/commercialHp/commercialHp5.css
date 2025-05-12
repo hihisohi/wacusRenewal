@@ -1,6 +1,7 @@
 #commercialHpDef {
-  padding: 10rem 0;
-  background: linear-gradient(90deg, #171717 0%, #000 100%);
+  padding: 16vh 0 10vh;
+  /* background: linear-gradient(90deg, #171717 0%, #000 100%); */
+  background: rgba(0, 0, 0, 0);
 }
 
 #commercialHpDef .cmhp-container {
@@ -30,7 +31,7 @@
 
 .cmhp-def__fade-slider {
   width: 79rem;
-  height: 60rem;
+  height: 76%;
 }
 
 .cmhp-def__pagination {
@@ -38,22 +39,6 @@
   height: 100%;
 
   padding-left: 14rem;
-}
-
-.cmhp-def__fade-slider .slider-wrapper {
-  position: relative;
-
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.cmhp-def__fade-slider .slider-item {
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .cmhp-def__fade-slider .slider-item .item-img {
@@ -67,30 +52,41 @@
   object-fit: cover;
 }
 
+.cmhp-def__pagination {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
 .cmhp-def__pagination > div {
   display: flex;
 
   opacity: 0.2;
+  transition: opacity 0.3s ease;
+
+  cursor: pointer;
+}
+
+.cmhp-def__pagination > div:not(.active):hover {
+  opacity: 0.4;
 }
 
 .cmhp-def__pagination > div p .highlight-or {
   color: var(--color-wh);
 }
 
-.cmhp-def__pagination > div + div {
-  margin-top: 4rem;
-}
-
 .cmhp-def__pagination .paging__number {
   font-family: var(--font-mbc);
   font-size: 4.4rem;
+  font-size: calc(18px + 2.6rem);
 }
 
 .cmhp-def__pagination > div > p {
   font-size: 3rem;
+  font-size: calc(16px + 1.4rem);
 
-  margin-top: 1.4rem;
-  margin-left: 1.4rem;
+  margin-top: 0.54em;
+  margin-left: 0.54em;
 }
 
 .cmhp-def__pagination > div.active {
@@ -100,4 +96,38 @@
 
 .cmhp-def__pagination > div.active p .highlight-or {
   color: var(--color-point);
+}
+
+@media (max-width: 960px) {
+  .cmhp-def__content {
+    flex-wrap: wrap;
+  }
+
+  .cmhp-def__fade-slider {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .cmhp-def__pagination {
+    width: 100%;
+
+    padding-left: 0;
+    margin: 10rem auto 0;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cmhp-def__pagination > div {
+    width: calc(50% - 4rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .cmhp-def__pagination > div {
+    width: 100%;
+    max-width: 24em;
+  }
 }

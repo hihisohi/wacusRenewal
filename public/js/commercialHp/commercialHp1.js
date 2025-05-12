@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     '.cmhp-intro__person[data-direction="right"]'
   );
 
-  function initSplitText() {
-    let splitChars, splitLines, animation;
+  function initIntroSplitText() {
+    let splitChars, splitLines, splitWords, animation;
 
     splitChars && splitChars.revert();
     splitWords && splitWords.revert();
@@ -34,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     splitChars = SplitText.create("#commercialHpIntro .split--chars", {
       type: "chars",
+    });
+    splitWords = SplitText.create("#commercialHpIntro .split--words", {
+      type: "words",
     });
     splitLines = SplitText.create("#commercialHpIntro .split--lines", {
       type: "lines",

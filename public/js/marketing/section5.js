@@ -191,12 +191,19 @@ $(document).ready(function () {
         formData.company = company;
         formData.inquiry = inquiry;
 
-        // if (inDexNumb != 4 || inDexNumb != 3) {
-        //     console.log('정보입력단계가 아님');
-        //     return;
-        // } else {
-        //     console.log('정보입력단계가 맞음');
-        // }
+        if (inDexNumb != 4) {
+            setTimeout(()=>{
+                console.log('정보입력단계가 아님');
+                console.log('inDexNumb='+inDexNumb);
+                return;
+            },1000)
+        } else {
+            setTimeout(()=>{
+                console.log('정보입력단계가 맞음');
+                console.log('inDexNumb='+inDexNumb);
+                return;
+            },1000)
+        }
 
         // 필수 입력값 검증
         if (!name || !phone || !email || !company || !inquiry) {

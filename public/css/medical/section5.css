@@ -108,7 +108,7 @@
 }
 .sc_inquiry .link_wrap a span:before,
 .sc_inquiry .link_wrap a .icon_wrap:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -174,5 +174,12 @@
   }
   .sc_inquiry .link_wrap a .icon_wrap {
     border-radius: 11px;
+  }
+}
+
+/* 영문 사이트 style */
+@media screen and (max-width: 768px) {
+  .lang-en .sc_inquiry .txt {
+    height: 78px;
   }
 }

@@ -89,6 +89,10 @@
   margin-left: 0.54em;
 }
 
+.cmhp-def__pagination > div > p > span.sm {
+  font-size: calc(12.8px + 1.12rem);
+}
+
 .cmhp-def__pagination > div.active {
   font-weight: 600;
   opacity: 1;

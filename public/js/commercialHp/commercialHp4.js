@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: "#commercialHpIssue .split--words",
       start: "top 80%",
+      end: "bottom 10%",
       scrub: true,
     },
   });

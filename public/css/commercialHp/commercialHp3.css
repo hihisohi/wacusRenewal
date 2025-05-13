@@ -115,3 +115,11 @@
     padding: 18vh 0 6vh;
   }
 }
+
+.lang-en .cmhp-need__scrolling-text .text-item {
+  font-size: calc(16.2px + 2.88rem);
+}
+
+.lang-en .cmhp-need__scrolling-text .text-item.on {
+  font-size: calc(18px + 3.78rem);
+}

@@ -3,9 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const needActiveScrollHeight = commercialHpNeed.offsetHeight * 3;
 
-  const scrollingText = commercialHpNeed.querySelector(".cmhp-need__scrolling-text");
+  const scrollingText = commercialHpNeed.querySelector(
+    ".cmhp-need__scrolling-text"
+  );
   const needTextItems = scrollingText.querySelectorAll(".text-item");
-  const needImageItems = commercialHpNeed.querySelectorAll(".cmhp-need__images .image-item");
+  const needImageItems = commercialHpNeed.querySelectorAll(
+    ".cmhp-need__images .image-item"
+  );
 
   const needScrollingTextAni = gsap.timeline({
     scrollTrigger: {
@@ -18,10 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  needScrollingTextAni.to(scrollingText, { y: "-49.995%", ease: "power3.inOut" }).to(scrollingText, {
-    y: "-83.325%",
-    ease: "power3.inOut",
-  });
+  needScrollingTextAni
+    .to(scrollingText, { y: "-49.995%", ease: "power3.inOut" })
+    .to(scrollingText, {
+      y: "-83.325%",
+      ease: "power3.inOut",
+    });
 
   ScrollTrigger.create({
     trigger: commercialHpNeed,

@@ -4,8 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const MethodActiveScrollHeight = commercialHpMethod.offsetHeight;
 
   // polygon slide
-  const polygonItems = commercialHpMethod.querySelectorAll(".cmhp-method__polygon-text > div");
-  const polygonDots = commercialHpMethod.querySelectorAll(".cmhp-method__polygon-dot .polygon-dot");
+  const polygonItems = commercialHpMethod.querySelectorAll(
+    ".cmhp-method__polygon-text > div"
+  );
+  const polygonDots = commercialHpMethod.querySelectorAll(
+    ".cmhp-method__polygon-dot .polygon-dot"
+  );
 
   let current = 0;
 
@@ -35,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: "#commercialHpMethod .split--words",
       start: "top 80%",
+      end: "bottom 10%",
       scrub: true,
     },
   });

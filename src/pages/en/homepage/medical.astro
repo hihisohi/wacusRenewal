@@ -1,0 +1,80 @@
+---
+title: "medical Page"
+
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../../consts"; //타이틀이랑 웹사이트 설명 
+import { ViewTransitions } from 'astro:transitions';  //페이지 이동시 부드럽게 페이지 전환 아스트로 설정이 2.0이여야한다 확인 후 넣어보자.
+
+import "../../../../public/css/marketing/section1.css"
+
+import Head from '../../../components/layout/Head.astro'; //메타태그들
+import Header from '../../../components/layout/Header.astro'; //진정한 헤더
+
+// import Loading from "../../../components/Loading2.astro"; //상세로딩
+
+import Medical1 from '../../../components/en/medical/medical1.astro'; // 필요성
+import Medical2 from "../../../components/en/medical/medical2.astro"; // 환자와의 첫만남
+import Medical3 from "../../../components/en/medical/medical3.astro"; // 리스트 형식
+import Medical4 from "../../../components/en/medical/medical4.astro"; // 핵심 전략
+import Hospital4 from "../../../components/hospital/hospital4.astro"; // project
+import Medical5 from "../../../components/en/medical/medical5.astro"; // 프로젝트 문의
+import Section10 from "../../../components/main/Section10.astro"; //풋터
+import ScrollIndicator from "../../../components/inc/ScrollIndicator.astro"; //스크롤 인디케이터
+
+
+---
+<style is:global>
+    .sc-project .nav-item.active .btn {
+        background: var(--web-main) !important;
+        color: #fff !important;
+    }
+    html {
+        --main:#f50;
+    }
+</style>
+<html lang="en">
+    <head>
+        <Head title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+        <ScrollIndicator />
+        <!-- <ViewTransitions /> -->
+        <link rel="stylesheet" href="../../../../public/km.css">
+        <link rel="stylesheet" href="../../../../public/css/main/section1.css">
+        <link rel="stylesheet" href="../../../../public/css/hospital/section1.css">
+        <link rel="stylesheet" href="../../../../public/css/hospital/section2.css"><!-- 환자와의 첫만남 기존 -->
+        <link rel="stylesheet" href="../../../../public/css/main/section3.css">  <!-- 메인에서 가져온 프로젝트 css -->
+        <link rel="stylesheet" href="../../../../public/css/medical/section1.css"> <!-- 필요성-->
+        <link rel="stylesheet" href="../../../../public/css/medical/section2.css"> <!-- 환자와의 첫만남 추가-->
+        <link rel="stylesheet" href="../../../../public/css/medical/section3.css"> <!-- 리스트 형식-->
+        <link rel="stylesheet" href="../../../../public/css/medical/section4.css"> <!-- 핵심 전략 -->
+        <link rel="stylesheet" href="../../../../public/css/medical/section5.css"> <!-- 프로젝트 문의 -->
+        <script src="../../../../public/js/hospital/index.js"></script>
+        <script src="../../../../public/js/medical/index.js"></script><!--medical 모듈 js-->
+    </head>
+    <body class="lang-en">
+        <Header />
+        <!-- <Loading /> -->
+    
+
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+                <main class="mainpage">
+                    <Medical1 />
+                    <Medical2 />
+                    <Medical3 />
+                    <Medical4 />
+                    
+                    
+                    
+                    <Hospital4 />
+                    <Medical5 />
+              
+                    <Section10 client:load/>
+                </main>
+
+            </div>
+
+     
+
+        </div>
+     
+    </body>
+</html>

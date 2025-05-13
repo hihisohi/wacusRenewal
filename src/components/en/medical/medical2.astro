@@ -1,0 +1,104 @@
+<section class="section sc-identity">
+    <div class="inner">
+        <h2 class="blind">와커스 아이덴티티</h2>
+        
+        <div class="ttl-area">
+            <div class="ani-fadeup slogan-swiper swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <p class="sub-ttl">
+                            <em class="font-paperlogy fw-700 color-orange">IDENTITY</em>
+                            It’s where patients look first for trustworthy information<br class="mobile_block"> — your hospital website.
+                        </p>
+                    </li>
+
+                    <!-- <li class="swiper-slide">
+                        <p class="sub-ttl">
+                            <em class="font-paperlogy fw-700 color-blue">IDENTITY</em>
+                            세상에 같은 병원은 없습니다.<br class="mo"> 본원만의 강점, 차별화 즉, 색깔을 가져야합니다.
+                        </p>
+                    </li>
+
+                    <li class="swiper-slide">
+                        <p class="sub-ttl">
+                            <em class="font-paperlogy fw-700 color-blue">PERFORMANCE</em>
+                            측정할 수 없다면, 관리할 수 없습니다.<br class="mo"> 데이터를 기반으로 정교한 마케팅이 병원의 성장과 연결됩니다.
+                        </p>
+                    </li> -->
+                </ul>
+            </div>
+            
+            <div class="ani-fadeup ttl-box font-paperlogy">
+                <div class="keyword-swiper swiper">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">The first <br class="mobile_block" /><span class="txt-gradient">encounter</span>,</li>
+                        <!-- <li class="swiper-slide">병원만의 <span class="txt-gradient">색깔</span>이</li>
+                        <li class="swiper-slide">확실한 <span class="txt-gradient">데이터</span>가</li> -->
+                    </ul>
+                </div>
+
+                <h3 class="sc-ttl">with a patient starts on your website.</h3>
+            </div>
+            <div class="ani-fadeup tt2_box">
+                <p>
+                    What do successful hospitals have in common? <br class="mobile_block" />A well-designed website.<br>
+                    Trust begins with a search and is built through your website.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="marquee-wrap" role="presentation">
+            <div class="marquee-txt" aria-hidden="true">
+                <span class="txt">WACUS</span>
+                <span class="txt">WACUS</span>
+                <span class="txt">WACUS</span>
+                <span class="txt">WACUS</span>
+                <span class="txt">WACUS</span>
+                <span class="txt">WACUS</span>
+            </div>
+            <div class="marquee-bg"></div>
+        </div>
+    </div>
+</section>
+
+<script is:inline>
+    gsap.utils.toArray(".ani-fadeup").forEach(item => {
+        const tween = gsap.from(item, {
+            duration: .4,
+            yPercent: 10,
+            opacity: 0,
+            ease: 'power2.inOut',
+            stagger: {
+                each: .2
+            }
+        })
+
+        ScrollTrigger.create({
+            trigger: item,
+            start: '0% 50%',
+            end: '100% 50%',
+            animation: tween,
+            toggleActions: 'play none none none',
+        })
+    })
+    const sloganSwiper = new Swiper('.sc-identity .slogan-swiper', {
+        slidesPerView: 1,
+        loop: true,
+        direction: "vertical",
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+    })
+    const keywordSwiper = new Swiper('.sc-identity .keyword-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 15,
+        loop: true,
+        direction: "vertical",
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+    })
+</script>

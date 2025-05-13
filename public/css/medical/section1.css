@@ -56,7 +56,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: url('/img/medical/sc_needs_bg.png') no-repeat center center /
+  background: url("/img/medical/sc_needs_bg.png") no-repeat center center /
     cover;
   animation: bgScale forwards infinite 10s linear;
 }
@@ -73,11 +73,18 @@
   height: 5.05vw;
   overflow: hidden;
 }
+.sc_needs .box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .sc_needs .box h3 {
   transition: 1s;
   font-size: 2.6vw;
   color: rgba(255, 255, 255, 0.2);
 }
+
 .sc_needs .txt.second {
   height: 8.33vw;
 }
@@ -104,6 +111,7 @@
   color: #fff;
   font-size: 3.6vw;
 }
+
 @keyframes bgScale {
   0% {
     transform: scale(1);
@@ -115,6 +123,7 @@
     transform: scale(1);
   }
 }
+
 @media screen and (max-width: 768px) {
   .sc_needs .inner {
     height: 100svh;
@@ -133,5 +142,20 @@
   }
   .sc_needs .txt.third {
     height: 260px;
+  }
+}
+
+/* 영문 사이트 style */
+.lang-en .sc_needs .box h3.on {
+  font-size: 3.2vw;
+}
+
+@media screen and (max-width: 768px) {
+  .lang-en .sc_needs .box h3.on {
+    font-size: 36px;
+  }
+
+  .lang-en .sc-identity .keyword-swiper {
+    height: 100px;
   }
 }

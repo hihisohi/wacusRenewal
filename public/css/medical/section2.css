@@ -57,3 +57,17 @@
     line-height: 1;
   }
 }
+
+/* 영문페이지 style */
+
+.lang-en .sc-identity {
+  padding-top: 256px;
+}
+
+.lang-en .sc-identity .keyword-swiper {
+  max-width: none;
+}
+
+.lang-en .sc-identity .ttl-box {
+  flex-direction: column;
+}

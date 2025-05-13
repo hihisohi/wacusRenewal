@@ -40,7 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  const fadeDownLists = commercialHpContact.querySelectorAll("[data-fade='down']");
+  const fadeDownLists =
+    commercialHpContact.querySelectorAll("[data-fade='down']");
 
   gsap.utils.toArray(fadeDownLists).forEach((item, idx) => {
     gsap.set(item, { opacity: 0, y: -40 });
@@ -50,8 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
       duration: 2 * idx + 1,
       scrollTrigger: {
         trigger: item,
-        start: "100% bottom",
-        end: "150% bottom",
+        start: "top 80%",
+        end: "bottom 80%",
         scrub: true,
       },
     });

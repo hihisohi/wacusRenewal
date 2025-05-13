@@ -2,7 +2,9 @@ import { rotate } from "three/webgpu";
 
 document.addEventListener("DOMContentLoaded", () => {
   const commercialHpDef = document.querySelector("#commercialHpDef");
-  const paginationItems = document.querySelectorAll(".cmhp-def__pagination > div");
+  const paginationItems = document.querySelectorAll(
+    ".cmhp-def__pagination > div"
+  );
 
   const defActiveScrollHeight = commercialHpDef.offsetHeight;
 
@@ -19,7 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
     on: {
       realIndexChange: function () {
         const activeIndex = this.realIndex;
-        const paginations = document.querySelectorAll(".cmhp-def__pagination > div");
+        const paginations = document.querySelectorAll(
+          ".cmhp-def__pagination > div"
+        );
 
         paginations.forEach((el, index) => {
           if (index === activeIndex) {
@@ -39,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 아래 배경색과 자연스럽게 이어지도록 스크롤시 경색 주기
+  // 아래 배경색과 자연스럽게 이어지도록 스크롤시 배경색 주기
   const timeline = gsap.timeline({
     scrollTrigger: {
       trigger: document.querySelector(".bg-change"),
@@ -69,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollTrigger: {
       trigger: "#commercialHpDef .split--chars",
       start: "top 80%",
+      end: "bottom 10%",
       scrub: true,
     },
   });

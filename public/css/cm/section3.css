@@ -74,3 +74,10 @@
 .lang-en .sc-03 .keyword-area .keyword-list {
   flex: none;
 }
+
+@media screen and (max-width: 500px) {
+  .lang-en .sc-03 .keyword-area .keyword-list {
+    height: 8.4rem;
+    padding: 2rem;
+  }
+}

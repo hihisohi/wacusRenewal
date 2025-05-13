@@ -310,6 +310,38 @@ html {
 }
 
 /* 영문 사이트 style */
+.lang-en .br-500 {
+  display: none;
+}
+
 .lang-en .sc-01 .sc-ttl .ttl-txt {
   font-size: 8rem;
+}
+
+.lang-en .sc-01 .wrapper-01 .txt-box {
+  top: 75%;
+}
+
+@media screen and (max-width: 768px) {
+  .lang-en .sc-01 .sc-ttl .ttl-txt {
+    font-size: 4.3rem;
+  }
+
+  .lang-en .sc-01 .wrapper-01 .txt-box {
+    top: 2.2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .lang-en .br-500 {
+    display: block;
+  }
+
+  .lang-en .sc-01 .sc-ttl .ttl-txt {
+    font-size: 3.7rem;
+  }
+
+  .lang-en .sc-01 .wrapper-01 .txt-box {
+    top: 0.7em;
+  }
 }

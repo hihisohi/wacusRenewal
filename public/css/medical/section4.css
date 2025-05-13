@@ -353,3 +353,21 @@ button {
     height: 100px;
   }
 }
+
+/* 영문 페이지 style */
+
+@media screen and (max-width: 768px) {
+  .lang-en .sc_strategy_2 .txt02 {
+    height: 88px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .lang-en .sc_strategy_2 .big_con strong {
+    font-size: 28px;
+  }
+
+  .lang-en .sc_inquiry .txt_wrap h4 {
+    font-size: 28px;
+  }
+}

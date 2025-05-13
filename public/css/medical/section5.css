@@ -183,3 +183,28 @@
     height: 78px;
   }
 }
+
+/* 영문페이지 style */
+.lang-en .sc_inquiry .txt {
+  font-size: calc(30px + 2.08vw);
+  height: 1.4em;
+}
+
+.lang-en .sc_inquiry .txt_wrap h4 {
+  font-size: inherit;
+}
+
+.lang-en .sc_strategy_1 .txt_wrap {
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 960px) {
+  .lang-en .sc_inquiry .txt {
+    font-size: 6.875vw;
+    height: 2.6em;
+  }
+
+  .lang-en .sc_inquiry .txt_wrap h4 .mobile_block {
+    display: block;
+  }
+}

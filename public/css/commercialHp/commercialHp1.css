@@ -150,3 +150,8 @@
     height: 160vw;
   }
 }
+
+/* 영문 페이지 style */
+.lang-en #commercialHpIntro .cmhp-desc {
+  width: 100%;
+}

@@ -57,7 +57,8 @@ body {
 }
 
 #commercialHpPage .br-500,
-#commercialHpPage .br-768 {
+#commercialHpPage .br-768,
+#commercialHpPage .br-960 {
   display: inline-block;
 }
 
@@ -173,6 +174,12 @@ body {
   }
 }
 
+@media (max-width: 960px) {
+  #commercialHpPage .br-960 {
+    display: block;
+  }
+}
+
 @media (max-width: 768px) {
   #commercialHpPage .br-768 {
     display: block;
@@ -195,14 +202,30 @@ body {
 }
 
 /* 영문 사이트 style */
+.lang-en .cmhp-heading {
+  font-size: calc(23.4px + 4.86rem);
+}
+
 .lang-en .cmhp-heading.lg {
   font-size: calc(23.4px + 6.66rem);
+}
+
+.lang-en .cmhp-intro__title {
+  padding: 0 10px;
 }
 
 #commercialHpPage.lang-en .speech-bubble {
   font-size: calc(7.2px + 1.92rem);
 }
 
-.lang-en .cmhp-heading {
-  font-size: calc(23.4px + 4.86rem);
+@media (max-width: 1200px) {
+  .lang-en .cmhp-heading.lg {
+    font-size: calc(18.72px + 5.328rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .lang-en #commercialHpIntro .cmhp-heading {
+    gap: 0;
+  }
 }

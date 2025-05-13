@@ -85,7 +85,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const content = track.querySelector(itemSelector);
     const marqueeEle = content.closest(".marquee");
 
-    const cloneCount = Math.ceil((marqueeEle.clientWidth * 2) / content.clientWidth);
+    const cloneCount = Math.ceil(
+      (marqueeEle.clientWidth * 2) / content.clientWidth
+    );
 
     for (let i = 1; i < cloneCount; i++) {
       const clone = content.cloneNode(true); // 복제
@@ -123,5 +125,9 @@ document.addEventListener("DOMContentLoaded", () => {
     wrapperSelector: ".marquee2",
     speed: 400,
     direction: -1,
+  });
+
+  window.addEventListener("resize", () => {
+    ScrollTrigger.refresh();
   });
 });

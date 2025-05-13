@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const commercialHpIntro = document.querySelector("#commercialHpIntro");
   const introPinWrapper = commercialHpIntro.querySelector(".pin-wrapper");
 
+  const isEn = document.querySelector(".lang-en");
+
   // 홈페이지 첫번째 섹션 고정
   const introActiveScrollHeight = commercialHpIntro.offsetHeight;
 
@@ -47,12 +49,10 @@ document.addEventListener("DOMContentLoaded", () => {
     tl.from(splitChars.chars, {
       scale: 0.6,
       opacity: 0,
-      duration: 0.8,
+      duration: isEn ? 0.4 : 0.8,
       ease: "power4",
-      stagger: 0.06,
-      onComplete: () => {
-        console.log("Character animation complete!");
-      },
+      stagger: isEn ? 0.04 : 0.06,
+      onComplete: () => {},
     })
       // .from(
       //   [personImageLeft, personImageRight],
@@ -74,12 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
           y: 5,
           scale: 0.96,
           opacity: 0,
-          duration: 0.8,
+          duration: isEn ? 0.6 : 0.8,
           ease: "power4",
-          stagger: 0.3,
-          onComplete: () => {
-            console.log("word animation complete!");
-          },
+          stagger: isEn ? 0.2 : 0.3,
+          onComplete: () => {},
         },
         "-=1.4"
       )
@@ -89,12 +87,10 @@ document.addEventListener("DOMContentLoaded", () => {
           y: 5,
           scale: 0.96,
           opacity: 0,
-          duration: 1.4,
+          duration: isEn ? 1.2 : 1.4,
           ease: "power4",
           stagger: 0.3,
-          onComplete: () => {
-            console.log("Line animation complete!");
-          },
+          onComplete: () => {},
         },
         "-=0.6"
       );

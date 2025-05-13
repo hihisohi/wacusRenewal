@@ -177,3 +177,10 @@
     left: -20%;
   }
 }
+
+/* 영문페이지 style */
+@media (max-width: 500px) {
+  .lang-en .cmhp-issue__list li {
+    max-width: none;
+  }
+}

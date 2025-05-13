@@ -218,3 +218,46 @@
     margin-top: 4vh;
   }
 }
+
+/* 영문페이지 style */
+.lang-en .cmhp-method__polygon-text > div {
+  max-width: 14em;
+  font-size: calc(10.8px + 1.62rem);
+}
+
+.lang-en .cmhp-method__polygon-text > div:nth-child(2) {
+  transform: translate(-180%, -50%);
+}
+
+.lang-en .cmhp-method__polygon-text > div:nth-child(5) {
+  transform: translate(80%, -50%);
+}
+
+.lang-en .cmhp-method__text {
+  line-height: 1.6;
+}
+
+@media (max-width: 960px) {
+  .lang-en .cmhp-method__polygon-text > div {
+    max-width: 10em;
+  }
+
+  .lang-en .cmhp-method__polygon-text > div:nth-child(2) {
+    transform: translate(-220%, -50%);
+  }
+
+  .lang-en .cmhp-method__polygon-text > div:nth-child(5) {
+    transform: translate(110%, -50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .lang-en .cmhp-method__polygon-text > div {
+    max-width: none;
+  }
+
+  .lang-en .cmhp-method__polygon-text > div:nth-child(2),
+  .lang-en .cmhp-method__polygon-text > div:nth-child(5) {
+    transform: translate(0, 0);
+  }
+}

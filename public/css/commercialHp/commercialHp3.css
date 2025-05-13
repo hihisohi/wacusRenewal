@@ -117,9 +117,19 @@
 }
 
 .lang-en .cmhp-need__scrolling-text .text-item {
-  font-size: calc(16.2px + 2.88rem);
+  font-size: calc(13.77px + 2.448rem);
 }
 
 .lang-en .cmhp-need__scrolling-text .text-item.on {
-  font-size: calc(18px + 3.78rem);
+  font-size: calc(15.3px + 3.213rem);
+}
+
+@media (max-width: 1200px) {
+  .lang-en .cmhp-need__scrolling-text .text-item {
+    font-size: calc(12.393px + 2.2032rem);
+  }
+
+  .lang-en .cmhp-need__scrolling-text .text-item.on {
+    font-size: calc(13.77px + 2.8917rem);
+  }
 }
